@@ -48,35 +48,41 @@
 */
 
 -(IBAction) doExerciseGoal_button{
-    //Updates the pace of Exercise to be realistic
-    DBController *mydb = [[DBController alloc] init];
-
-  
-    if([mydb DBdatafieldToObjectArray: @"select * from username" ]){
+  // Set goal at 0 to 1500 pts
+  // 1500 pts -> 3 pounds per week from exercise
+  // 45 minutes of intense exercise per day -> 750 calories 
+  // 60 minutes of intense exercise  -> 1000 calories
+  // 90 minutes of intense exercise -> 1500 calories
     
- // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
-    Users *temp= [[Users  alloc]init];
+   // Intense exercise -> 16.5 cal /min
+   // Moderate exercise -> 12 cal / min 
+   // Light exercise -> 6 cal /min
     
-   
-         temp = [mydb.obj_array lastObject];
-
-    int temp_points =  temp.total_progress;
-    
-    pointsEarnedtoday_Exercise.text = [[NSNumber alloc ]initWithInt: temp_points].stringValue; 
-    }
-    else{
-        pointsEarnedtoday_Exercise.text = [[NSNumber alloc ]initWithInt: -1].stringValue;
-    }
 }
 -(IBAction) doDietGoal_button{
     //Updates the pace of Diet to be realistic
+    //Set goal form 0 to 1000 pts
+    // 1000 pts -> 2 pounds per week from diet
+    
+    //cutting 2- 20oz sodas -> 500 calories 
+    //changing from 2- 20 oz bottles to 2- 12oz cans -> 200 calories
+    
+    //changing to diet or water -> 490 calories
+    
+    // replace soda with water && hard candy OR gum
+    
+    //cutting french fries -> 380 calories
     
     pointsEarnedtoday_Diet.text = [[NSNumber alloc ]initWithFloat: 550].stringValue; 
    
     //progress bar 
+    
+#if 0  //verified the method to update the progress bars
     [diet_todaysprogress  setProgress: 0.4];
     [diet_todaysprogress setProgress: 0.1]; 
     [totalprogress setProgress: 0.6];
+    
+#endif 
     
 }
 

@@ -45,6 +45,11 @@
     int totalearned = [weightlimit GetPointsEarnedTotal: 0] ;
     int totalgoal = [weightlimit GetPointsTotal_goal:0];
    
+    //TODO: update progress from data base
+    
+    exerciseProgress.progress = 0.5;
+    dietProgress.progress = 0.9;
+    
     totalProgress.progress = (float) totalearned / (float) totalgoal;
     
     totalgoal_points.text = [[NSNumber alloc ]initWithInt:totalgoal ].stringValue;
