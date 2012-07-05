@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UITableViewController{
-    NSArray * userlist;
+    NSMutableArray * userlist;
  
 }
 @property (nonatomic,retain) NSArray * userlist;

@@ -37,9 +37,20 @@
     // sql = "select user_id, user, ... from username"
     // when we switch pages we pass the user_id to the next view
     
+    DBController *mydb = [[DBController alloc] init];
     
     
-   self.userlist = [[NSArray alloc] initWithObjects:@"Xe",  nil];
+    if([mydb DBdatafieldToObjectArray: @"select * from username" ]){
+        
+        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
+      
+        
+       self.userlist = mydb.obj_array;
+        
+        
+    }
+    
+  // self.userlist = [[NSMutableArray alloc] initWithObjects:@"Xe",  nil];
 
     
     // Uncomment the following line to preserve selection between presentations.
@@ -114,9 +125,9 @@
         
    
     // Configure the cell...
-    NSString *cellValue = [userlist objectAtIndex:indexPath.row -1];
+    Users *cellValue = [userlist objectAtIndex:indexPath.row -1];
 
-    cell.username.text = cellValue;
+    cell.username.text = cellValue.user;
     
         return cell;
     }else {
