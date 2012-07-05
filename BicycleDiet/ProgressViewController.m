@@ -41,7 +41,7 @@
     
    
     
-    totalgoal_points.text = [[NSNumber alloc ]initWithInt:[weightlimit GetPointsEarnedTotal]].stringValue;
+    totalgoal_points.text = [[NSNumber alloc ]initWithInt:[weightlimit GetPointsEarnedTotal: 0] ].stringValue;
    
     totalpoints_earned.text = @"29000"; 
     
@@ -63,21 +63,5 @@
 
 
 
-#if 0 // Add View to view controller
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-   
-    
-        static NSString *CellId = @"ProgressView";
-        CreateView *cell0 = [ProgressView dequeueReusableCellWithIdentifier:CellId];
-        
-        if (cell0 == nil) {
-            cell0 = [[CreateUserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellId]; 
-            
-            cell0.textLabel.text = @"Add User";
-        }
-        
-        return cell0;
-    }
-#endif
+
 @end

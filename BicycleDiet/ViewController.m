@@ -6,11 +6,15 @@
 //  Copyright (c) 2012 __SiriwanLabs__. All rights reserved.
 //
 
+//Controllers
 #import "ViewController.h"
+#import "DBController.h"
+
+//Cells & Views
 #import "ProgressCell.h"
 #import "CreateUserCell.h"
 #import "EmptyCell.h"
-#import "DBController.h"
+
 
 @interface ViewController ()
 
@@ -37,12 +41,12 @@
     
     //ToDo make a call to the databse here to load this array with users
     // sql = "select user_id, user, ... from username"
-    // when we switch pages we pass the user_id to the next view
+  
     
     DBController *mydb = [[DBController alloc] init];
     
     
-    if([mydb DBdatafieldToObjectArray: @"select * from username" ]){
+    if([mydb DBdatafieldToObjectArray: @"select * from username " ]){
         
         // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
       
@@ -50,6 +54,8 @@
        self.userlist = mydb.obj_array;
         
         
+    }else {
+        self.userlist = nil;
     }
     
   // self.userlist = [[NSMutableArray alloc] initWithObjects:@"Xe",  nil];
@@ -78,7 +84,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-//#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
@@ -87,15 +92,17 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
+    // -One CreateUser Cell, Multiple User Cells, One Empty Cell
+    // -userlist contains User cell data +2 accounts for other two cells
     return [userlist count] + 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     //for height
     if (indexPath.row==0) {
-        return 70;
+        return 75;
     }else {
-        return 140;
+        return 145;
     }
 }
 

@@ -8,6 +8,7 @@
 
 #import "DBController.h"
 #import "Users.h"
+#import "Activity.h"
 
 @implementation DBController
 @synthesize a;
@@ -108,7 +109,10 @@
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
                 NSLog (@"inside while");
-				int userid = sqlite3_column_int(compiledStatement, 0);
+				
+                // TODO:Update this with a select statement so the correct onject type is loaded
+                
+                int userid = sqlite3_column_int(compiledStatement, 0);
 				NSString *user = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
 				int goal= sqlite3_column_int(compiledStatement, 2);
                 int progress= sqlite3_column_int(compiledStatement, 3);
@@ -116,6 +120,7 @@
 				// Create a new animal object with the data from the database
 				Users *a_user = [[Users alloc] initWithUserId:userid andUser:user andGoal:goal andProgress:progress];
 				
+                
 				// Add the animal object to the animals Array
 				[obj_array addObject:a_user];
 				
@@ -135,6 +140,69 @@
 sqlite3_close(database);
     return success;
 }
+
+-(BOOL)  DBdatafieldToActivityArray: (NSString *) sql_com{
+	
+	BOOL success = [self CheckOrCreateDB];
+    
+	// Query the database for all  records and construct the object array
+    
+	// Init the  Array
+	obj_array = [[NSMutableArray alloc] init];
+	
+    NSLog(@"database exists");
+    
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+        sqlite3_extended_result_codes(database, 1);
+        
+        NSLog (@"Database opened");
+        
+		// Setup the SQL Statement and compile it for faster access
+        
+        
+		sqlite3_stmt *compiledStatement;
+        
+        
+		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+                NSLog (@"inside while");
+				
+                // TODO:Update this with a select statement so the correct onject type is loaded
+                
+                int activity_id = sqlite3_column_int(compiledStatement, 1);
+				int type = sqlite3_column_int(compiledStatement, 2);
+
+				int points= sqlite3_column_int(compiledStatement, 3);
+               
+                NSLog( @"ID: %i  Type: %i Points: %i", activity_id, type, points); 
+                
+				// Create a new animal object with the data from the database
+				Activity *an_activity = [[Activity alloc] initWithTimeStamp:nil andId:activity_id andType: type andPoints:points];
+				
+                
+				// Add the animal object to the animals Array
+				[obj_array addObject:an_activity];
+				
+                
+			}
+            success = TRUE;
+		}else {
+            success = FALSE;
+        }
+        
+        
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+    }
+    
+    
+    sqlite3_close(database);
+    return success;
+}
+
 
 
 

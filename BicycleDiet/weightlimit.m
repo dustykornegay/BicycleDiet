@@ -9,8 +9,10 @@
 #import "weightlimit.h"
 #import "DBController.h"
 #import "Users.h"
+#import "Activity.h"
 
 @implementation weightlimit 
+@synthesize obj_list = _obj_list;
 
 
 +(float) Calculate_Points: (float) current_weight_lbs ideal: (float) ideal_weight_lbs{
@@ -61,19 +63,56 @@
                         else return -1;
 }
 
-+(int) GetPointsEarnedTotal {
-    return 25000;
++(int) GetPointsEarnedTotal: (int)user_num {
+    // Open the status table and total the points earned from all sources
+    // where user_id == user_num
+    //sql = "Select ?points? from status where user_id = ?user_num?
+     
+    NSString * sql = @"Select * from status";
+    int total =[self Database_select: sql];
+   
+    
+    return total;
 }
-+(int) GetPointsEarnedToday{
+
++(int) GetPointsEarnedToday: (int)user_num{
+    // Open the status table and total the points earned from all sources
+    // where user_id == user_num  &  date == ?Today's Date;
+    //sql = "SELECT ?points? WHERE user_id = ?user_num? AND date= ?Today?
+    
     return 1000;
 }
 
-    
     
 +(int) GetPointsEarnedToday_Exercise{
     return 400;
 }
 
++(int)Database_select: (NSString *) sql_command{
+DBController *mydb = [[DBController alloc] init];
+int sum = 0;
 
+if([mydb DBdatafieldToActivityArray: sql_command ]){
+    
+    // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
+NSLog( @"Get data from DB");
+    NSMutableArray * objects;
+    
+    objects = mydb.obj_array;
+    
+    // walk through array and sum data values
+   // for( int y = 0; y < [objects count]; y++){
+        Activity * a =[objects objectAtIndex: 0];
+        sum += a.points; 
+  //  }
+    
+    
+    
+}else {
+    NSLog (@"DBdatafiledToObjectArray FAILED in +Database_select");
+    sum = -1;
+}
+return sum;
+}
 
 @end
