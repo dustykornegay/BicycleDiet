@@ -37,13 +37,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    
+    
     NSLog(@"ProgressView Loaded");
     
+    int totalearned = [weightlimit GetPointsEarnedTotal: 0] ;
+    int totalgoal = [weightlimit GetPointsTotal_goal:0];
    
+    totalProgress.progress = (float) totalearned / (float) totalgoal;
     
-    totalgoal_points.text = [[NSNumber alloc ]initWithInt:[weightlimit GetPointsEarnedTotal: 0] ].stringValue;
-   
-    totalpoints_earned.text = @"29000"; 
+    totalgoal_points.text = [[NSNumber alloc ]initWithInt:totalgoal ].stringValue;
+       
+    totalpoints_earned.text = [[NSNumber alloc ]initWithInt:totalearned ].stringValue; 
     
     totalpoints_earnedtoday.text = @"1550";
   

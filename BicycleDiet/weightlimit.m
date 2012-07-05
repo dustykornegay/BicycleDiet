@@ -63,6 +63,28 @@
                         else return -1;
 }
 
++ (int) GetPointsTotal_goal: (int) user_num{
+    DBController *mydb = [[DBController alloc] init];
+    
+    NSString * sql = @"select * from username where user_id= 0";
+    
+    if([mydb DBdatafieldToObjectArray: sql ]){
+        
+        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
+        Users *temp= [[Users  alloc]init];
+        
+        
+        temp = [mydb.obj_array lastObject];
+        
+        int temp_points =  temp.total_progress;
+        
+        return temp_points;
+    }
+    else{
+        return -1;
+    }
+}
+
 +(int) GetPointsEarnedTotal: (int)user_num {
     // Open the status table and total the points earned from all sources
     // where user_id == user_num
