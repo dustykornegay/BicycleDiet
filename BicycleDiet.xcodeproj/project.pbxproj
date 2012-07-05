@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E1DAD271596C40F00EC6DB0 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */; };
+		1E2950DF159299C700FB9E52 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2950DE159299C700FB9E52 /* ProgressView.m */; };
+		1E2950E215929C0B00FB9E52 /* ProgressChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2950E115929C0B00FB9E52 /* ProgressChartView.m */; };
+		1E3A218F159784770014D2CD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3A218E159784770014D2CD /* libsqlite3.0.dylib */; };
+		1E3A219615978C540014D2CD /* DBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A219515978C540014D2CD /* DBController.m */; };
+		1E3A219A1597C3EB0014D2CD /* bicyclediet_tables in Resources */ = {isa = PBXBuildFile; fileRef = 1E3A21991597C3EB0014D2CD /* bicyclediet_tables */; };
+		1E3A219D1597DC800014D2CD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3A219B1597D3F40014D2CD /* Default.png */; };
+		1E3A21A51597F9870014D2CD /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A21A41597F9870014D2CD /* Users.m */; };
+		1E4B58E3158BE86500A9457B /* CreateUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B58E2158BE86500A9457B /* CreateUserCell.m */; };
+		1E4B58EC158D324F00A9457B /* SetGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B58EB158D324F00A9457B /* SetGoal.m */; };
+		1E6F7615159F7F2100A93206 /* ID-10080546.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F7614159F7F2100A93206 /* ID-10080546.jpg */; };
+		1E6F7619159F91AB00A93206 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F7618159F91AB00A93206 /* Exercise.m */; };
+		1E6F761C159FB9CE00A93206 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F761B159FB9CE00A93206 /* Activity.m */; };
+		1E6F761F159FBE2600A93206 /* Inspiration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F761E159FBE2600A93206 /* Inspiration.m */; };
+		1E6F7622159FC1C600A93206 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F7621159FC1C600A93206 /* Food.m */; };
+		1E6F7625159FC97100A93206 /* MealSnack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F7624159FC97100A93206 /* MealSnack.m */; };
+		1E6F7628159FCBF400A93206 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F7627159FCBF300A93206 /* Question.m */; };
+		1E6F762A159FD46700A93206 /* Bicycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F7629159FD46600A93206 /* Bicycle.png */; };
+		1E6F7639159FE1FB00A93206 /* PadMaMa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F7638159FE1FB00A93206 /* PadMaMa.png */; };
+		1E6F763F159FFB3C00A93206 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F763E159FFB3C00A93206 /* EmptyCell.m */; };
+		1E6F764115A0008D00A93206 /* siriwan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F764015A0008D00A93206 /* siriwan.png */; };
+		1E81F7C115829BE1004755AE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E81F7C015829BE1004755AE /* icon.png */; };
+		1E864D7B15899922002F12F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7A15899922002F12F0 /* ViewController.m */; };
+		1E864D7F1589AEFE002F12F0 /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7E1589AEFE002F12F0 /* ProgressCell.m */; };
+		1E871E82158ED04A00386892 /* weightlimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E871E81158ED04A00386892 /* weightlimit.m */; };
+		1EDE8C95159D7A4B0054C357 /* bicyclediet.db in Resources */ = {isa = PBXBuildFile; fileRef = 1EDE8C94159D7A4B0054C357 /* bicyclediet.db */; };
+		1EE1C4F115A178FA0011278F /* bicycle_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE1C4F015A178FA0011278F /* bicycle_retina.png */; };
+		1EFAF479157B0DE900F8DF27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFAF478157B0DE900F8DF27 /* UIKit.framework */; };
+		1EFAF47B157B0DE900F8DF27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFAF47A157B0DE900F8DF27 /* Foundation.framework */; };
+		1EFAF47D157B0DE900F8DF27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFAF47C157B0DE900F8DF27 /* CoreGraphics.framework */; };
+		1EFAF483157B0DE900F8DF27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EFAF481157B0DE900F8DF27 /* InfoPlist.strings */; };
+		1EFAF485157B0DE900F8DF27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF484157B0DE900F8DF27 /* main.m */; };
+		1EFAF489157B0DE900F8DF27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF488157B0DE900F8DF27 /* AppDelegate.m */; };
+		1EFAF48C157B0DE900F8DF27 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAF48B157B0DE900F8DF27 /* RootViewController.m */; };
+		1EFAF495157B0DEA00F8DF27 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFAF493157B0DEA00F8DF27 /* MainStoryboard.storyboard */; };
+		1EFAF49D157B1CEB00F8DF27 /* ID-10046769.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1EFAF49B157B1CEB00F8DF27 /* ID-10046769.jpg */; };
+		1EFAF49E157B1CEB00F8DF27 /* ID-10072763.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1EFAF49C157B1CEB00F8DF27 /* ID-10072763.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E1DAD1D159656FE00EC6DB0 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; wrapsLines = 1; };
+		1E1DAD251596C40F00EC6DB0 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		1E2950DD159299C700FB9E52 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		1E2950DE159299C700FB9E52 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		1E2950E015929C0B00FB9E52 /* ProgressChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressChartView.h; sourceTree = "<group>"; };
+		1E2950E115929C0B00FB9E52 /* ProgressChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressChartView.m; sourceTree = "<group>"; };
+		1E3A218E159784770014D2CD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		1E3A219415978C540014D2CD /* DBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBController.h; sourceTree = "<group>"; };
+		1E3A219515978C540014D2CD /* DBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBController.m; sourceTree = "<group>"; };
+		1E3A21991597C3EB0014D2CD /* bicyclediet_tables */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bicyclediet_tables; sourceTree = "<group>"; };
+		1E3A219B1597D3F40014D2CD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		1E3A219E1597DC880014D2CD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		1E3A21A31597F9870014D2CD /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		1E3A21A41597F9870014D2CD /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
+		1E4B58E1158BE86500A9457B /* CreateUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateUserCell.h; sourceTree = "<group>"; };
+		1E4B58E2158BE86500A9457B /* CreateUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserCell.m; sourceTree = "<group>"; };
+		1E4B58EA158D324F00A9457B /* SetGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGoal.h; sourceTree = "<group>"; };
+		1E4B58EB158D324F00A9457B /* SetGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGoal.m; sourceTree = "<group>"; };
+		1E6F7614159F7F2100A93206 /* ID-10080546.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10080546.jpg"; sourceTree = "<group>"; };
+		1E6F7617159F91AB00A93206 /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		1E6F7618159F91AB00A93206 /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		1E6F761A159FB9CD00A93206 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		1E6F761B159FB9CE00A93206 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		1E6F761D159FBE2600A93206 /* Inspiration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inspiration.h; sourceTree = "<group>"; };
+		1E6F761E159FBE2600A93206 /* Inspiration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inspiration.m; sourceTree = "<group>"; };
+		1E6F7620159FC1C500A93206 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		1E6F7621159FC1C600A93206 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		1E6F7623159FC97000A93206 /* MealSnack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealSnack.h; sourceTree = "<group>"; };
+		1E6F7624159FC97100A93206 /* MealSnack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealSnack.m; sourceTree = "<group>"; };
+		1E6F7626159FCBF300A93206 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		1E6F7627159FCBF300A93206 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		1E6F7629159FD46600A93206 /* Bicycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bicycle.png; sourceTree = "<group>"; };
+		1E6F7638159FE1FB00A93206 /* PadMaMa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PadMaMa.png; sourceTree = "<group>"; };
+		1E6F763D159FFB3C00A93206 /* EmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptyCell.h; path = ../EmptyCell.h; sourceTree = "<group>"; };
+		1E6F763E159FFB3C00A93206 /* EmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptyCell.m; path = ../EmptyCell.m; sourceTree = "<group>"; };
+		1E6F764015A0008D00A93206 /* siriwan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siriwan.png; sourceTree = "<group>"; };
+		1E81F7C015829BE1004755AE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		1E864D7915899922002F12F0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1E864D7A15899922002F12F0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1E864D7D1589AEFE002F12F0 /* ProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressCell.h; path = ../ProgressCell.h; sourceTree = "<group>"; };
+		1E864D7E1589AEFE002F12F0 /* ProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressCell.m; path = ../ProgressCell.m; sourceTree = "<group>"; };
+		1E871E80158ED04A00386892 /* weightlimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weightlimit.h; sourceTree = "<group>"; };
+		1E871E81158ED04A00386892 /* weightlimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weightlimit.m; sourceTree = "<group>"; };
+		1EDE8C94159D7A4B0054C357 /* bicyclediet.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = bicyclediet.db; path = BicycleDiet/bicyclediet.db; sourceTree = SOURCE_ROOT; };
+		1EE1C4F015A178FA0011278F /* bicycle_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bicycle_retina.png; sourceTree = "<group>"; };
+		1EFAF474157B0DE900F8DF27 /* BicycleDiet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BicycleDiet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFAF478157B0DE900F8DF27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1EFAF47A157B0DE900F8DF27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1EFAF47C157B0DE900F8DF27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1EFAF480157B0DE900F8DF27 /* BicycleDiet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BicycleDiet-Info.plist"; sourceTree = "<group>"; };
+		1EFAF482157B0DE900F8DF27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1EFAF484157B0DE900F8DF27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1EFAF486157B0DE900F8DF27 /* BicycleDiet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BicycleDiet-Prefix.pch"; sourceTree = "<group>"; };
+		1EFAF487157B0DE900F8DF27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1EFAF488157B0DE900F8DF27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1EFAF48A157B0DE900F8DF27 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1EFAF48B157B0DE900F8DF27 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1EFAF494157B0DEA00F8DF27 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1EFAF49B157B1CEB00F8DF27 /* ID-10046769.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10046769.jpg"; sourceTree = "<group>"; };
+		1EFAF49C157B1CEB00F8DF27 /* ID-10072763.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10072763.jpg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EFAF471157B0DE900F8DF27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3A218F159784770014D2CD /* libsqlite3.0.dylib in Frameworks */,
+				1EFAF479157B0DE900F8DF27 /* UIKit.framework in Frameworks */,
+				1EFAF47B157B0DE900F8DF27 /* Foundation.framework in Frameworks */,
+				1EFAF47D157B0DE900F8DF27 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E6F7610159F7D2400A93206 /* Cells & Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E6F763D159FFB3C00A93206 /* EmptyCell.h */,
+				1E6F763E159FFB3C00A93206 /* EmptyCell.m */,
+				1E4B58E1158BE86500A9457B /* CreateUserCell.h */,
+				1E4B58E2158BE86500A9457B /* CreateUserCell.m */,
+				1E864D7E1589AEFE002F12F0 /* ProgressCell.m */,
+				1E864D7D1589AEFE002F12F0 /* ProgressCell.h */,
+				1E2950E015929C0B00FB9E52 /* ProgressChartView.h */,
+				1E2950E115929C0B00FB9E52 /* ProgressChartView.m */,
+				1E2950DD159299C700FB9E52 /* ProgressView.h */,
+				1E2950DE159299C700FB9E52 /* ProgressView.m */,
+				1E4B58EA158D324F00A9457B /* SetGoal.h */,
+				1E4B58EB158D324F00A9457B /* SetGoal.m */,
+			);
+			name = "Cells & Views";
+			sourceTree = "<group>";
+		};
+		1E6F7612159F7E1200A93206 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				1E1DAD1D159656FE00EC6DB0 /* Constants.h */,
+				1E871E80158ED04A00386892 /* weightlimit.h */,
+				1E871E81158ED04A00386892 /* weightlimit.m */,
+			);
+			name = Methods;
+			sourceTree = "<group>";
+		};
+		1E6F7613159F7E5000A93206 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				1E6F761A159FB9CD00A93206 /* Activity.h */,
+				1E6F761B159FB9CE00A93206 /* Activity.m */,
+				1E6F7617159F91AB00A93206 /* Exercise.h */,
+				1E6F7618159F91AB00A93206 /* Exercise.m */,
+				1E6F7620159FC1C500A93206 /* Food.h */,
+				1E6F7621159FC1C600A93206 /* Food.m */,
+				1E6F7623159FC97000A93206 /* MealSnack.h */,
+				1E6F7624159FC97100A93206 /* MealSnack.m */,
+				1E6F761D159FBE2600A93206 /* Inspiration.h */,
+				1E6F761E159FBE2600A93206 /* Inspiration.m */,
+				1E6F7626159FCBF300A93206 /* Question.h */,
+				1E6F7627159FCBF300A93206 /* Question.m */,
+				1E3A21A31597F9870014D2CD /* Users.h */,
+				1E3A21A41597F9870014D2CD /* Users.m */,
+			);
+			name = DataModels;
+			sourceTree = "<group>";
+		};
+		1E6F7616159F808A00A93206 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAF48A157B0DE900F8DF27 /* RootViewController.h */,
+				1EFAF48B157B0DE900F8DF27 /* RootViewController.m */,
+				1E1DAD251596C40F00EC6DB0 /* ProgressViewController.h */,
+				1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */,
+				1E864D7915899922002F12F0 /* ViewController.h */,
+				1E864D7A15899922002F12F0 /* ViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1EFAF469157B0DE900F8DF27 = {
+			isa = PBXGroup;
+			children = (
+				1EE1C4F015A178FA0011278F /* bicycle_retina.png */,
+				1EFAF47E157B0DE900F8DF27 /* BicycleDiet */,
+				1EFAF477157B0DE900F8DF27 /* Frameworks */,
+				1EFAF475157B0DE900F8DF27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EFAF475157B0DE900F8DF27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAF474157B0DE900F8DF27 /* BicycleDiet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EFAF477157B0DE900F8DF27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E3A218E159784770014D2CD /* libsqlite3.0.dylib */,
+				1EFAF478157B0DE900F8DF27 /* UIKit.framework */,
+				1EFAF47A157B0DE900F8DF27 /* Foundation.framework */,
+				1EFAF47C157B0DE900F8DF27 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EFAF47E157B0DE900F8DF27 /* BicycleDiet */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAF493157B0DEA00F8DF27 /* MainStoryboard.storyboard */,
+				1EFAF487157B0DE900F8DF27 /* AppDelegate.h */,
+				1EFAF488157B0DE900F8DF27 /* AppDelegate.m */,
+				1E3A219415978C540014D2CD /* DBController.h */,
+				1E3A219515978C540014D2CD /* DBController.m */,
+				1E6F7610159F7D2400A93206 /* Cells & Views */,
+				1E6F7613159F7E5000A93206 /* DataModels */,
+				1E6F7612159F7E1200A93206 /* Methods */,
+				1E6F7616159F808A00A93206 /* ViewControllers */,
+				1EFAF47F157B0DE900F8DF27 /* Supporting Files */,
+			);
+			path = BicycleDiet;
+			sourceTree = "<group>";
+		};
+		1EFAF47F157B0DE900F8DF27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAF484157B0DE900F8DF27 /* main.m */,
+				1E3A219E1597DC880014D2CD /* Default@2x.png */,
+				1E3A219B1597D3F40014D2CD /* Default.png */,
+				1E81F7C015829BE1004755AE /* icon.png */,
+				1E6F764015A0008D00A93206 /* siriwan.png */,
+				1E6F7629159FD46600A93206 /* Bicycle.png */,
+				1E6F7638159FE1FB00A93206 /* PadMaMa.png */,
+				1E6F7614159F7F2100A93206 /* ID-10080546.jpg */,
+				1EFAF49B157B1CEB00F8DF27 /* ID-10046769.jpg */,
+				1EFAF49C157B1CEB00F8DF27 /* ID-10072763.jpg */,
+				1EDE8C94159D7A4B0054C357 /* bicyclediet.db */,
+				1E3A21991597C3EB0014D2CD /* bicyclediet_tables */,
+				1EFAF480157B0DE900F8DF27 /* BicycleDiet-Info.plist */,
+				1EFAF481157B0DE900F8DF27 /* InfoPlist.strings */,
+				1EFAF486157B0DE900F8DF27 /* BicycleDiet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EFAF473157B0DE900F8DF27 /* BicycleDiet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EFAF498157B0DEA00F8DF27 /* Build configuration list for PBXNativeTarget "BicycleDiet" */;
+			buildPhases = (
+				1EFAF470157B0DE900F8DF27 /* Sources */,
+				1EFAF471157B0DE900F8DF27 /* Frameworks */,
+				1EFAF472157B0DE900F8DF27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BicycleDiet;
+			productName = BicycleDiet;
+			productReference = 1EFAF474157B0DE900F8DF27 /* BicycleDiet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EFAF46B157B0DE900F8DF27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1EFAF46E157B0DE900F8DF27 /* Build configuration list for PBXProject "BicycleDiet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1EFAF469157B0DE900F8DF27;
+			productRefGroup = 1EFAF475157B0DE900F8DF27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EFAF473157B0DE900F8DF27 /* BicycleDiet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EFAF472157B0DE900F8DF27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFAF483157B0DE900F8DF27 /* InfoPlist.strings in Resources */,
+				1EFAF495157B0DEA00F8DF27 /* MainStoryboard.storyboard in Resources */,
+				1EFAF49D157B1CEB00F8DF27 /* ID-10046769.jpg in Resources */,
+				1EFAF49E157B1CEB00F8DF27 /* ID-10072763.jpg in Resources */,
+				1E81F7C115829BE1004755AE /* icon.png in Resources */,
+				1E3A219A1597C3EB0014D2CD /* bicyclediet_tables in Resources */,
+				1E3A219D1597DC800014D2CD /* Default.png in Resources */,
+				1EDE8C95159D7A4B0054C357 /* bicyclediet.db in Resources */,
+				1E6F7615159F7F2100A93206 /* ID-10080546.jpg in Resources */,
+				1E6F762A159FD46700A93206 /* Bicycle.png in Resources */,
+				1E6F7639159FE1FB00A93206 /* PadMaMa.png in Resources */,
+				1E6F764115A0008D00A93206 /* siriwan.png in Resources */,
+				1EE1C4F115A178FA0011278F /* bicycle_retina.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EFAF470157B0DE900F8DF27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFAF485157B0DE900F8DF27 /* main.m in Sources */,
+				1EFAF489157B0DE900F8DF27 /* AppDelegate.m in Sources */,
+				1EFAF48C157B0DE900F8DF27 /* RootViewController.m in Sources */,
+				1E864D7B15899922002F12F0 /* ViewController.m in Sources */,
+				1E864D7F1589AEFE002F12F0 /* ProgressCell.m in Sources */,
+				1E4B58E3158BE86500A9457B /* CreateUserCell.m in Sources */,
+				1E4B58EC158D324F00A9457B /* SetGoal.m in Sources */,
+				1E871E82158ED04A00386892 /* weightlimit.m in Sources */,
+				1E2950DF159299C700FB9E52 /* ProgressView.m in Sources */,
+				1E2950E215929C0B00FB9E52 /* ProgressChartView.m in Sources */,
+				1E1DAD271596C40F00EC6DB0 /* ProgressViewController.m in Sources */,
+				1E3A219615978C540014D2CD /* DBController.m in Sources */,
+				1E3A21A51597F9870014D2CD /* Users.m in Sources */,
+				1E6F7619159F91AB00A93206 /* Exercise.m in Sources */,
+				1E6F761C159FB9CE00A93206 /* Activity.m in Sources */,
+				1E6F761F159FBE2600A93206 /* Inspiration.m in Sources */,
+				1E6F7622159FC1C600A93206 /* Food.m in Sources */,
+				1E6F7625159FC97100A93206 /* MealSnack.m in Sources */,
+				1E6F7628159FCBF400A93206 /* Question.m in Sources */,
+				1E6F763F159FFB3C00A93206 /* EmptyCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1EFAF481157B0DE900F8DF27 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EFAF482157B0DE900F8DF27 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1EFAF493157B0DEA00F8DF27 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EFAF494157B0DEA00F8DF27 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EFAF496157B0DEA00F8DF27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1EFAF497157B0DEA00F8DF27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EFAF499157B0DEA00F8DF27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BicycleDiet/BicycleDiet-Prefix.pch";
+				INFOPLIST_FILE = "BicycleDiet/BicycleDiet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1EFAF49A157B0DEA00F8DF27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BicycleDiet/BicycleDiet-Prefix.pch";
+				INFOPLIST_FILE = "BicycleDiet/BicycleDiet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EFAF46E157B0DE900F8DF27 /* Build configuration list for PBXProject "BicycleDiet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFAF496157B0DEA00F8DF27 /* Debug */,
+				1EFAF497157B0DEA00F8DF27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EFAF498157B0DEA00F8DF27 /* Build configuration list for PBXNativeTarget "BicycleDiet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFAF499157B0DEA00F8DF27 /* Debug */,
+				1EFAF49A157B0DEA00F8DF27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EFAF46B157B0DE900F8DF27 /* Project object */;
+}

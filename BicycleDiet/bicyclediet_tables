@@ -1,0 +1,39 @@
+sqlite> create table username (
+   ...> user_id int,
+   ...> user var[25],
+   ...> goal int,
+   ...> progress int);
+sqlite> create table status(
+   ...> user_id int,
+   ...> action var(25),
+   ...> time var [25],
+   ...> date var[25],
+   ...> points int);
+sqlite> create table food (
+   ...> name var[50],
+   ...> type var[50],
+   ...> is_snack bit,
+   ...> is meal bit,
+   ...> calories_vol int,
+   ...> description var[200],
+   ...> image blob);
+
+sqlite> create table exercise(
+   ...> name var[50],
+   ...> description var[200],
+   ...> image blob);
+sqlite> create table food (
+   ...> name var[50],
+   ...> type var[50],
+   ...> is_snack bit,
+   ...> is_meal bit,
+   ...> calories_vol int,
+   ...> description var[200],
+   ...> image blob);
+sqlite> create table inspiration(
+   ...> personality_id int,
+   ...> message var[200]);
+sqlite> create table personality(
+   ...> personality_id int,
+   ...> personality_name var[25],
+   ...> image blob);
