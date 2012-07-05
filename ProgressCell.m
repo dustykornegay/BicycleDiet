@@ -10,6 +10,7 @@
 
 @implementation ProgressCell
 @synthesize username = _username;
+@synthesize diet, exercise, total;
 @synthesize diet_todaysprogress;
 @synthesize exercise_todaysprogress;
 @synthesize totalprogress;

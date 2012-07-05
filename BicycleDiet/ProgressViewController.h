@@ -22,5 +22,8 @@
 @property (nonatomic,retain) IBOutlet UILabel *totalpoints_earned;
 @property (nonatomic, retain) IBOutlet UILabel *totalpoints_earnedtoday;
 
+@property (nonatomic, retain) IBOutlet UIProgressView *exerciseProgress;
+@property (nonatomic, retain) IBOutlet UIProgressView *dietProgress;
+@property (nonatomic, retain) IBOutlet UIProgressView *totalProgress;
 
 @end

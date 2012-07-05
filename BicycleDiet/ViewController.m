@@ -20,6 +20,8 @@
 @synthesize userlist;
 @synthesize name = _name;
 
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -128,7 +130,17 @@
     Users *cellValue = [userlist objectAtIndex:indexPath.row -1];
 
     cell.username.text = cellValue.user;
+        
+        float temp = (float) cellValue.total_progress / (float) cellValue.total_goal;
+        
+        cell.totalprogress.progress = temp;
+        cell.exercise_todaysprogress.progress = 0;
+        cell.diet_todaysprogress.progress = 0;
     
+        cell.diet.text = @"diet Goal";
+        cell.exercise.text = @"exerciseGoal";
+        cell.total.text = [[NSNumber alloc] initWithInt: cellValue.total_goal].stringValue ;
+        
         return cell;
     }else {
     

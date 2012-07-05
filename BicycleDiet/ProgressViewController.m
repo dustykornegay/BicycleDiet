@@ -20,6 +20,10 @@
 @synthesize totalpoints_earned;
 @synthesize totalpoints_earnedtoday;
 
+@synthesize exerciseProgress;
+@synthesize dietProgress;
+@synthesize totalProgress;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

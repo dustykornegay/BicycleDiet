@@ -15,4 +15,6 @@
 @property (nonatomic,retain) NSArray * userlist;
 @property (nonatomic,strong) NSArray * name;
 
+
+
 @end
