@@ -98,12 +98,12 @@
         NSLog (@"Database opened");
         
 		// Setup the SQL Statement and compile it for faster access
-        const char *sqlStatement = "select user_id, user, goal, progress from username where user_id = 0";
+        
         
 		sqlite3_stmt *compiledStatement;
          
         
-		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
