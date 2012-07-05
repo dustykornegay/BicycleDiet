@@ -74,7 +74,7 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [userlist count] + 1;
+    return [userlist count] + 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,7 +100,7 @@
         }
         
         return cell0;
-    }else {
+    }else if (indexPath.row < [userlist count] +1){
     
     // configure ProgressCells
     static NSString *CellIdentifier = @"UserProgress";
@@ -110,17 +110,19 @@
         cell = [[ProgressCell alloc] initWithStyle:UITableViewCellStyleDefault 
                                       reuseIdentifier:CellIdentifier];
         
-    }
+    } 
+        
+   
     // Configure the cell...
     NSString *cellValue = [userlist objectAtIndex:indexPath.row -1];
 
     cell.username.text = cellValue;
     
         return cell;
-    }
+    }else {
     
     // configure Empty Cell
-    static NSString *CellIdentifier = @"UserProgress";
+    static NSString *CellIdentifier = @"EmptyCell";
     EmptyCell *emptycell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (emptycell == nil) {
@@ -128,10 +130,10 @@
                                    reuseIdentifier:CellIdentifier];
         
     }
-          
+    return emptycell;      
+    }
     
     
-    return emptycell;
 
 }
 
