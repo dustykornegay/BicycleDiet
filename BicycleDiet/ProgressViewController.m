@@ -47,8 +47,8 @@
    
     //TODO: update progress from data base
     
-    exerciseProgress.progress = 0.5;
-    dietProgress.progress = 0.9;
+    exerciseProgress.progress = (float)500/(float)1000;
+    dietProgress.progress = (float)500/(float)1000;;
     
     totalProgress.progress = (float) totalearned / (float) totalgoal;
     
