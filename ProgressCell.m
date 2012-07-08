@@ -7,6 +7,8 @@
 //
 
 #import "ProgressCell.h"
+#import "BicycleDietCommon.h"
+#import "AppDelegate.h"
 
 @implementation ProgressCell
 @synthesize username = _username;
@@ -14,6 +16,7 @@
 @synthesize diet_todaysprogress;
 @synthesize exercise_todaysprogress;
 @synthesize totalprogress;
+@synthesize user_id;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -32,6 +35,8 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+  
+    
 }
 
 

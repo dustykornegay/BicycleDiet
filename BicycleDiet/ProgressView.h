@@ -29,7 +29,7 @@
 @property (nonatomic, retain) IBOutlet UIProgressView *diet_todaysprogress;
 @property (nonatomic, retain) IBOutlet UIProgressView *totalprogress;
 
--(IBAction) doExerciseGoal_button;
+
 -(IBAction) doDietGoal_button;
 
 

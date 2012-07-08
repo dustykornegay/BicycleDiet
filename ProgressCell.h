@@ -19,6 +19,7 @@
 @property (nonatomic,strong) IBOutlet UILabel * diet;
 @property (nonatomic,strong) IBOutlet UILabel * exercise;
 @property (nonatomic,strong) IBOutlet UILabel * total;
+@property (nonatomic) int user_id;
 
 @property (nonatomic, retain) IBOutlet UIProgressView *exercise_todaysprogress;
 @property (nonatomic, retain) IBOutlet UIProgressView *diet_todaysprogress;

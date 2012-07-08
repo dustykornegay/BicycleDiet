@@ -7,8 +7,8 @@
 //
 
 #import "SetGoal.h"
-#import "weightlimit.h"
-#import "Constants.h"
+#import "BicycleDietCommon.h"
+
 
 @implementation SetGoal
 

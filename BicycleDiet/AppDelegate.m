@@ -13,6 +13,7 @@
 @synthesize window = _window;
 @synthesize points =_points;
 @synthesize user_array = _user_array;
+@synthesize user_id= _user_id;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

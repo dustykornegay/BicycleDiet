@@ -16,7 +16,10 @@
     int pointsEarned_exercise;
     int pointsEarned_quiz;
     int pointsEarned_total;
+    
+    int user_id;
 }
+@property int user_id;
 
 @property (nonatomic, retain) IBOutlet UILabel *totalgoal_points;
 @property (nonatomic,retain) IBOutlet UILabel *totalpoints_earned;
@@ -25,5 +28,7 @@
 @property (nonatomic, retain) IBOutlet UIProgressView *exerciseProgress;
 @property (nonatomic, retain) IBOutlet UIProgressView *dietProgress;
 @property (nonatomic, retain) IBOutlet UIProgressView *totalProgress;
+
+-(id)initWithUserId: (int) User_id;
 
 @end

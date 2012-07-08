@@ -122,10 +122,15 @@ NSLog( @"Get data from DB");
     
     objects = mydb.obj_array;
     
+    if (objects != nil){
     // walk through array and sum data values
    // for( int y = 0; y < [objects count]; y++){
         Activity * a =[objects objectAtIndex: 0];
-        sum += a.points; 
+        sum += a.points; }else {
+            sum = -2;
+        }
+    
+    
   //  }
     
     

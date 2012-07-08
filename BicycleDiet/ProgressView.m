@@ -8,7 +8,7 @@
 
 #import "ProgressView.h"
 #import "weightlimit.h"
-#import "DBController.h"
+
 
 @implementation ProgressView
 @synthesize totalgoal_points = _totalgoal_points;
@@ -47,18 +47,7 @@
 }
 */
 
--(IBAction) doExerciseGoal_button{
-  // Set goal at 0 to 1500 pts
-  // 1500 pts -> 3 pounds per week from exercise
-  // 45 minutes of intense exercise per day -> 750 calories 
-  // 60 minutes of intense exercise  -> 1000 calories
-  // 90 minutes of intense exercise -> 1500 calories
-    
-   // Intense exercise -> 16.5 cal /min
-   // Moderate exercise -> 12 cal / min 
-   // Light exercise -> 6 cal /min
-    
-}
+
 -(IBAction) doDietGoal_button{
     //Updates the pace of Diet to be realistic
     //Set goal form 0 to 1000 pts

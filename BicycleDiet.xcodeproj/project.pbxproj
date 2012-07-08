@@ -48,7 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E1DAD1D159656FE00EC6DB0 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; wrapsLines = 1; };
+		1E1DAD1D159656FE00EC6DB0 /* BicycleDietCommon.h */ = {isa = PBXFileReference; path = BicycleDietCommon.h; sourceTree = "<group>"; wrapsLines = 1; };
 		1E1DAD251596C40F00EC6DB0 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
 		1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		1E2950DD159299C700FB9E52 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		1E871E80158ED04A00386892 /* weightlimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weightlimit.h; sourceTree = "<group>"; };
 		1E871E81158ED04A00386892 /* weightlimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weightlimit.m; sourceTree = "<group>"; };
 		1EDE8C94159D7A4B0054C357 /* bicyclediet.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = bicyclediet.db; path = BicycleDiet/bicyclediet.db; sourceTree = SOURCE_ROOT; };
-		1EE1C4F015A178FA0011278F /* bicycle_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bicycle_retina.png; sourceTree = "<group>"; };
+		1EE1C4F015A178FA0011278F /* bicycle_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bicycle_retina.png; path = ../bicycle_retina.png; sourceTree = "<group>"; };
 		1EFAF474157B0DE900F8DF27 /* BicycleDiet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BicycleDiet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFAF478157B0DE900F8DF27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1EFAF47A157B0DE900F8DF27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,7 +152,7 @@
 		1E6F7612159F7E1200A93206 /* Methods */ = {
 			isa = PBXGroup;
 			children = (
-				1E1DAD1D159656FE00EC6DB0 /* Constants.h */,
+				1E1DAD1D159656FE00EC6DB0 /* BicycleDietCommon.h */,
 				1E871E80158ED04A00386892 /* weightlimit.h */,
 				1E871E81158ED04A00386892 /* weightlimit.m */,
 			);
@@ -196,7 +196,6 @@
 		1EFAF469157B0DE900F8DF27 = {
 			isa = PBXGroup;
 			children = (
-				1EE1C4F015A178FA0011278F /* bicycle_retina.png */,
 				1EFAF47E157B0DE900F8DF27 /* BicycleDiet */,
 				1EFAF477157B0DE900F8DF27 /* Frameworks */,
 				1EFAF475157B0DE900F8DF27 /* Products */,
@@ -242,6 +241,7 @@
 		1EFAF47F157B0DE900F8DF27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1EE1C4F015A178FA0011278F /* bicycle_retina.png */,
 				1EFAF484157B0DE900F8DF27 /* main.m */,
 				1E3A219E1597DC880014D2CD /* Default@2x.png */,
 				1E3A219B1597D3F40014D2CD /* Default.png */,

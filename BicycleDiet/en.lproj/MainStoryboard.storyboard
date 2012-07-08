@@ -720,7 +720,7 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <connections>
-                                    <segue destination="12" kind="push" id="QlH-qv-eXV"/>
+                                    <segue destination="12" kind="push" identifier="Plan" id="QlH-qv-eXV"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="UserProgress" rowHeight="147" id="Zrb-Pw-Xy2" customClass="ProgressCell">
@@ -805,7 +805,7 @@
                                     <outlet property="total" destination="aCr-On-rRT" id="b30-UH-mlG"/>
                                     <outlet property="totalprogress" destination="hH0-ik-0LV" id="j0P-Xi-VcG"/>
                                     <outlet property="username" destination="lVi-i3-wef" id="lLz-gk-lf8"/>
-                                    <segue destination="4gQ-Rx-AcU" kind="push" id="j32-a5-Ite"/>
+                                    <segue destination="4gQ-Rx-AcU" kind="push" identifier="Inspiration" id="j32-a5-Ite"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmptyCell" rowHeight="160" id="PUB-Uh-ycm" customClass="EmptyCell">
@@ -1266,7 +1266,7 @@
                                 </state>
                                 <connections>
                                     <action selector="doAcceptgoal_button" destination="13" eventType="touchUpInside" id="6hE-Ry-uRj"/>
-                                    <segue destination="4gQ-Rx-AcU" kind="push" id="vgy-mt-fCe"/>
+                                    <segue destination="4gQ-Rx-AcU" kind="push" identifier="Inspiration" id="vgy-mt-fCe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Goal Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="g7S-GU-db5">
@@ -1552,7 +1552,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressView.h"/>
             <relationships>
                 <relationship kind="action" name="doDietGoal_button"/>
-                <relationship kind="action" name="doExerciseGoal_button"/>
                 <relationship kind="outlet" name="DietGoal_button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="ExerciseGoal_button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
@@ -1604,6 +1603,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="j32-a5-Ite"/>
+        <segue reference="vgy-mt-fCe"/>
     </inferredMetricsTieBreakers>
 </document>

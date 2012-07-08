@@ -7,8 +7,7 @@
 //
 
 #import "DBController.h"
-#import "Users.h"
-#import "Activity.h"
+#import "BicycleDietCommon.h"
 
 @implementation DBController
 @synthesize a;

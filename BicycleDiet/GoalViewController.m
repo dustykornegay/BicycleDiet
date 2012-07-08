@@ -7,7 +7,7 @@
 //
 
 #import "GoalViewController.h"
-#import "weightlimit.h"
+#import "BicycleDietCommon.h"
 
 @interface GoalViewController ()
 

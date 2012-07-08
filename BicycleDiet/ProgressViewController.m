@@ -23,6 +23,7 @@
 @synthesize exerciseProgress;
 @synthesize dietProgress;
 @synthesize totalProgress;
+@synthesize user_id;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +31,16 @@
     if (self) {
         // Custom initialization
     }
+    return self;
+}
+
+-(id)initWithUserId: (int) User_id{
+    self = [super init];
+    
+    if(self){
+        self.user_id = User_id;
+    }
+    
     return self;
 }
 
@@ -41,16 +52,21 @@
     
     
     NSLog(@"ProgressView Loaded");
+    NSLog(@"%i",user_id);
     
-    int totalearned = [weightlimit GetPointsEarnedTotal: 0] ;
-    int totalgoal = [weightlimit GetPointsTotal_goal:0];
+    int totalearned = [weightlimit GetPointsEarnedTotal: user_id] ;
+    int totalgoal = [weightlimit GetPointsTotal_goal:user_id];
    
     //TODO: update progress from data base
     
     exerciseProgress.progress = (float)500/(float)1000;
     dietProgress.progress = (float)500/(float)1000;;
     
+    if ((totalgoal != 0)){
     totalProgress.progress = (float) totalearned / (float) totalgoal;
+    } else {
+        totalgoal = 0;
+    } 
     
     totalgoal_points.text = [[NSNumber alloc ]initWithInt:totalgoal ].stringValue;
        

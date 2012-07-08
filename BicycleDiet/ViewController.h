@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
 @interface ViewController : UITableViewController{
     NSMutableArray * userlist;
-    
- 
+    int user_id;
+  //  id<ADBannerViewDelegate>;
 }
 @property (nonatomic,retain) NSArray * userlist;
 @property (nonatomic,strong) NSArray * name;
+
+//bannerview objects
+@property (strong,nonatomic) ADBannerView *bannerView;
 
 
 

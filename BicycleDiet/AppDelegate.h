@@ -16,9 +16,11 @@
     NSMutableArray * exercise_array;
     NSMutableArray * snack_array;
     NSMutableArray * meal_array;
+    int user_id;
 }
 @property (strong, nonatomic) UIWindow *window;
 @property int points;
+@property int user_id;
 @property NSMutableArray * user_array;
 
 @end
