@@ -137,4 +137,79 @@ NSLog( @"Get data from DB");
 return sum;
 }
 
+
++(int) DaysToGoal: (int) CaloriesPerDay userId: (int) user_id {
+    int days = 90;
+    int totalGoal = 99999;
+    int currentPoints = -1;
+    
+    
+    //Get TotalGoal & Current points
+     
+    
+    //Subtract TotalGoal
+    days = (totalGoal - currentPoints) / CaloriesPerDay;
+    
+    return days;
+    
+}
+
++(int) QuarterPoundsbyDate:(int) CaloriesPerDay date: (NSDate *) goal{
+    int CaloriesPerQuarterPound = 875; 
+    int quarterPounds = 0; 
+    int days= 90;
+    
+    //Calendar required to use NSDateComponents
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+
+    //get todays date:
+    NSDate *today = [NSDate date];
+    
+    // days = (goal - today) using NSDateComponents
+    
+    NSDateComponents *components = [calendar components:NSDayCalendarUnit fromDate:today toDate:goal options:0];
+    
+    days = [components day];
+     
+    quarterPounds = (CaloriesPerDay * days) / CaloriesPerQuarterPound;
+
+    return quarterPounds;
+}
+
++(NSDate *) DayGoalAchieved: (int)CaloriesPerDay userId:(int) user_id{
+    NSDate *today = [NSDate date];
+    NSTimeInterval secondsPerDay = 24 * 60 * 60;
+    int days;
+
+    //Get days to Goal
+    days = [self DaysToGoal: CaloriesPerDay userId: user_id];
+    
+    // Calculate date after x days
+    NSDate *goalDay = [today dateByAddingTimeInterval: (days * secondsPerDay)];
+
+    return goalDay;
+}
+
++(int) CaloriesPerDay_exercise: (int) intensity  Duration: (int) minutes {
+    int calories = intensity * minutes;
+    
+    return calories;
+}
+
++(BOOL) PushDailyGoals: (int) user_id  Diet: (int)caloriesCut Exercise: (int) extraCaloriesBurned {
+    bool success = false;
+    
+    if ( TRUE /* if user exist in database */) { 
+        
+        //TODO: Set goals
+        // pseudoSQL: @"INSERT Values( caloriesCut, extraCaloriesBurned) INTO users where user_id = user_id  ,) 
+    
+        
+        
+         success = TRUE;
+    }
+    
+    return success;
+}
+
 @end

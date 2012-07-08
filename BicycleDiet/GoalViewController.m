@@ -7,12 +7,15 @@
 //
 
 #import "GoalViewController.h"
+#import "weightlimit.h"
 
 @interface GoalViewController ()
 
 @end
 
 @implementation GoalViewController
+@synthesize user_id, dietGoal, exerciseGoal, goalreached_estimate; 
+@synthesize hoursExercise, intensityExercise, caloriesDiet;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +39,11 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // load new exercise/diet goal values in the database by user_id
+    
+    //TODO:Write the new goals out to the database by user_id.
+    [weightlimit PushDailyGoals: (int) user_id Diet: (int) dietGoal Exercise: (int) exerciseGoal];
+    
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
