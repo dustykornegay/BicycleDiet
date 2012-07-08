@@ -29,5 +29,5 @@
 +(int) QuarterPoundsbyDate:(int) CaloriesPerDay date: (NSDate *) goal;
 +(NSDate *) DayGoalAchieved: (int)CaloriesPerDay userId:(int) user_id;
 
-+(BOOL) PushDailyGoals: (int) user_id  Diet: (int)caloriesCut Exercise: (int) extraCaloriesBurned;
++(BOOL) PushDailyGoals: (int) user_id  Diet: (int)caloriesCut Exercise: (int) extraCaloriesBurned ExerciseDuration: (int) minutes;
 @end

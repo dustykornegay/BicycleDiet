@@ -196,7 +196,7 @@ return sum;
     return calories;
 }
 
-+(BOOL) PushDailyGoals: (int) user_id  Diet: (int)caloriesCut Exercise: (int) extraCaloriesBurned {
++(BOOL) PushDailyGoals: (int) user_id  Diet: (int)caloriesCut Exercise: (int) extraCaloriesBurned ExerciseDuration: (int) minutes{
     bool success = false;
     
     if ( TRUE /* if user exist in database */) { 

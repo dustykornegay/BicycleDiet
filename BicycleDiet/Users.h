@@ -16,6 +16,7 @@
     int total_progress;
     int dailyExercise_goal;
     int dailyExercise_progress;
+    int dailyExercise_duration;
     int dailyDiet_goal;
     int dailyDiet_progress;
     
