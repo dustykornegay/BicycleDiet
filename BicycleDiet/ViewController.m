@@ -41,14 +41,7 @@
 {
     [super viewDidLoad];
     
-#if 0    
-    //initialize BannerAd
-    self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    
-    self.bannerView.requiredContentSizeIdentifiers  = [NSSet setWithObjects: ADBannerContentSizeIdentifierPortrait, ADBannerContentSizeIdentifierLandscape, nil];
-    
-    self.bannerView.delegate = self;
-#endif
+
     
     //ToDo make a call to the databse here to load this array with users
     // sql = "select user_id, user, ... from username"
@@ -179,11 +172,7 @@
 
 }
 
-#if 0
--(void) bannerViewDidiLoadAd:  (ADBannerView *) banner {
-    UITableView.tableHeaderView =  bannerView;
-}
-#endif
+ 
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -225,22 +214,6 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    if ([userlist count] <= indexPath.row >= 1  ){
-    
-        Users * userAtTableview = [[Users alloc] init ];
-        userAtTableview = [userlist objectAtIndex: indexPath.row -1] ;
-        
-        user_id = userAtTableview.user_id;
-        
-   //     ProgressViewController *nextView = [[ProgressViewController alloc] initWithUserId: user_id];
-        
-   // [self  presentModalViewController:nextView animated:NO];
-    
-     
-    }
-}
+
 
 @end

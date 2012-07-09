@@ -37,8 +37,11 @@
 -(id)initWithUserId: (int) User_id{
     self = [super init];
     
+    [super viewDidLoad];
+    
     if(self){
         self.user_id = User_id;
+     
     }
     
     return self;
