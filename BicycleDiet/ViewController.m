@@ -8,6 +8,7 @@
 
 //Controllers
 #import "ViewController.h"
+#import "AppDelegate.h"
 #import "DBController.h"
 #import "ProgressViewController.h"
 
@@ -171,6 +172,17 @@
     
 
 }
+
+
+//Problem this runs after the segue
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    Users * selectedUser =[userlist objectAtIndex: indexPath.row -1];
+    appDelegate.user_id =  selectedUser.user_id;
+    
+    return indexPath;
+}
+
 
  
 /*

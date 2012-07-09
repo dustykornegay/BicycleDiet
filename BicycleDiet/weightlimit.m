@@ -90,7 +90,9 @@
     // where user_id == user_num
     //sql = "Select ?points? from status where user_id = ?user_num?
      
-    NSString * sql = @"Select * from status";
+    NSString * sql = [[NSString alloc] initWithFormat: @"Select * from status where user_id = %i", user_num];
+    NSLog(@"%@",sql);
+    
     int total =[self Database_select: sql];
    
     
@@ -115,25 +117,21 @@ DBController *mydb = [[DBController alloc] init];
 int sum = 0;
 
 if([mydb DBdatafieldToActivityArray: sql_command ]){
+// TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
     
-    // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
 NSLog( @"Get data from DB");
     NSMutableArray * objects;
     
     objects = mydb.obj_array;
     
-    if (objects != nil){
+    if (objects.count != 0){
     // walk through array and sum data values
    // for( int y = 0; y < [objects count]; y++){
         Activity * a =[objects objectAtIndex: 0];
         sum += a.points; }else {
             sum = -2;
         }
-    
-    
   //  }
-    
-    
     
 }else {
     NSLog (@"DBdatafiledToObjectArray FAILED in +Database_select");

@@ -805,7 +805,7 @@
                                     <outlet property="total" destination="aCr-On-rRT" id="b30-UH-mlG"/>
                                     <outlet property="totalprogress" destination="hH0-ik-0LV" id="j0P-Xi-VcG"/>
                                     <outlet property="username" destination="lVi-i3-wef" id="lLz-gk-lf8"/>
-                                    <segue destination="4gQ-Rx-AcU" kind="push" identifier="Inspiration" id="j32-a5-Ite"/>
+                                    <segue destination="4gQ-Rx-AcU" kind="push" identifier="Inspiration" id="YXw-pN-G4D"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmptyCell" rowHeight="160" id="PUB-Uh-ycm" customClass="EmptyCell">
@@ -1603,6 +1603,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="j32-a5-Ite"/>
+        <segue reference="YXw-pN-G4D"/>
     </inferredMetricsTieBreakers>
 </document>
