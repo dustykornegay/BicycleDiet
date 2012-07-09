@@ -126,12 +126,13 @@ NSLog( @"Get data from DB");
     
     if (objects.count != 0){
     // walk through array and sum data values
-   // for( int y = 0; y < [objects count]; y++){
+    for( int y = 0; y < [objects count]; y++){
         Activity * a =[objects objectAtIndex: 0];
-        sum += a.points; }else {
+        sum += a.points; }
+    }else {
             sum = -2;
         }
-  //  }
+    
     
 }else {
     NSLog (@"DBdatafiledToObjectArray FAILED in +Database_select");
