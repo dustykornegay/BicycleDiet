@@ -720,7 +720,7 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <connections>
-                                    <segue destination="12" kind="modal" identifier="Plan" modalTransitionStyle="coverVertical" id="QlH-qv-eXV"/>
+                                    <segue destination="12" kind="push" identifier="Plan" id="QlH-qv-eXV"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserProgress" rowHeight="147" id="Zrb-Pw-Xy2" customClass="ProgressCell">
@@ -1173,7 +1173,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Bicycle Diet" title="Bicycle Diet" id="12" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13" userLabel="BicycleDiet_StartForm" customClass="SetGoal">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" id="Sxk-pm-4Zg" userLabel="Txt_Name">
