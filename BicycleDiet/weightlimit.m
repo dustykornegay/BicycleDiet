@@ -66,7 +66,7 @@
 + (int) GetPointsTotal_goal: (int) user_num{
     DBController *mydb = [[DBController alloc] init];
     
-    NSString * sql = @"select * from username where user_id= 0";
+    NSString * sql = [[NSString alloc] initWithFormat: @"Select * from users where user_id = %i", user_num];
     
     if([mydb DBdatafieldToObjectArray: sql ]){
         
@@ -76,7 +76,7 @@
         
         temp = [mydb.obj_array lastObject];
         
-        int temp_points =  temp.total_progress;
+        int temp_points =  temp.total_goal;
         
         return temp_points;
     }
@@ -91,7 +91,7 @@
     //sql = "Select ?points? from status where user_id = ?user_num?
      
     NSString * sql = [[NSString alloc] initWithFormat: @"Select * from status where user_id = %i", user_num];
-    NSLog(@"%@",sql);
+    NSLog(@"User ID = %@",sql);
     
     int total =[self Database_select: sql];
    
@@ -127,7 +127,7 @@ NSLog( @"Get data from DB");
     if (objects.count != 0){
     // walk through array and sum data values
     for( int y = 0; y < [objects count]; y++){
-        Activity * a =[objects objectAtIndex: 0];
+        Activity * a =[objects objectAtIndex: y];
         sum += a.points; }
     }else {
             sum = -2;

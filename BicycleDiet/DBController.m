@@ -171,15 +171,16 @@ sqlite3_close(database);
 				
                 // TODO:Update this with a select statement so the correct onject type is loaded
                 
-                int activity_id = sqlite3_column_int(compiledStatement, 1);
-				int type = sqlite3_column_int(compiledStatement, 2);
-
-				int points= sqlite3_column_int(compiledStatement, 3);
+                
+				int type = sqlite3_column_int(compiledStatement, 1);
+               // NSString * activity_id = sqlite3_column_int(compiledStatement, 2);
+                
+				int points= sqlite3_column_int(compiledStatement, 4);
                
-                NSLog( @"ID: %i  Type: %i Points: %i", activity_id, type, points); 
+                NSLog( @"ID:   Type: %i Points: %i", type, points); 
                 
 				// Create a new animal object with the data from the database
-				Activity *an_activity = [[Activity alloc] initWithTimeStamp:nil andId:activity_id andType: type andPoints:points];
+				Activity *an_activity = [[Activity alloc] initWithTimeStamp:nil andId:0 andType: type andPoints:points];
 				
                 
 				// Add the animal object to the animals Array

@@ -59,7 +59,7 @@
     NSLog(@"ProgressView Loaded");
     NSLog(@"%i",user_id);
     
-    int totalearned = [weightlimit GetPointsEarnedTotal: user_id] ;
+    int totalearned = [weightlimit GetPointsEarnedTotal: user_id];
     int totalgoal = [weightlimit GetPointsTotal_goal:user_id];
    
     //TODO: update progress from data base
