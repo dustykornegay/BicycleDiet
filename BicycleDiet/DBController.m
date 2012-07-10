@@ -80,7 +80,7 @@
     
 }
 
--(BOOL)  DBdatafieldToObjectArray: (NSString *) sql_com{
+-(BOOL)  DBdatafieldToUserArray: (NSString *) sql_com{
 	
 	BOOL success = [self CheckOrCreateDB];
         
@@ -203,7 +203,39 @@ sqlite3_close(database);
     return success;
 }
 
+-(BOOL) DBPush: (NSString *) sql_com{
+    BOOL success = [self CheckOrCreateDB];
+    
+    // Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+        sqlite3_extended_result_codes(database, 1);
+        
+        NSLog (@"Database opened for insert");
+        
+		// Setup the SQL Statement and compile it for faster access
+        
+        
+		sqlite3_stmt *compiledStatement;
+        
+        
+		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
+            //push data into the database is not dependent on a data object
+            //it doesn't load any data for later use
+            success = TRUE;
+		}else {
+            success = FALSE;
+        }
+        
+        
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+    }
+    
+    
+    sqlite3_close(database);
+    return success;
 
+}
 
 
 -(void) LoadDatabaseFromFile: (NSString *) filename {

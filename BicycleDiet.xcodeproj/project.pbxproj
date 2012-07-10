@@ -48,7 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E1DAD1D159656FE00EC6DB0 /* BicycleDietCommon.h */ = {isa = PBXFileReference; path = BicycleDietCommon.h; sourceTree = "<group>"; wrapsLines = 1; };
+		1E1DAD1D159656FE00EC6DB0 /* BicycleDietCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BicycleDietCommon.h; sourceTree = "<group>"; wrapsLines = 1; };
 		1E1DAD251596C40F00EC6DB0 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
 		1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		1E2950DD159299C700FB9E52 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
@@ -131,8 +131,6 @@
 		1E6F7610159F7D2400A93206 /* Cells & Views */ = {
 			isa = PBXGroup;
 			children = (
-				1E3E659E15A6B90300601EFE /* GoalViewController.h */,
-				1E3E659F15A6B90400601EFE /* GoalViewController.m */,
 				1E4B58E1158BE86500A9457B /* CreateUserCell.h */,
 				1E4B58E2158BE86500A9457B /* CreateUserCell.m */,
 				1E6F763D159FFB3C00A93206 /* EmptyCell.h */,
@@ -183,6 +181,8 @@
 		1E6F7616159F808A00A93206 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1E3E659E15A6B90300601EFE /* GoalViewController.h */,
+				1E3E659F15A6B90400601EFE /* GoalViewController.m */,
 				1EFAF48A157B0DE900F8DF27 /* RootViewController.h */,
 				1EFAF48B157B0DE900F8DF27 /* RootViewController.m */,
 				1E1DAD251596C40F00EC6DB0 /* ProgressViewController.h */,

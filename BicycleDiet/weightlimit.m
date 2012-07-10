@@ -68,7 +68,7 @@
     
     NSString * sql = [[NSString alloc] initWithFormat: @"Select * from users where user_id = %i", user_num];
     
-    if([mydb DBdatafieldToObjectArray: sql ]){
+    if([mydb DBdatafieldToUserArray: sql ]){
         
         // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
         Users *temp= [[Users  alloc]init];
@@ -201,19 +201,23 @@ return sum;
 }
 
 +(BOOL) PushDailyGoals: (int) user_id  Diet: (int)caloriesCut Exercise: (int) extraCaloriesBurned ExerciseDuration: (int) minutes{
+    DBController *mydb = [[DBController alloc] init];
     bool success = false;
     
     if ( TRUE /* if user exist in database */) { 
         
         //TODO: Set goals
-        // pseudoSQL: @"INSERT Values( caloriesCut, extraCaloriesBurned) INTO users where user_id = user_id  ,) 
+        // pseudoSQL: @"Update Values( caloriesCut, extraCaloriesBurned) INTO users where user_id = user_id  ,) 
     
+        NSString * sql_command = [[NSString alloc] initWithFormat: @"Update username set exerciseGoal = %i, exerciseDuration = %i, dietGoal = %i from status where user_id = %i", extraCaloriesBurned , minutes ,caloriesCut, user_id];
         
-        
+        if([mydb DBPush: sql_command]){        
          success = TRUE;
-    }
+        }else {
+            success = FALSE;
+        }
     
+    }
     return success;
 }
-
 @end

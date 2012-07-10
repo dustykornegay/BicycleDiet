@@ -25,8 +25,10 @@
 
 
 
--(BOOL) DBdatafieldToObjectArray:  (NSString *) sql_com ;
+-(BOOL) DBdatafieldToUserArray:  (NSString *) sql_com ;
 -(BOOL) DBdatafieldToActivityArray:  (NSString *) sql_com ;
+
+-(BOOL) DBPush: (NSString *) sql_com; 
 
 -(void) LoadDatabaseFromFile: (NSString *) filename;
 

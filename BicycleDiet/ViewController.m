@@ -51,7 +51,7 @@
     DBController *mydb = [[DBController alloc] init];
     
     
-    if([mydb DBdatafieldToObjectArray: @"select * from username " ]){
+    if([mydb DBdatafieldToUserArray: @"select * from username " ]){
         
         // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
       
@@ -176,10 +176,11 @@
 
 //Problem this runs after the segue
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ((indexPath.row -1) > 0){
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     Users * selectedUser =[userlist objectAtIndex: indexPath.row -1];
     appDelegate.user_id =  selectedUser.user_id;
-    
+    }
     return indexPath;
 }
 
