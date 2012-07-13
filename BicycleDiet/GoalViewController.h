@@ -16,6 +16,12 @@
     NSDate * goalreached_estimate;
     UILabel * ETA;
     UILabel * WeightAtDate;
+    
+    UISlider *caloriesDiet ;
+    UISlider *hoursExercise;
+    UISlider *intensityExercise;
+    
+    int exerciseGoal_intensity;
 }
 
 @property (nonatomic) int user_id;
@@ -32,6 +38,9 @@
 @property (nonatomic,retain) IBOutlet UILabel * WeightAtDate;
 
 
+-(IBAction) sliderDiet: (id) sender;
+-(IBAction) sliderHoursExercise: (id)sender;
+-(IBAction) sliderIntensityExercise:(id)sender;
 
 - (IBAction) SetGoals;
 
