@@ -33,6 +33,7 @@
 		1E864D7B15899922002F12F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7A15899922002F12F0 /* ViewController.m */; };
 		1E864D7F1589AEFE002F12F0 /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7E1589AEFE002F12F0 /* ProgressCell.m */; };
 		1E871E82158ED04A00386892 /* weightlimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E871E81158ED04A00386892 /* weightlimit.m */; };
+		1E8E7C6B15B0D58600F86BF8 /* ExercisingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8E7C6A15B0D58600F86BF8 /* ExercisingViewController.m */; };
 		1EDE8C95159D7A4B0054C357 /* bicyclediet.db in Resources */ = {isa = PBXBuildFile; fileRef = 1EDE8C94159D7A4B0054C357 /* bicyclediet.db */; };
 		1EE1C4F115A178FA0011278F /* bicycle_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE1C4F015A178FA0011278F /* bicycle_retina.png */; };
 		1EFAF479157B0DE900F8DF27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFAF478157B0DE900F8DF27 /* UIKit.framework */; };
@@ -94,6 +95,8 @@
 		1E864D7E1589AEFE002F12F0 /* ProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressCell.m; path = ../ProgressCell.m; sourceTree = "<group>"; };
 		1E871E80158ED04A00386892 /* weightlimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weightlimit.h; sourceTree = "<group>"; };
 		1E871E81158ED04A00386892 /* weightlimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weightlimit.m; sourceTree = "<group>"; };
+		1E8E7C6915B0D58600F86BF8 /* ExercisingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisingViewController.h; sourceTree = "<group>"; };
+		1E8E7C6A15B0D58600F86BF8 /* ExercisingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisingViewController.m; sourceTree = "<group>"; };
 		1EDE8C94159D7A4B0054C357 /* bicyclediet.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = bicyclediet.db; path = BicycleDiet/bicyclediet.db; sourceTree = SOURCE_ROOT; };
 		1EE1C4F015A178FA0011278F /* bicycle_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bicycle_retina.png; path = ../bicycle_retina.png; sourceTree = "<group>"; };
 		1EFAF474157B0DE900F8DF27 /* BicycleDiet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BicycleDiet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +192,8 @@
 				1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */,
 				1E864D7915899922002F12F0 /* ViewController.h */,
 				1E864D7A15899922002F12F0 /* ViewController.m */,
+				1E8E7C6915B0D58600F86BF8 /* ExercisingViewController.h */,
+				1E8E7C6A15B0D58600F86BF8 /* ExercisingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				1E6F7628159FCBF400A93206 /* Question.m in Sources */,
 				1E6F763F159FFB3C00A93206 /* EmptyCell.m in Sources */,
 				1E3E65A015A6B90400601EFE /* GoalViewController.m in Sources */,
+				1E8E7C6B15B0D58600F86BF8 /* ExercisingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
