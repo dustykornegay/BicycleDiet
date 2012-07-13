@@ -7,6 +7,7 @@
 //
 
 #import "GoalViewController.h"
+#import "AppDelegate.h"
 #import "BicycleDietCommon.h"
 
 @interface GoalViewController ()
@@ -35,9 +36,20 @@
     //Check database for goal settings fo this user_id
     // if do not exist set to 0.4 ( 1 hr moderate exercise), 0.5(500 cal /day)
     
-    //Load Goals from stored values
+    if (0){
+       //Load Goals from stored values 
         
-    
+    }else{
+        //set goals to defaults
+        dietGoal = 900;
+        exerciseGoal_intensity = 9; // moderate intensity (7-17) calories per minute
+        exerciseGoal_minutes   = 30;
+        exerciseGoal = exerciseGoal_minutes * exerciseGoal_intensity;
+        
+    }
+        
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    user_id = appDelegate.user_id ;
     
     //Update View
     [self SetGoals];
@@ -77,6 +89,10 @@
     
     //set estimated date you will meet goal;
     ETA.text = @"July 25, 2010";
+    
+    [hoursExercise  setValue: (float)exerciseGoal_minutes / 60];
+    [intensityExercise  setValue: exerciseGoal_intensity];
+    [caloriesDiet  setValue: dietGoal];
     
 }
 
