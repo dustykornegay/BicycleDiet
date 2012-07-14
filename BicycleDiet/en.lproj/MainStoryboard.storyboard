@@ -1098,7 +1098,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fQI-HG-dLM">
-                                <rect key="frame" x="187" y="233" width="122" height="37"/>
+                                <rect key="frame" x="153" y="233" width="104" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Submit Points">
@@ -1123,6 +1123,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Points Earned" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QdD-a5-pel">
+                                <rect key="frame" x="259" y="233" width="55" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1131,31 +1138,83 @@
             </objects>
             <point key="canvasLocation" x="1714" y="592"/>
         </scene>
-        <!--View Controller - Exercise Timer-->
+        <!--Exercising View Controller - Exercise Timer-->
         <scene sceneID="sww-Je-8kH">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrD-C5-D9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="aqo-1O-lOk" sceneMemberID="viewController">
+                <viewController id="aqo-1O-lOk" customClass="ExercisingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qHy-3o-pXx">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nsL-Eh-wEe">
-                                <rect key="frame" x="83" y="245" width="155" height="37"/>
+                                <rect key="frame" x="60" y="309" width="200" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Pause">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="PRESS TO REST">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="StartPauseTimer:" destination="aqo-1O-lOk" eventType="touchUpInside" id="whZ-CN-G53"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time  HH:MM:SS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="lW7-JJ-jNd">
-                                <rect key="frame" x="83" y="95" width="155" height="85"/>
+                                <rect key="frame" x="68" y="93" width="155" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="6" maxValue="17" id="yBD-83-hXC">
+                                <rect key="frame" x="62" y="215" width="196" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderIntensity:" destination="aqo-1O-lOk" eventType="touchUpInside" id="l8D-6r-rNU"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="9aT-Bf-bWU">
+                                <rect key="frame" x="68" y="20" width="205" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Low" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="V6R-Qb-BfG">
+                                <rect key="frame" x="60" y="235" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="High" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Sfw-Kg-3Lc">
+                                <rect key="frame" x="226" y="235" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Medium" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="aGA-fT-uk1">
+                                <rect key="frame" x="128" y="235" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Exercise Intensity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Bk2-YH-eJH">
+                                <rect key="frame" x="83" y="186" width="157" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="bTG-zl-iFD">
+                                <rect key="frame" x="77" y="49" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1163,6 +1222,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Exercise Timer" id="6WV-pd-fRg"/>
+                    <connections>
+                        <outlet property="points_label" destination="bTG-zl-iFD" id="l9S-U7-fjh"/>
+                        <outlet property="stopwatch" destination="lW7-JJ-jNd" id="7Z4-Nb-U2Y"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2155" y="592"/>
@@ -1517,6 +1580,99 @@
         <image name="PadMaMa.png" width="240" height="320"/>
         <image name="siriwan.png" width="320" height="162"/>
     </resources>
+    <classes>
+        <class className="CreateUserCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateUserCell.h"/>
+        </class>
+        <class className="EmptyCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EmptyCell.h"/>
+        </class>
+        <class className="ExercisingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercisingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="StartPauseTimer:"/>
+                <relationship kind="outlet" name="counter" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="points_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stopwatch" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GoalViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SetGoals"/>
+                <relationship kind="action" name="sliderDiet:"/>
+                <relationship kind="action" name="sliderHoursExercise:"/>
+                <relationship kind="action" name="sliderIntensityExercise:"/>
+                <relationship kind="outlet" name="DateSelector" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="ETA" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="WeightAtDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="caloriesDiet" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="hoursExercise" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="ProgressCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="diet" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exercise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="total" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="username" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ProgressView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressView.h"/>
+            <relationships>
+                <relationship kind="action" name="doDietGoal_button"/>
+                <relationship kind="outlet" name="DietGoal_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="ExerciseGoal_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="inspiration" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedTotal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Diet" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Exercise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Total" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalgoal_points" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalprogress" candidateClass="UIProgressView"/>
+            </relationships>
+        </class>
+        <class className="ProgressViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dietProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exerciseProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="totalProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="totalgoal_points" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalpoints_earned" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalpoints_earnedtoday" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SetGoal" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetGoal.h"/>
+            <relationships>
+                <relationship kind="action" name="doAcceptgoal_button"/>
+                <relationship kind="action" name="doGender_button:"/>
+                <relationship kind="action" name="doSuggestgoal_button"/>
+                <relationship kind="action" name="sliderchanged:"/>
+                <relationship kind="outlet" name="acceptgoal_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="current_weight" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gender_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="goal" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="height_ft_field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="height_in_field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="namefield" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="suggestgoal_button" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
