@@ -66,7 +66,7 @@
 + (int) GetPointsTotal_goal: (int) user_num{
     DBController *mydb = [[DBController alloc] init];
     
-    NSString * sql = [[NSString alloc] initWithFormat: @"Select * from users where user_id = %i", user_num];
+    NSString * sql = [[NSString alloc] initWithFormat: @"Select * from username where user_id = %i", user_num];
     
     if([mydb DBdatafieldToUserArray: sql ]){
         
