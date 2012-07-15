@@ -1046,7 +1046,7 @@
         <scene sceneID="Z7d-tY-os2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgk-Wn-s8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="61b-DY-JHd" userLabel="ExcerciseView" sceneMemberID="viewController">
+                <viewController id="61b-DY-JHd" userLabel="ExcerciseView" customClass="ExerciseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJE-E4-b8z">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1107,6 +1107,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="SubmitPoints:" destination="61b-DY-JHd" eventType="touchUpInside" id="JIA-e7-aZW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bicycling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nKM-o5-ReJ">
                                 <rect key="frame" x="6" y="10" width="145" height="21"/>
@@ -1122,10 +1125,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Points Earned" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QdD-a5-pel">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Points Earned" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QdD-a5-pel">
                                 <rect key="frame" x="259" y="233" width="55" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1133,6 +1136,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Exercise" id="P08-QS-LBp"/>
+                    <connections>
+                        <outlet property="unsubmittedpoints" destination="QdD-a5-pel" id="XVf-6m-rnq"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1714" y="592"/>
@@ -1585,6 +1591,13 @@
         </class>
         <class className="EmptyCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EmptyCell.h"/>
+        </class>
+        <class className="ExerciseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SubmitPoints:"/>
+                <relationship kind="outlet" name="unsubmittedpoints" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="ExercisingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercisingViewController.h"/>

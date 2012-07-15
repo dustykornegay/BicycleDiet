@@ -15,10 +15,11 @@
 @synthesize user_array = _user_array;
 @synthesize user_id= _user_id;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    user_id= 0;
+    user_id= -1;
     return YES;
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "ExercisingViewController.h"
+#import "AppDelegate.h"
 
 @interface ExercisingViewController ()
 
@@ -48,9 +49,15 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     
+    
+    
+    
+}
+
+- (void) viewWillDisappear:(BOOL)animated   {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.points =  points; 
     // TODO: Save the Exercise name, id &  points in the Activity database under the user_id
-    
-    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
