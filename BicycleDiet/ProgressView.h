@@ -21,8 +21,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *pointsEarnedTotal;
 @property (nonatomic, retain) IBOutlet UILabel *inspiration;
 
-@property (nonatomic, retain) IBOutlet UIButton *ExerciseGoal_button;
-@property (nonatomic, retain) IBOutlet UIButton *DietGoal_button;
+
+@property (nonatomic, retain) IBOutlet UIButton *Goal_button;
 
 
 @property (nonatomic, retain) IBOutlet UIProgressView *exercise_todaysprogress;
@@ -30,7 +30,7 @@
 @property (nonatomic, retain) IBOutlet UIProgressView *totalprogress;
 
 
--(IBAction) doDietGoal_button;
+
 
 
 @end

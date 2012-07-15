@@ -286,8 +286,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doDietGoal_button" destination="rEM-lb-aBd" eventType="touchUpInside" id="fG7-SO-oVb"/>
-                                    <segue destination="cyp-wE-nOZ" kind="push" id="oOh-9l-gxq"/>
+                                    <segue destination="cyp-wE-nOZ" kind="push" id="7RR-48-WU2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GOAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ib4-Bd-71a">
@@ -344,7 +343,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
-                            <outlet property="DietGoal_button" destination="aYW-qU-pKG" id="LrC-yF-2Jf"/>
+                            <outlet property="Goal_button" destination="aYW-qU-pKG" id="h0K-ri-78d"/>
                             <outlet property="diet_todaysprogress" destination="DOe-rU-c2g" id="uH2-A8-Jd2"/>
                             <outlet property="exercise_todaysprogress" destination="stv-QY-DHt" id="271-CW-3My"/>
                             <outlet property="inspiration" destination="xUZ-ch-Qee" id="beZ-RJ-KiM"/>
@@ -1329,7 +1328,7 @@
                                 </state>
                                 <connections>
                                     <action selector="doAcceptgoal_button" destination="13" eventType="touchUpInside" id="6hE-Ry-uRj"/>
-                                    <segue destination="4gQ-Rx-AcU" kind="push" identifier="Inspiration" id="vgy-mt-fCe"/>
+                                    <segue destination="4gQ-Rx-AcU" kind="push" id="MKM-by-Id2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Goal Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="g7S-GU-db5">
@@ -1627,9 +1626,7 @@
         <class className="ProgressView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressView.h"/>
             <relationships>
-                <relationship kind="action" name="doDietGoal_button"/>
-                <relationship kind="outlet" name="DietGoal_button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="ExerciseGoal_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="Goal_button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="inspiration" candidateClass="UILabel"/>
@@ -1679,6 +1676,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vgy-mt-fCe"/>
+        <segue reference="MKM-by-Id2"/>
     </inferredMetricsTieBreakers>
 </document>

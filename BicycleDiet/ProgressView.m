@@ -17,8 +17,8 @@
 @synthesize pointsEarnedtoday_Total;
 @synthesize pointsEarnedTotal;
 
-@synthesize  ExerciseGoal_button;
-@synthesize  DietGoal_button;
+
+@synthesize  Goal_button;
 
 @synthesize diet_todaysprogress;
 @synthesize exercise_todaysprogress;
@@ -47,32 +47,8 @@
 }
 */
 
-
--(IBAction) doDietGoal_button{
-    //Updates the pace of Diet to be realistic
-    //Set goal form 0 to 1000 pts
-    // 1000 pts -> 2 pounds per week from diet
-    
-    //cutting 2- 20oz sodas -> 500 calories 
-    //changing from 2- 20 oz bottles to 2- 12oz cans -> 200 calories
-    
-    //changing to diet or water -> 490 calories
-    
-    // replace soda with water && hard candy OR gum
-    
-    //cutting french fries -> 380 calories
-    
-    pointsEarnedtoday_Diet.text = [[NSNumber alloc ]initWithFloat: 550].stringValue; 
-   
-    //progress bar 
-    
-#if 0  //verified the method to update the progress bars
-    [diet_todaysprogress  setProgress: 0.4];
-    [diet_todaysprogress setProgress: 0.1]; 
-    [totalprogress setProgress: 0.6];
-    
-#endif 
-    
+- (UIButton *)Goal_button: (id) sender{
+    return sender;
 }
 
 
