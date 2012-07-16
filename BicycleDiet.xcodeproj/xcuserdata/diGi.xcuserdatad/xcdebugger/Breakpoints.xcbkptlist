@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/ProgressViewController.m"
-         timestampString = "364106124.725164"
+         timestampString = "364109087.49504"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
+         startingLineNumber = "145"
+         endingLineNumber = "145"
          landmarkName = "-getInspiration:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/ProgressViewController.m"
-         timestampString = "364105879.970435"
+         timestampString = "364109087.49504"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "115"
-         endingLineNumber = "115"
+         startingLineNumber = "121"
+         endingLineNumber = "121"
          landmarkName = "-getInspiration:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,37 +86,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/ProgressViewController.m"
-         timestampString = "364105899.489608"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129"
-         landmarkName = "-getInspiration:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "BicycleDiet/ProgressViewController.m"
-         timestampString = "364106124.725164"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "133"
-         endingLineNumber = "133"
-         landmarkName = "-getInspiration:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "BicycleDiet/ProgressViewController.m"
-         timestampString = "364106124.725164"
+         timestampString = "364109087.49504"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "135"
          endingLineNumber = "135"
+         landmarkName = "-getInspiration:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BicycleDiet/ProgressViewController.m"
+         timestampString = "364109087.49504"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "139"
+         endingLineNumber = "139"
+         landmarkName = "-getInspiration:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BicycleDiet/ProgressViewController.m"
+         timestampString = "364109087.49504"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
          landmarkName = "-getInspiration:"
          landmarkType = "5">
       </FileBreakpoint>

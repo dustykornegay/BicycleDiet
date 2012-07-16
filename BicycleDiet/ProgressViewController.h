@@ -25,6 +25,9 @@
 }
 @property int user_id;
 
+@property (nonatomic, retain) IBOutlet UILabel *dietGoal;
+@property (nonatomic, retain) IBOutlet UILabel *exerciseGoal;
+
 @property (nonatomic, retain) IBOutlet UILabel *totalgoal_points;
 @property (nonatomic,retain) IBOutlet UILabel *totalpoints_earned;
 @property (nonatomic, retain) IBOutlet UILabel *totalpoints_earnedtoday;

@@ -20,6 +20,8 @@
 @synthesize totalgoal_points;
 @synthesize totalpoints_earned;
 @synthesize totalpoints_earnedtoday;
+@synthesize dietGoal;
+@synthesize exerciseGoal;
 
 @synthesize exerciseProgress;
 @synthesize dietProgress;
@@ -70,9 +72,12 @@
     int totalgoal = [weightlimit GetPointsTotal_goal:user_id];
    
     //TODO: update progress from data base
+    dietGoal.text = @"Goal Not Set";
+    exerciseGoal.text = @"Goal Not Set";
+    
     
     exerciseProgress.progress = (float)500/(float)1000;
-    dietProgress.progress = (float)500/(float)1000;;
+    dietProgress.progress = (float)500/(float)1000;
     
     if ((totalgoal != 0)){
     totalProgress.progress = (float) totalearned / (float) totalgoal;
@@ -84,9 +89,10 @@
        
     totalpoints_earned.text = [[NSNumber alloc ]initWithInt:totalearned ].stringValue; 
     
+    // TODO: load from DB from activity table where date = today AND user = user_id
     totalpoints_earnedtoday.text = @"1550";
-  
     
+     
 }
 
 - (void)viewDidUnload

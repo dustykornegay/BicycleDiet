@@ -252,15 +252,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="600" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nlL-dP-YLo">
-                                <rect key="frame" x="219" y="49" width="33" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" id="nlL-dP-YLo">
+                                <rect key="frame" x="185" y="49" width="67" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.078214020479999993" green="0.060990015139999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="9vq-SQ-ktF">
-                                <rect key="frame" x="219" y="78" width="33" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" id="9vq-SQ-ktF">
+                                <rect key="frame" x="185" y="78" width="67" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.078214020479999993" green="0.060990015139999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -357,7 +357,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Inspiration" id="7o9-Nb-A0W"/>
                     <connections>
+                        <outlet property="dietGoal" destination="9vq-SQ-ktF" id="6VM-xF-J42"/>
                         <outlet property="dietProgress" destination="DOe-rU-c2g" id="F6h-kQ-QWS"/>
+                        <outlet property="exerciseGoal" destination="nlL-dP-YLo" id="Whe-aS-nbE"/>
                         <outlet property="exerciseProgress" destination="stv-QY-DHt" id="4KQ-Mc-6iw"/>
                         <outlet property="inspiration" destination="xUZ-ch-Qee" id="DVL-kI-3zX"/>
                         <outlet property="totalProgress" destination="WpT-fB-d18" id="vEs-he-1h5"/>
@@ -1592,6 +1594,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="MKM-by-Id2"/>
+        <segue reference="YXw-pN-G4D"/>
     </inferredMetricsTieBreakers>
 </document>
