@@ -27,6 +27,7 @@
 
 -(BOOL) DBdatafieldToUserArray:  (NSString *) sql_com ;
 -(BOOL) DBdatafieldToActivityArray:  (NSString *) sql_com ;
+-(BOOL)  DBgetInspirationArray: (NSString *) sql_com;
 
 -(BOOL) DBPush: (NSString *) sql_com; 
 

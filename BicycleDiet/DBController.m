@@ -79,6 +79,39 @@
     
     
 }
+-(BOOL) DBPush: (NSString *) sql_com{
+    BOOL success = [self CheckOrCreateDB];
+    
+    // Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+        sqlite3_extended_result_codes(database, 1);
+        
+        NSLog (@"Database opened for insert");
+        
+		// Setup the SQL Statement and compile it for faster access
+        
+        
+		sqlite3_stmt *compiledStatement;
+        
+        
+		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
+            //push data into the database is not dependent on a data object
+            //it doesn't load any data for later use
+            success = TRUE;
+		}else {
+            success = FALSE;
+        }
+        
+        
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+    }
+    
+    
+    sqlite3_close(database);
+    return success;
+    
+}
 
 -(BOOL)  DBdatafieldToUserArray: (NSString *) sql_com{
 	
@@ -203,24 +236,55 @@ sqlite3_close(database);
     return success;
 }
 
--(BOOL) DBPush: (NSString *) sql_com{
-    BOOL success = [self CheckOrCreateDB];
+
+-(BOOL)  DBgetInspirationArray: (NSString *) sql_com{
+	
+	BOOL success = [self CheckOrCreateDB];
     
-    // Open the database from the users filessytem
+	// Query the database for all  records and construct the object array
+    
+	// Init the  Array
+	obj_array = [[NSMutableArray alloc] init];
+	
+    NSLog(@"database exists");
+    
+	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
         sqlite3_extended_result_codes(database, 1);
         
-        NSLog (@"Database opened for insert");
+        NSLog (@"Database opened");
         
 		// Setup the SQL Statement and compile it for faster access
         
         
 		sqlite3_stmt *compiledStatement;
         
-        
+  //TODO: Update this so it loads five random messages from the database      
 		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
-            //push data into the database is not dependent on a data object
-            //it doesn't load any data for later use
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+                NSLog (@"inside while");
+				
+                // TODO:Update this with a select statement so the correct onject type is loaded
+                
+                
+				int inspiredID = sqlite3_column_int(compiledStatement, 0);
+                 NSString  * quote = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                
+				
+                
+                NSLog( @"ID:   Type: %i Points: %@", inspiredID, quote); 
+                
+				// Create a new animal object with the data from the database
+				Inspiration *someInspiration = [[Inspiration alloc] initWithId: inspiredID andAuthor:0 andDate:0 andQuote: quote ];
+				
+                
+				// Add the animal object to the animals Array
+				[obj_array addObject:someInspiration];
+				
+                
+			}
             success = TRUE;
 		}else {
             success = FALSE;
@@ -234,8 +298,9 @@ sqlite3_close(database);
     
     sqlite3_close(database);
     return success;
-
 }
+
+
 
 
 -(void) LoadDatabaseFromFile: (NSString *) filename {

@@ -11,10 +11,10 @@
 @implementation Inspiration
 @synthesize  inspired_id, author, date, quote;
 
--(id)initWithId:(int) anId andId:(NSString *)By andDate:(NSDate*) aDate andQuote:(NSString *)aQuotation
+-(id)initWithId:(int) inspiredId andAuthor:(NSString *)By andDate:(NSDate*) aDate andQuote:(NSString *)aQuotation
 {
     if (self){
-    self.inspired_id = anId;
+    self.inspired_id = inspiredId;
     self.author = By;
     self.date = aDate;
     self.quote = aQuotation;

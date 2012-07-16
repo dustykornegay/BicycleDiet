@@ -18,17 +18,27 @@
     int pointsEarned_total;
     
     int user_id;
+    
+    NSMutableArray * inspirationArray;
+    NSTimer * inspirationTimer;
+    int index;
 }
 @property int user_id;
 
 @property (nonatomic, retain) IBOutlet UILabel *totalgoal_points;
 @property (nonatomic,retain) IBOutlet UILabel *totalpoints_earned;
 @property (nonatomic, retain) IBOutlet UILabel *totalpoints_earnedtoday;
+@property (nonatomic, retain) IBOutlet UILabel *inspiration;
 
 @property (nonatomic, retain) IBOutlet UIProgressView *exerciseProgress;
 @property (nonatomic, retain) IBOutlet UIProgressView *dietProgress;
 @property (nonatomic, retain) IBOutlet UIProgressView *totalProgress;
 
+@property (nonatomic,retain) NSArray * inspirationArray;
+
 -(id)initWithUserId: (int) User_id;
+
+-(void)getInspiration: (NSTimer *)inspirationTimer;
+
 
 @end

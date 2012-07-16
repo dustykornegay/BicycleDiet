@@ -9,7 +9,7 @@
 #import "ProgressViewController.h"
 #import "ProgressView.h"
 #import "AppDelegate.h"
-#import "weightlimit.h"
+#import "BicycleDietCommon.h"
 
 
 @interface ProgressViewController ()
@@ -25,6 +25,8 @@
 @synthesize dietProgress;
 @synthesize totalProgress;
 @synthesize user_id;
+@synthesize inspiration;
+@synthesize inspirationArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,6 +53,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    index = 0;
+    //initialize inspiration timer
+    inspirationTimer = [NSTimer scheduledTimerWithTimeInterval: 15 target: self selector: @selector(getInspiration:) userInfo:NULL repeats: YES];
+    
 	// Do any additional setup after loading the view.
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     user_id = appDelegate.user_id ;
@@ -95,8 +102,46 @@
 
 
 //add timer to randomly update inspration from database
+-(void)getInspiration: (NSTimer *)inspirationTimer{
+    
+    NSString * sql = @"Select * from inspiration where personality_id = 0 ";
+    
 
+    // chack the database
+    
+    DBController *mydb = [[DBController alloc] init];
+    
+    
+    if([mydb DBgetInspirationArray: sql ]){
+        
+        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
+        
+        
+        self.inspirationArray = mydb.obj_array;
+        
+        
+    }else {
+        self.inspirationArray = nil;
+    }
+    
+    //set the inspiration label
+    
+    if (index < inspirationArray.count){
+    Inspiration * LaoTsu = [inspirationArray objectAtIndex:index] ;
+    inspiration.text = LaoTsu.quote;
+        index ++;
+    
+    }else {
+        index = 0;
+      //  Load next five inspirational messages from database
+    }
+    
+   
+    
+    
+    
+    
 
-
+}
 
 @end

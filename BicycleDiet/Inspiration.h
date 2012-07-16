@@ -19,7 +19,7 @@
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSString * quote;
 
-- (id)initWithId:(int) anId andId:(NSString *)By andDate:(NSDate*) aDate andQuote:(NSString *)aQuotation;
+- (id)initWithId:(int) inspiredId andAuthor:(NSString *)By andDate:(NSDate*) aDate andQuote:(NSString *)aQuotation;
 
 
 @end
