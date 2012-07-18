@@ -30,4 +30,11 @@
 +(NSDate *) DayGoalAchieved: (int)CaloriesPerDay userId:(int) user_id;
 
 +(BOOL) PushDailyGoals: (int) user_id  Diet: (int)caloriesCut Exercise: (int) extraCaloriesBurned ExerciseDuration: (int) minutes;
+
++(NSString *) GetTime;
+
++(NSString *) GetDate;
+
++(NSString *) ThreeCharMonth: (int) month;
+
 @end

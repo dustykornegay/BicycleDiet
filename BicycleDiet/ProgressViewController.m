@@ -58,7 +58,7 @@
     
     index = 0;
     //initialize inspiration timer
-    inspirationTimer = [NSTimer scheduledTimerWithTimeInterval: 15 target: self selector: @selector(getInspiration:) userInfo:NULL repeats: YES];
+    inspirationTimer = [NSTimer scheduledTimerWithTimeInterval: 60 target: self selector: @selector(getInspiration:) userInfo:NULL repeats: YES];
     
 	// Do any additional setup after loading the view.
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -117,7 +117,7 @@
     
     DBController *mydb = [[DBController alloc] init];
     
-    
+   
     if([mydb DBgetInspirationArray: sql ]){
         
         // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"

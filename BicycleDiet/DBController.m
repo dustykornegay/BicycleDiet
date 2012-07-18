@@ -148,9 +148,15 @@
 				NSString *user = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
 				int goal= sqlite3_column_int(compiledStatement, 2);
                 int progress= sqlite3_column_int(compiledStatement, 3);
+                
+                int exercisegoal = sqlite3_column_int(compiledStatement, 4);
+                
+                int exerciseduration = sqlite3_column_int(compiledStatement, 5);
+                
+                int dietgoal = sqlite3_column_int(compiledStatement, 6);
 				 
 				// Create a new animal object with the data from the database
-				Users *a_user = [[Users alloc] initWithUserId:userid andUser:user andGoal:goal andProgress:progress];
+				Users *a_user = [[Users alloc] initWithUserId:userid andUser:user andGoal:goal andProgress:progress andExerciseGoal: exercisegoal andExerciseDuration: exerciseduration andDietGoal: dietgoal];
 				
                 
 				// Add the animal object to the animals Array

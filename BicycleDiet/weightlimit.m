@@ -209,7 +209,9 @@ return sum;
         //TODO: Set goals
         // pseudoSQL: @"Update Values( caloriesCut, extraCaloriesBurned) INTO users where user_id = user_id  ,) 
     
-        NSString * sql_command = [[NSString alloc] initWithFormat: @"Update username set exerciseGoal = %i, exerciseDuration = %i, dietGoal = %i from status where user_id = %i", extraCaloriesBurned , minutes ,caloriesCut, user_id];
+        NSString * sql_command = [[NSString alloc] initWithFormat: @"Update username set exerciseGoal = %i, exerciseDuration = %i, dietGoal = %i where user_id = %i", extraCaloriesBurned , minutes ,caloriesCut, user_id];
+        
+        NSLog(@"%@", sql_command);
         
         if([mydb DBPush: sql_command]){        
          success = TRUE;
@@ -219,5 +221,113 @@ return sum;
     
     }
     return success;
+}
+
++(NSString *) GetTime{
+    //Four character time hhmm
+    NSString * mytime;
+    
+    // Code modified from Carl Norum @stackoverflow.com
+    //begin
+    NSDateFormatter *formatter;
+    
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HHmm"];
+    
+   mytime = [formatter stringFromDate:[NSDate date]];
+     //end
+    
+    NSLog(@"%@", mytime);
+    
+   
+    return mytime;
+}
+
++(NSString *) GetDate{
+    //9 character date format ddMMMyyyy ex 12JUN2012
+    NSDate * now = [NSDate date];
+
+    NSString * mydate = [[NSString alloc] init];
+ 
+    // code found from Richard J. Ross on stackoverflow.com
+    //begin
+    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar];
+    NSDateComponents *components = [cal components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:now];
+
+     
+    int month = [components month] ;
+    int day = [components day]; 
+    int year= [components year];
+   
+    // end
+    
+    mydate = [@"" stringByAppendingFormat: @"'%i%@%i'", day, [self ThreeCharMonth: month], year];
+    
+    NSLog(@"%@",mydate);
+    
+    return mydate;
+    
+}
+
++(NSString *) ThreeCharMonth: (int) month{
+    NSString * month_str;
+    
+    switch (month){
+        case 1:
+            month_str = @"JAN";
+            break;
+            
+        case 2:
+            month_str = @"FEB";
+            break;    
+            
+        case 3:
+            month_str = @"MAR";
+            break;
+            
+        case 4:
+            month_str = @"APR";
+            break;
+            
+        case 5:
+            month_str = @"MAY";
+            break;
+            
+        case 6:
+            month_str = @"JUN";
+            break;
+            
+        case 7:
+            month_str = @"JUL";
+            break;
+            
+        case 8:
+            month_str = @"AUG";
+            break;
+            
+        case 9:
+            month_str = @"SEP";
+            break;
+            
+        case 10:
+            month_str = @"OCT";
+            break;
+            
+        case 11:
+            month_str = @"NOV";
+            break;
+            
+        case 12:
+            month_str = @"DEC";
+            break;
+            
+        default:
+            
+            month_str = @"UNK";
+            
+    }
+    
+    return month_str;
+    
 }
 @end

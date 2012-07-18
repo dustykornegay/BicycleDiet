@@ -16,15 +16,23 @@
 @synthesize user;
 @synthesize total_goal;
 @synthesize total_progress;
+@synthesize dailyExercise_duration;
+@synthesize dailyExercise_goal;
+@synthesize dailyDiet_goal;
 
 -(id)initWithUserId:(int)anId andUser:(NSString*)aName andGoal:(int)aGoal 
-        andProgress:(int)someProgress {
+        andProgress:(int)someProgress andExerciseGoal: (int) exercisegoal andExerciseDuration: (int)exerciseduration andDietGoal: (int) dietgoal{
        
     if (self){ 
         self.user_id = anId;
         self.user = aName;
         self.total_goal = aGoal;
         self.total_progress = someProgress;
+        
+        self.dailyExercise_goal = exercisegoal;
+        self.dailyExercise_duration = exerciseduration;
+        self.dailyDiet_goal = dietgoal;
+        
     }
     return self;
 }

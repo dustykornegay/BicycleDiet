@@ -26,12 +26,20 @@
 @property (nonatomic, retain) NSString* user;
 @property (nonatomic) int  total_goal;
 @property (nonatomic) int  total_progress;
+@property (nonatomic) int dailyExercise_goal;
+@property (nonatomic) int dailyExercise_duration;
+@property (nonatomic) int dailyDiet_goal;
+
+
 
 
 -(id)initWithUserId:(int)anId
-            andUser:(NSString*)aName
-            andGoal:(int)agoal
-        andProgress:(int)someProgress;
+        andUser:(NSString*)aName
+        andGoal:(int)agoal
+        andProgress:(int)someProgress 
+        andExerciseGoal: (int) exercisegoal 
+        andExerciseDuration: (int) exerciseduration 
+        andDietGoal:(int) dietgoal;
 
 @end
 
