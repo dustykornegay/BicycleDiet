@@ -98,8 +98,11 @@
             //push data into the database is not dependent on a data object
             //it doesn't load any data for later use
             success = TRUE;
+            NSLog(@"database recieved pushed data");
+            
 		}else {
             success = FALSE;
+            NSLog(@"dats was not pushed to database");
         }
         
         

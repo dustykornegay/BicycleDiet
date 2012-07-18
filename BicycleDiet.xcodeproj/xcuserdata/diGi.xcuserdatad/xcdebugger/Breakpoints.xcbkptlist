@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/DBController.m"
-         timestampString = "364281962.253534"
+         timestampString = "364283346.067363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "278"
-         endingLineNumber = "278"
+         startingLineNumber = "281"
+         endingLineNumber = "281"
          landmarkName = "-DBgetInspirationArray:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -222,6 +222,19 @@
          startingLineNumber = "43"
          endingLineNumber = "43"
          landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BicycleDiet/weightlimit.m"
+         timestampString = "364283112.244271"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "215"
+         endingLineNumber = "215"
+         landmarkName = "+PushDailyGoals:Diet:Exercise:ExerciseDuration:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
