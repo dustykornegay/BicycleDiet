@@ -174,7 +174,7 @@
 }
 
 
-//Problem this runs after the segue
+
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if ((indexPath.row -1) >= 0){
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];

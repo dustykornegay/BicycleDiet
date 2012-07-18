@@ -135,7 +135,7 @@ NSLog( @"Get data from DB");
     
     
 }else {
-    NSLog (@"DBdatafiledToObjectArray FAILED in +Database_select");
+    NSLog (@"DBdatafieldToObjectArray FAILED in weightlimit +Database_select");
     sum = -1;
 }
 return sum;
