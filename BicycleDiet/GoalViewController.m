@@ -50,7 +50,7 @@
         exerciseGoal_minutes = temp_user.dailyExercise_duration;
         
         if (exerciseGoal_minutes != 0){
-        exerciseGoal_intensity = temp_user.dailyExercise_goal / exerciseGoal_intensity;
+        exerciseGoal_intensity = temp_user.dailyExercise_goal / exerciseGoal_minutes;
         }
         
     }else{

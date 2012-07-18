@@ -151,9 +151,9 @@
                 
                 int exercisegoal = sqlite3_column_int(compiledStatement, 4);
                 
-                int exerciseduration = sqlite3_column_int(compiledStatement, 5);
+                int exerciseduration = sqlite3_column_int(compiledStatement, 6);
                 
-                int dietgoal = sqlite3_column_int(compiledStatement, 6);
+                int dietgoal = sqlite3_column_int(compiledStatement, 7);
 				 
 				// Create a new animal object with the data from the database
 				Users *a_user = [[Users alloc] initWithUserId:userid andUser:user andGoal:goal andProgress:progress andExerciseGoal: exercisegoal andExerciseDuration: exerciseduration andDietGoal: dietgoal];
