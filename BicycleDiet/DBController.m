@@ -126,14 +126,16 @@
 		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
             //push data into the database is not dependent on a data object
             //it doesn't load any data for later use
+            
+            if(sqlite3_step(compiledStatement)){
             success = TRUE;
             NSLog(@"database recieved pushed data");
             
 		}else {
             success = FALSE;
-            NSLog(@"dats was not pushed to database");
+            NSLog(@"data was not pushed to database");
         }
-        
+        }
         
 		// Release the compiled statement from memory
 		sqlite3_finalize(compiledStatement);
