@@ -213,6 +213,7 @@ sqlite3_close(database);
     return success;
 }
 
+
 -(BOOL)  DBdatafieldToActivityArray: (NSString *) sql_com{
 	
 	BOOL success = [self CheckOrCreateDB];
@@ -341,7 +342,54 @@ sqlite3_close(database);
 }
 
 
+-(int) DBGetUserID: (NSString *) username {
 
+    NSString * sql = [@"Select user_id where username = " stringByAppendingFormat: @" %@", username];
+    
+    if ([self DBdatafieldToUserArray: (NSString *) sql]){
+        if (obj_array.count > 0){
+        Users * temp = [obj_array lastObject];
+        
+            return temp.user_id;
+        }else {
+            return -2;
+        }
+    }else {
+        return -1;
+    }
+}
+
+-(int) DBGetNewUserID {
+    NSString * sql = @"Select max(user_id) from username";
+    int user_id = -1; 
+    
+    if ([self CheckOrCreateDB]){
+       
+    // Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+
+		// Setup the SQL Statement and compile it for faster access
+		sqlite3_stmt *compiledStatement;
+        
+		if(sqlite3_prepare_v2(database, [sql UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
+            
+            if(sqlite3_step(compiledStatement)){
+    
+                user_id = sqlite3_column_int(compiledStatement, 0);
+            }
+        }
+        
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+    }
+    
+        
+    
+    sqlite3_close(database);
+    }
+    user_id ++;
+    return user_id ;
+}
 
 -(void) LoadDatabaseFromFile: (NSString *) filename {
     NSFileManager *fileManager = [NSFileManager defaultManager];

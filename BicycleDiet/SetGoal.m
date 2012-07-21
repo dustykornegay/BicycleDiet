@@ -8,6 +8,7 @@
 
 #import "SetGoal.h"
 #import "BicycleDietCommon.h"
+#import "AppDelegate.h"
 
 
 @implementation SetGoal
@@ -126,6 +127,15 @@
        
         
         NSLog(@"Points to Goal are set to %i", points);
+        
+        DBController * myDB = [[DBController alloc] init];
+        
+        int user_id =[myDB DBGetNewUserID];
+        
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        appDelegate.user_id = user_id;
+        
+        //TODO: Push user_id,Name and goal to Database 
         
     }
 }

@@ -73,6 +73,11 @@
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewDidAppear{
+    
+    [self viewDidLoad];
+
+}
 
 - (void)viewDidUnload
 {

@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/DBController.m"
-         timestampString = "364531373.546654"
+         timestampString = "364543807.473756"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "312"
-         endingLineNumber = "312"
+         startingLineNumber = "313"
+         endingLineNumber = "313"
          landmarkName = "-DBgetInspirationArray:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -261,6 +261,32 @@
          startingLineNumber = "69"
          endingLineNumber = "69"
          landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BicycleDiet/DBController.m"
+         timestampString = "364543807.473756"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "378"
+         endingLineNumber = "378"
+         landmarkName = "-DBGetNewUserID"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BicycleDiet/SetGoal.m"
+         timestampString = "364543807.473756"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "136"
+         endingLineNumber = "136"
+         landmarkName = "-doAcceptgoal_button"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

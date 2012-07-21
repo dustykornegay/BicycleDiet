@@ -32,6 +32,8 @@
 -(BOOL) DBPush: (NSString *) sql_com; 
 
 -(void) LoadDatabaseFromFile: (NSString *) filename;
+-(int) DBGetNewUserID;
+-(int) DBGetUserID: (NSString *) username;  //returns user_id, -1 = database error, -2 = user doesn't exist
 
 
 @end
