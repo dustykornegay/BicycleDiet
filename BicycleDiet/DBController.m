@@ -22,6 +22,9 @@
     
     if ((self = [super init])) {
         
+        NSString * appSupport = @"ApplicationSupport";
+        NSString * myappdir = @"bicycleDiet";
+        
         databaseName = @"bicyclediet.db";
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -32,14 +35,40 @@
         
         NSLog(@"%@",BundleDbPath);
         
-        NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDir = [documentPaths objectAtIndex:0];
+        NSArray *libraryPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+        NSString *documentsDir = [libraryPaths objectAtIndex:0];
         
-        databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
+        databasePath = [documentsDir stringByAppendingPathComponent:appSupport];
+        
+          
+        
+        NSLog(@"%@", databasePath);
+        NSError * myerror;
+        
+        //create the ApplicationSupportDirectory if it does not exist
+        if (![fileManager fileExistsAtPath:databasePath]){
+            
+            [fileManager createDirectoryAtPath:databasePath withIntermediateDirectories:FALSE attributes:nil error: &myerror];
+            NSLog(@"%@",myerror);
+        }
+        
+        //create the bicycleDietdirectory if it doesn't exist
+        databasePath = [databasePath stringByAppendingPathComponent: myappdir];
         
         if (![fileManager fileExistsAtPath:databasePath]){
-
-        [fileManager moveItemAtPath:BundleDbPath toPath:databasePath  error:nil];
+            
+            [fileManager createDirectoryAtPath:databasePath withIntermediateDirectories:FALSE attributes:nil error: &myerror];
+            NSLog(@"%@",myerror);
+        }
+        
+        //copy database to databasePath if it doesn't exist
+        databasePath = [databasePath stringByAppendingPathComponent:databaseName];
+        
+        if (![fileManager fileExistsAtPath:databasePath]){
+            
+            if( ![fileManager copyItemAtPath:BundleDbPath toPath:databasePath error: & myerror]){
+                NSLog(@"%@",myerror);
+            }
         
         }
         

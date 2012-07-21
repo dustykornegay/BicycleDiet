@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/DBController.m"
-         timestampString = "364283346.067363"
+         timestampString = "364527364.805174"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "281"
-         endingLineNumber = "281"
+         startingLineNumber = "310"
+         endingLineNumber = "310"
          landmarkName = "-DBgetInspirationArray:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -190,11 +190,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/DBController.m"
-         timestampString = "364279798.81261"
+         timestampString = "364527364.805174"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "85"
-         endingLineNumber = "85"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
          landmarkName = "-DBPush:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,11 +203,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/DBController.m"
-         timestampString = "364279831.420155"
+         timestampString = "364527364.805174"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "128"
+         endingLineNumber = "128"
          landmarkName = "-DBPush:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -235,6 +235,32 @@
          startingLineNumber = "215"
          endingLineNumber = "215"
          landmarkName = "+PushDailyGoals:Diet:Exercise:ExerciseDuration:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BicycleDiet/DBController.m"
+         timestampString = "364524978.495992"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BicycleDiet/DBController.m"
+         timestampString = "364527364.805174"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "69"
+         endingLineNumber = "69"
+         landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
