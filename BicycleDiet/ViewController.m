@@ -42,29 +42,7 @@
 {
     [super viewDidLoad];
     
-
-    
-    //ToDo make a call to the databse here to load this array with users
-    // sql = "select user_id, user, ... from username"
-  
-    
-    DBController *mydb = [[DBController alloc] init];
-    
-    
-    if([mydb DBdatafieldToUserArray: @"select * from username " ]){
-        
-        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
-      
-        
-       self.userlist = mydb.obj_array;
-        
-        
-    }else {
-        self.userlist = nil;
-    }
-    
-  // self.userlist = [[NSMutableArray alloc] initWithObjects:@"Xe",  nil];
-
+    [self viewDidAppear];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -75,7 +53,19 @@
 
 -(void)viewDidAppear{
     
-    [self viewDidLoad];
+    DBController *mydb = [[DBController alloc] init];
+    
+    if([mydb DBdatafieldToUserArray: @"select * from username " ]){
+        
+        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
+        
+        
+        self.userlist = mydb.obj_array;
+        
+        
+    }else {
+        self.userlist = nil;
+    }
 
 }
 
@@ -200,19 +190,23 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        //Delete  user_id from database username table && activities table
+        
+        //TODO:DBDelete 
+        
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

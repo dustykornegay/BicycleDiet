@@ -135,7 +135,11 @@
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         appDelegate.user_id = user_id;
         
-        //TODO: Push user_id,Name and goal to Database 
+        //TODO: Push user_id,Name and goal to Database
+        
+        NSString * sql = [@"INSERT INTO username (user_id, user, goal) " stringByAppendingFormat: @"VALUES (%i ,'%@', %i)", user_id, namefield.text , points ];
+        
+        [myDB DBPush: sql];
         
     }
 }
