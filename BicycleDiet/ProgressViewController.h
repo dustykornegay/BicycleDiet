@@ -22,8 +22,10 @@
     NSMutableArray * inspirationArray;
     NSTimer * inspirationTimer;
     int index;
+    BOOL visible;
 }
 @property int user_id;
+@property BOOL visible;
 
 @property (nonatomic, retain) IBOutlet UILabel *dietGoal;
 @property (nonatomic, retain) IBOutlet UILabel *exerciseGoal;

@@ -29,6 +29,7 @@
 @synthesize user_id;
 @synthesize inspiration;
 @synthesize inspirationArray;
+@synthesize visible;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,7 +61,14 @@
     //initialize inspiration timer
     inspirationTimer = [NSTimer scheduledTimerWithTimeInterval: 60 target: self selector: @selector(getInspiration:) userInfo:NULL repeats: YES];
     
-	// Do any additional setup after loading the view.
+	    
+     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    visible = TRUE;
+    
+    // Do any additional setup after loading the view.
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     user_id = appDelegate.user_id ;
     
@@ -70,29 +78,38 @@
     
     int totalearned = [weightlimit GetPointsEarnedTotal: user_id];
     int totalgoal = [weightlimit GetPointsTotal_goal:user_id];
-   
-    //TODO: update progress from data base
+    
+    
     dietGoal.text = @"Goal Not Set";
     exerciseGoal.text = @"Goal Not Set";
+    
+    //TODO: update progress from data base
     
     
     exerciseProgress.progress = (float)500/(float)1000;
     dietProgress.progress = (float)500/(float)1000;
     
     if ((totalgoal != 0)){
-    totalProgress.progress = (float) totalearned / (float) totalgoal;
+        totalProgress.progress = (float) totalearned / (float) totalgoal;
     } else {
         totalgoal = 0;
     } 
     
     totalgoal_points.text = [[NSNumber alloc ]initWithInt:totalgoal ].stringValue;
-       
+    
     totalpoints_earned.text = [[NSNumber alloc ]initWithInt:totalearned ].stringValue; 
     
     // TODO: load from DB from activity table where date = today AND user = user_id
     totalpoints_earnedtoday.text = @"1550";
     
-     
+    [self getGoals:user_id];
+    
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    visible = FALSE;
+    
 }
 
 - (void)viewDidUnload
@@ -106,10 +123,29 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)getGoals: (int)user {
+   
+    NSString * sql = [ @"Select * from username where user_id = " stringByAppendingFormat: @" %i", user];
+    
+    DBController * myDB = [[DBController alloc] init]; 
+    
+    if([myDB DBdatafieldToUserArray:sql ]){
+        Users * temp = [myDB obj_array].lastObject;
+        
+        pointsEarned_diet = temp.dailyDiet_goal;
+        pointsEarned_exercise = temp.dailyExercise_goal;
+        
+        exerciseGoal.text = [@"" stringByAppendingFormat: @"%i", pointsEarned_diet];
+        dietGoal.text = [@"" stringByAppendingFormat: @"%i", pointsEarned_exercise ];
+    }
+}
+
 
 //add timer to randomly update inspration from database
 -(void)getInspiration: (NSTimer *)inspirationTimer{
     
+    //No inspiration updates loads while this page isn't visible
+    if (visible){
     NSString * sql = @"Select * from inspiration where personality_id = 0 ";
     
 
@@ -142,11 +178,7 @@
       //  Load next five inspirational messages from database
     }
     
-   
-    
-    
-    
-    
+    }
 
 }
 

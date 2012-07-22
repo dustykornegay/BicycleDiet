@@ -33,15 +33,23 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self viewDidAppear: FALSE];
+
+}
+
+- (void) viewDidAppear:(BOOL)animated{
     //Check database for goal settings fo this user_id
     // if do not exist set to 0.4 ( 1 hr moderate exercise), 0.5(500 cal /day)
-    NSString * sql_com = @"Select * from username where user_id = 0";
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    user_id = appDelegate.user_id ;
+    
+    NSString * sql_com = [@"Select * from username where user_id = " stringByAppendingFormat:@"%i",user_id];
     
     DBController * myDb = [[DBController alloc ]init];
     
     
     if ([myDb DBdatafieldToUserArray:sql_com]){
-       //Load Goals from stored values 
+        //Load Goals from stored values 
         NSMutableArray * temp_array = [myDb obj_array];
         
         Users * temp_user = [temp_array lastObject];
@@ -50,7 +58,7 @@
         exerciseGoal_minutes = temp_user.dailyExercise_duration;
         
         if (exerciseGoal_minutes != 0){
-        exerciseGoal_intensity = temp_user.dailyExercise_goal / exerciseGoal_minutes;
+            exerciseGoal_intensity = temp_user.dailyExercise_goal / exerciseGoal_minutes;
         }
         
     }else{
@@ -61,15 +69,12 @@
         exerciseGoal = exerciseGoal_minutes * exerciseGoal_intensity;
         
     }
-        
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    user_id = appDelegate.user_id ;
-  
+    
     
     //Update View
     [self SetGoals];
+    
 }
-
 -(void) viewDidDisappear:(BOOL)animated    {
     // load new exercise/diet goal values in the database by user_id
      exerciseGoal = exerciseGoal_intensity * exerciseGoal_minutes;
