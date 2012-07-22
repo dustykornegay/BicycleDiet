@@ -389,6 +389,13 @@ sqlite3_close(database);
     }
     user_id ++;
     return user_id ;
+    
+}
+
+-(void) DeleteUser: (int)user {
+    NSString * sql = [ @"" stringByAppendingFormat: @"Remove * from username where user_id = %i", user]; 
+    
+    [self DBPush: sql];
 }
 
 -(void) LoadDatabaseFromFile: (NSString *) filename {
@@ -396,7 +403,7 @@ sqlite3_close(database);
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [documentPaths objectAtIndex:0];
-    NSString * filenameToOld = [databaseName stringByAppendingPathComponent: @".old"];
+    NSString * filenameToOld = [databaseName stringByAppendingFormat:@".old"];
     
     filenameToOld = [documentsDir stringByAppendingPathComponent:filenameToOld ];
     

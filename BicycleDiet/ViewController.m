@@ -145,6 +145,7 @@
         int d_goal = cellValue.dailyDiet_goal;
         
         cell.totalprogress.progress = temp;
+        //TODO:
         cell.exercise_todaysprogress.progress = e_goal;
         cell.diet_todaysprogress.progress = d_goal;
     
@@ -185,10 +186,12 @@
 
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ((indexPath.row -1) >= 0){
+    if ((indexPath.row -1) >= 0) {
+        if ( (indexPath.row -1) < userlist.count ){
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     Users * selectedUser =[userlist objectAtIndex: indexPath.row -1];
     appDelegate.user_id =  selectedUser.user_id;
+        }
     }
     return indexPath;
 }
@@ -209,11 +212,28 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        NSLog(@"%i",userlist.count);
+        if ((indexPath.row -1) < userlist.count   ){
         //Delete  user_id from database username table && activities table
+        DBController *myDB = [[DBController alloc ]init];
         
-        //TODO:DBDelete 
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        int temp_id = appDelegate.user_id;
+        
+        // TODO:fix deleteUser sql so that it functions correctly
+        // also consider removing history from status table
+        [myDB DeleteUser: temp_id  ];
+        
+        
+        [userlist removeObjectAtIndex: indexPath.row -1];
+        
+      // [self viewDidAppear];
+        
+        // Delete the row from the data source
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        
         
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {

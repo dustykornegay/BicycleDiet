@@ -34,6 +34,7 @@
 -(void) LoadDatabaseFromFile: (NSString *) filename;
 -(int) DBGetNewUserID;
 -(int) DBGetUserID: (NSString *) username;  //returns user_id, -1 = database error, -2 = user doesn't exist
+-(void) DeleteUser: (int)user_id ;
 
 
 @end
