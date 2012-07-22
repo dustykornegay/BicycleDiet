@@ -140,12 +140,26 @@
         
         float temp = (float) cellValue.total_progress / (float) cellValue.total_goal;
         
+        
+        int e_goal = cellValue.dailyExercise_goal;
+        int d_goal = cellValue.dailyDiet_goal;
+        
         cell.totalprogress.progress = temp;
-        cell.exercise_todaysprogress.progress = 0;
-        cell.diet_todaysprogress.progress = 0;
+        cell.exercise_todaysprogress.progress = e_goal;
+        cell.diet_todaysprogress.progress = d_goal;
     
+        
+        if (d_goal > 0){
+            cell.diet.text = [[NSNumber alloc] initWithInt: d_goal].stringValue; 
+        }else {
         cell.diet.text = @"diet Goal";
+        }
+        
+        if (e_goal > 0) {
+            cell.exercise.text = [[NSNumber alloc] initWithInt: e_goal].stringValue;
+        }else {
         cell.exercise.text = @"exerciseGoal";
+        }
         cell.total.text = [[NSNumber alloc] initWithInt: cellValue.total_goal].stringValue ;
         
         cell.user_id = cellValue.user_id;
