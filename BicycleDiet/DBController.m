@@ -393,7 +393,8 @@ sqlite3_close(database);
 }
 
 -(void) DeleteUser: (int)user {
-    NSString * sql = [ @"" stringByAppendingFormat: @"Remove * from username where user_id = %i", user]; 
+    NSLog(@"User_id: %i", user);
+    NSString * sql = [ @"" stringByAppendingFormat: @"DELETE FROM username where user_id = %i", user]; 
     
     [self DBPush: sql];
 }

@@ -20,6 +20,7 @@
     int dailyDiet_goal;
     int dailyDiet_progress;
     
+    
 }
 
 @property (nonatomic) int user_id;
@@ -28,7 +29,11 @@
 @property (nonatomic) int  total_progress;
 @property (nonatomic) int dailyExercise_goal;
 @property (nonatomic) int dailyExercise_duration;
+@property (nonatomic) int dailyExercise_progress;
 @property (nonatomic) int dailyDiet_goal;
+@property (nonatomic) int dailyDiet_progress;
+
+
 
 
 

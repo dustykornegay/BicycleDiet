@@ -17,8 +17,10 @@
 @synthesize total_goal;
 @synthesize total_progress;
 @synthesize dailyExercise_duration;
+@synthesize dailyExercise_progress;
 @synthesize dailyExercise_goal;
 @synthesize dailyDiet_goal;
+@synthesize dailyDiet_progress;
 
 -(id)initWithUserId:(int)anId andUser:(NSString*)aName andGoal:(int)aGoal 
         andProgress:(int)someProgress andExerciseGoal: (int) exercisegoal andExerciseDuration: (int)exerciseduration andDietGoal: (int) dietgoal{

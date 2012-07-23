@@ -42,7 +42,7 @@
 {
     [super viewDidLoad];
     
-    [self viewDidAppear];
+    [self viewWillAppear: FALSE];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -51,7 +51,7 @@
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)viewDidAppear{
+-(void) viewWillAppear:(BOOL)animated   {
     
     DBController *mydb = [[DBController alloc] init];
     
@@ -144,10 +144,24 @@
         int e_goal = cellValue.dailyExercise_goal;
         int d_goal = cellValue.dailyDiet_goal;
         
+        float e_progress = 0;
+        float d_progress = 0;
+        
+        if (e_goal >0) {
+            
+            e_progress = (float) cellValue.dailyExercise_progress / (float) e_goal;
+        }
+        
+        if (d_goal >0) {
+            
+            d_progress = (float) cellValue.dailyDiet_progress / (float) d_goal;
+        }
+        
+
+        
         cell.totalprogress.progress = temp;
-        //TODO:
-        cell.exercise_todaysprogress.progress = e_goal;
-        cell.diet_todaysprogress.progress = d_goal;
+        cell.exercise_todaysprogress.progress = e_progress;
+        cell.diet_todaysprogress.progress = d_progress;
     
         
         if (d_goal > 0){
@@ -215,20 +229,21 @@
         NSLog(@"%i",userlist.count);
         if ((indexPath.row -1) < userlist.count   ){
         //Delete  user_id from database username table && activities table
-        DBController *myDB = [[DBController alloc ]init];
+       DBController *myDB = [[DBController alloc ]init];
         
-        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        //AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        Users * temp = [userlist objectAtIndex:(indexPath.row -1)];
         
-        int temp_id = appDelegate.user_id;
+        
         
         // TODO:fix deleteUser sql so that it functions correctly
         // also consider removing history from status table
-        [myDB DeleteUser: temp_id  ];
+        [myDB DeleteUser: temp.user_id];
         
         
         [userlist removeObjectAtIndex: indexPath.row -1];
         
-      // [self viewDidAppear];
+            [self viewWillAppear:FALSE];
         
         // Delete the row from the data source
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
