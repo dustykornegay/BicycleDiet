@@ -103,12 +103,23 @@
 -(IBAction) SetGoals {
    // Call the weightloss methods necessary to recalculate the dates & weights
     
+    NSCalendar * calendar = [[NSCalendar alloc ]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate * today = [NSDate date];
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init] ;
+    [components setDay: [weightlimit DaysToGoal: user_id]];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"ddMMMyyyy"];
+    
+    NSDate *goal = [calendar dateByAddingComponents:components toDate:today options:0];
+    
     //set weight at date;
     WeightAtDate.text = @"135";
     
     
     //set estimated date you will meet goal;
-    ETA.text = @"July 25, 2010";
+    ETA.text = [formatter stringFromDate:goal];
     
     [hoursExercise  setValue: (float)exerciseGoal_minutes / 60];
     [intensityExercise  setValue: exerciseGoal_intensity];
@@ -121,16 +132,26 @@
 -(IBAction) sliderDiet: (id) sender{
     UISlider *slider = (UISlider *) sender;
     dietGoal = (slider.value);
+    
+    //update date
+    [self viewDidDisappear:YES];
+    [self SetGoals];
      
 }
 -(IBAction) sliderHoursExercise: (id)sender{
     UISlider *slider = (UISlider *) sender;
     exerciseGoal_minutes = (slider.value)* 60; //convert hours to minutes
+    
+    [self viewDidDisappear:YES];
+    [self SetGoals];
 }
 -(IBAction) sliderIntensityExercise:(id)sender{
     //slider scale calibrated to calories per hour based on intensity
     UISlider *slider = (UISlider *) sender;
     exerciseGoal_intensity = (slider.value);
+    
+    [self viewDidDisappear:YES];
+    [self SetGoals];
 }
 
 @end

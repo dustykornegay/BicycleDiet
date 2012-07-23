@@ -25,7 +25,7 @@
 +(int) GetPointsEarnedToday_Exercise;
 + (int)Database_select: (NSString *) sql_command;
 
-+(int) DaysToGoal: (int) CaloriesPerDay userId: (int) user_id ;
++(int) DaysToGoal:  (int) user_id ;
 +(int) QuarterPoundsbyDate:(int) CaloriesPerDay date: (NSDate *) goal;
 +(NSDate *) DayGoalAchieved: (int)CaloriesPerDay userId:(int) user_id;
 

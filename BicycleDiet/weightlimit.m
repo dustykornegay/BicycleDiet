@@ -142,7 +142,7 @@ return sum;
 }
 
 
-+(int) DaysToGoal: (int) CaloriesPerDay userId: (int) user_id {
++(int) DaysToGoal: (int) user_id {
     int days = 90;
     int totalGoal = 99999;
     int currentPoints = -1;
@@ -159,11 +159,15 @@ return sum;
     totalGoal = temp.total_goal;
     currentPoints = temp.total_progress;
     
-    CaloriesPerDay  = temp.dailyDiet_goal + temp.dailyExercise_goal;
+    int CaloriesPerDay  = temp.dailyDiet_goal + temp.dailyExercise_goal;
     
+    if (CaloriesPerDay > 0){
     //Subtract TotalGoal
     days = (totalGoal - currentPoints) / CaloriesPerDay;
-    
+    }
+    else {
+        days = 10000;
+    }
     return days;
     
 }
@@ -196,7 +200,7 @@ return sum;
     int days;
 
     //Get days to Goal
-    days = [self DaysToGoal: CaloriesPerDay userId: user_id];
+    days = [self DaysToGoal: user_id];
     
     // Calculate date after x days
     NSDate *goalDay = [today dateByAddingTimeInterval: (days * secondsPerDay)];
