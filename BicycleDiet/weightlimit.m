@@ -149,7 +149,17 @@ return sum;
     
     
     //Get TotalGoal & Current points
-     
+    NSString * sql = [ @"" stringByAppendingFormat: @"SELECT * from username where user_id = %i", user_id]; 
+    DBController * myDB = [[DBController alloc] init];
+    
+    [myDB DBdatafieldToUserArray:sql];
+    
+    Users * temp = [myDB.obj_array lastObject]; 
+    
+    totalGoal = temp.total_goal;
+    currentPoints = temp.total_progress;
+    
+    CaloriesPerDay  = temp.dailyDiet_goal + temp.dailyExercise_goal;
     
     //Subtract TotalGoal
     days = (totalGoal - currentPoints) / CaloriesPerDay;
