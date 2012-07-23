@@ -109,6 +109,8 @@
 
     
 +(int) GetPointsEarnedToday_Exercise{
+    //TODO: in Progress View Controller Move here to clean up.
+    
     return 400;
 }
 

@@ -83,10 +83,8 @@
     dietGoal.text = @"Goal Not Set";
     exerciseGoal.text = @"Goal Not Set";
     
-    //TODO: update progress from data base
     
     
-    exerciseProgress.progress = (float)500/(float)1000;
     dietProgress.progress = (float)500/(float)1000;
     
     if ((totalgoal != 0)){
@@ -99,10 +97,19 @@
     
     totalpoints_earned.text = [[NSNumber alloc ]initWithInt:totalearned ].stringValue; 
     
+    
+    
+    [self getGoals:user_id];
+    
     // TODO: load from DB from activity table where date = today AND user = user_id
     totalpoints_earnedtoday.text = @"1550";
     
-    [self getGoals:user_id];
+    // Use weightlimit Database Select  with sql for date an user_id
+ 
+    //TODO: update progress from data base
+  //  NSString * sql = [@"Select * from status where"  stringByAppendingFormat: @"user_id =  %i AND date = %@ AND activity_id = %i", user_id, date, ];
+  
+   // [weightlimit Database_select: sql];
     
 }
 
