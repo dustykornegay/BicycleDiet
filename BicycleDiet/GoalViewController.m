@@ -17,7 +17,7 @@
 @implementation GoalViewController
 @synthesize user_id, dietGoal, exerciseGoal,exerciseGoal_minutes, goalreached_estimate; 
 @synthesize hoursExercise, intensityExercise, caloriesDiet,DateSelector;
-@synthesize ETA, WeightAtDate;
+@synthesize ETA, WeightAtDate, eventday;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +34,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self viewDidAppear: FALSE];
+    today = [NSDate date];
+    event = [NSDate date];
 
 }
 
@@ -90,9 +92,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     
-    
-    
-    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -104,7 +103,6 @@
    // Call the weightloss methods necessary to recalculate the dates & weights
     
     NSCalendar * calendar = [[NSCalendar alloc ]initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDate * today = [NSDate date];
     
     NSDateComponents *components = [[NSDateComponents alloc] init] ;
     [components setDay: [weightlimit DaysToGoal: user_id]];
@@ -114,11 +112,19 @@
     
     NSDate *goal = [calendar dateByAddingComponents:components toDate:today options:0];
     
+    
     //set weight at date;
-    WeightAtDate.text = @"135";
+    
+    int CaloriesPerDay = (exerciseGoal_intensity * exerciseGoal_minutes) + dietGoal;
+    
+    float temp_float =(float)[weightlimit QuarterPoundsbyDate: CaloriesPerDay date:event] / 4;
     
     
-    //set estimated date you will meet goal;
+    WeightAtDate.text =  [[NSNumber alloc] initWithFloat: temp_float].stringValue;
+    
+    eventday.text = [formatter stringFromDate: event] ;
+    
+    //set estimated date you will meet goal;today
     ETA.text = [formatter stringFromDate:goal];
     
     [hoursExercise  setValue: (float)exerciseGoal_minutes / 60];
@@ -127,7 +133,18 @@
     
 }
 
-
+-(IBAction) byDate{
+    NSCalendar * calendar = [[NSCalendar alloc ]initWithCalendarIdentifier:NSGregorianCalendar];
+   
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    
+    [components setDay: (int) DateSelector.value];
+   
+    event = [calendar dateByAddingComponents:components toDate:today options:0];
+    
+    [self SetGoals];
+    
+}
 
 -(IBAction) sliderDiet: (id) sender{
     UISlider *slider = (UISlider *) sender;

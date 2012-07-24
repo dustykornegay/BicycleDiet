@@ -37,6 +37,7 @@
 		1E8E7C6B15B0D58600F86BF8 /* ExercisingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8E7C6A15B0D58600F86BF8 /* ExercisingViewController.m */; };
 		1EDE8C95159D7A4B0054C357 /* bicyclediet.db in Resources */ = {isa = PBXBuildFile; fileRef = 1EDE8C94159D7A4B0054C357 /* bicyclediet.db */; };
 		1EE1C4F115A178FA0011278F /* bicycle_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE1C4F015A178FA0011278F /* bicycle_retina.png */; };
+		1EF1441C15BE303F00F5AF38 /* ID-10064756.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1EF1441B15BE303F00F5AF38 /* ID-10064756.jpg */; };
 		1EFAF479157B0DE900F8DF27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFAF478157B0DE900F8DF27 /* UIKit.framework */; };
 		1EFAF47B157B0DE900F8DF27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFAF47A157B0DE900F8DF27 /* Foundation.framework */; };
 		1EFAF47D157B0DE900F8DF27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFAF47C157B0DE900F8DF27 /* CoreGraphics.framework */; };
@@ -102,6 +103,7 @@
 		1E8E7C6A15B0D58600F86BF8 /* ExercisingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisingViewController.m; sourceTree = "<group>"; };
 		1EDE8C94159D7A4B0054C357 /* bicyclediet.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = bicyclediet.db; path = BicycleDiet/bicyclediet.db; sourceTree = SOURCE_ROOT; };
 		1EE1C4F015A178FA0011278F /* bicycle_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bicycle_retina.png; path = ../bicycle_retina.png; sourceTree = "<group>"; };
+		1EF1441B15BE303F00F5AF38 /* ID-10064756.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10064756.jpg"; sourceTree = "<group>"; };
 		1EFAF474157B0DE900F8DF27 /* BicycleDiet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BicycleDiet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFAF478157B0DE900F8DF27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1EFAF47A157B0DE900F8DF27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -259,9 +261,10 @@
 				1E6F764015A0008D00A93206 /* siriwan.png */,
 				1E6F7629159FD46600A93206 /* Bicycle.png */,
 				1E6F7638159FE1FB00A93206 /* PadMaMa.png */,
-				1E6F7614159F7F2100A93206 /* ID-10080546.jpg */,
 				1EFAF49B157B1CEB00F8DF27 /* ID-10046769.jpg */,
+				1EF1441B15BE303F00F5AF38 /* ID-10064756.jpg */,
 				1EFAF49C157B1CEB00F8DF27 /* ID-10072763.jpg */,
+				1E6F7614159F7F2100A93206 /* ID-10080546.jpg */,
 				1EDE8C94159D7A4B0054C357 /* bicyclediet.db */,
 				1E3A21991597C3EB0014D2CD /* bicyclediet_tables */,
 				1EFAF480157B0DE900F8DF27 /* BicycleDiet-Info.plist */,
@@ -334,6 +337,7 @@
 				1E6F7639159FE1FB00A93206 /* PadMaMa.png in Resources */,
 				1E6F764115A0008D00A93206 /* siriwan.png in Resources */,
 				1EE1C4F115A178FA0011278F /* bicycle_retina.png in Resources */,
+				1EF1441C15BE303F00F5AF38 /* ID-10064756.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

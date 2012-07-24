@@ -14,8 +14,11 @@
     int exerciseGoal;
     int exerciseGoal_minutes;
     NSDate * goalreached_estimate;
+    NSDate * event; 
+    NSDate * today;
     UILabel * ETA;
     UILabel * WeightAtDate;
+    UITextField * eventday;
     
     UISlider *caloriesDiet ;
     UISlider *hoursExercise;
@@ -36,11 +39,13 @@
 @property (nonatomic, retain) IBOutlet UIStepper * DateSelector;
 @property (nonatomic,retain) IBOutlet UILabel * ETA;
 @property (nonatomic,retain) IBOutlet UILabel * WeightAtDate;
+@property (nonatomic,retain) IBOutlet UITextField * eventday;
 
 
 -(IBAction) sliderDiet: (id) sender;
 -(IBAction) sliderHoursExercise: (id)sender;
 -(IBAction) sliderIntensityExercise:(id)sender;
+-(IBAction) byDate;
 
 - (IBAction) SetGoals;
 
