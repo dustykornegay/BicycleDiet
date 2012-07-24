@@ -99,6 +99,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cyp-wE-nOZ" id="f08-wv-tZc"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IRl-BA-dds">
                                 <rect key="frame" x="120" y="272" width="65" height="21"/>
@@ -1620,7 +1623,6 @@
             <relationships>
                 <relationship kind="action" name="SetGoals"/>
                 <relationship kind="action" name="byDate"/>
-                <relationship kind="action" name="byDate:"/>
                 <relationship kind="action" name="sliderDiet:"/>
                 <relationship kind="action" name="sliderHoursExercise:"/>
                 <relationship kind="action" name="sliderIntensityExercise:"/>

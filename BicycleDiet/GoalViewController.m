@@ -171,4 +171,11 @@
     [self SetGoals];
 }
 
+-(BOOL) textFieldShouldReturn:(UITextField *) aTextField {
+    [aTextField resignFirstResponder];
+    NSLog(@"I hit return");
+    return YES;
+    
+}
+
 @end
