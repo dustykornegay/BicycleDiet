@@ -100,7 +100,7 @@
     return total;
 }
 
-+(int) GetPointsEarnedToday: (int)user_num Type: (NSString *) dietOrExercise{
++(int) GetPointsEarnedToday: (int)user_num Type: (NSString *) DietOrExercise{
     
     NSDate * today = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -108,7 +108,7 @@
     
     NSString * str_today =  [formatter stringFromDate:today]; 
     
-    NSString * sql = [@"Select * from status where " stringByAppendingFormat: @"user_id = %i and date = %@and type = 'Diet'" , user_num, str_today];
+    NSString * sql = [@"Select * from status where " stringByAppendingFormat: @"user_id = %i and date like '%@' and action = '%@'" , user_num, str_today, DietOrExercise ];
     
     int total =[self Database_select: sql];
     
@@ -270,8 +270,12 @@ return sum;
     //9 character date format ddMMMyyyy ex 12JUN2012
     NSDate * now = [NSDate date];
 
+    NSDateFormatter * formatter= [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"ddMMMyyyy"];
+    
     NSString * mydate = [[NSString alloc] init];
- 
+    
+    /*
     // code found from Richard J. Ross on stackoverflow.com
     //begin
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar];
@@ -285,7 +289,10 @@ return sum;
     // end
   
     //TODO: Update to use Formatter 
-    mydate = [@"" stringByAppendingFormat: @"'%i%@%i'", day, [self ThreeCharMonth: month], year];
+    //mydate = [@"" stringByAppendingFormat: @"'%i%@%i'", day, [self ThreeCharMonth: month], year];
+    */
+    
+    mydate = [formatter stringFromDate:now];
     
     NSLog(@"%@",mydate);
     
@@ -293,65 +300,6 @@ return sum;
     
 }
 
-+(NSString *) ThreeCharMonth: (int) month{
-    NSString * month_str;
-    
-    switch (month){
-        case 1:
-            month_str = @"JAN";
-            break;
-            
-        case 2:
-            month_str = @"FEB";
-            break;    
-            
-        case 3:
-            month_str = @"MAR";
-            break;
-            
-        case 4:
-            month_str = @"APR";
-            break;
-            
-        case 5:
-            month_str = @"MAY";
-            break;
-            
-        case 6:
-            month_str = @"JUN";
-            break;
-            
-        case 7:
-            month_str = @"JUL";
-            break;
-            
-        case 8:
-            month_str = @"AUG";
-            break;
-            
-        case 9:
-            month_str = @"SEP";
-            break;
-            
-        case 10:
-            month_str = @"OCT";
-            break;
-            
-        case 11:
-            month_str = @"NOV";
-            break;
-            
-        case 12:
-            month_str = @"DEC";
-            break;
-            
-        default:
-            
-            month_str = @"UNK";
-            
-    }
-    
-    return month_str;
-    
-}
+
+
 @end

@@ -236,6 +236,7 @@ sqlite3_close(database);
         
 		sqlite3_stmt *compiledStatement;
         
+        NSLog (@"%@", sql_com);
         
 		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array

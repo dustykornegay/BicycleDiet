@@ -100,8 +100,10 @@
     
     [self getGoals:user_id];
     
-    // TODO: load from DB from activity table where date = today AND user = user_id
-    totalpoints_earnedtoday.text = @"1550";
+    // TODO: load from DB from activity table where date = today AND user = user_i
+    
+    totalpoints_earnedtoday.text = [[NSNumber alloc] initWithInt: [weightlimit GetPointsEarnedToday:user_id Type: @"Exercise"]].stringValue  ;
+    
     
     // Use weightlimit Database Select  with sql for date an user_id
  

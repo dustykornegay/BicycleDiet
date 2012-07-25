@@ -21,7 +21,7 @@
 +(int) GetPointsTotal_goal: (int) user_num;
 +(int) GetPointsEarnedTotal: (int) user_num;
 
-+(int) GetPointsEarnedToday: (int) user_num Type: (NSString *) dietOrExercise;
++(int) GetPointsEarnedToday: (int) user_num Type: (NSString *) DietOrExercise;
 
 + (int)Database_select: (NSString *) sql_command;
 
@@ -35,6 +35,6 @@
 
 +(NSString *) GetDate;
 
-+(NSString *) ThreeCharMonth: (int) month;
+
 
 @end
