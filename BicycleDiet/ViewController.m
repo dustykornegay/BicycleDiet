@@ -42,7 +42,7 @@
 {
     [super viewDidLoad];
     
-    [self viewWillAppear: FALSE];
+    [self viewWillAppear: TRUE];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -51,7 +51,8 @@
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void) viewWillAppear:(BOOL)animated   {
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     DBController *mydb = [[DBController alloc] init];
     
@@ -66,7 +67,9 @@
     }else {
         self.userlist = nil;
     }
-
+    
+  [self.tableView reloadData];
+   
 }
 
 - (void)viewDidUnload
