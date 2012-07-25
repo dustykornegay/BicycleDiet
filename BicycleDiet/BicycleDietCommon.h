@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "weightlimit.h"
 #import "DBController.h"
+#import "AppDelegate.h"
 
 //import DataModels
 
@@ -23,12 +24,15 @@
 
 #define PI = 3.14159265358979323846264338327;
 
-@interface BicycleDietCommon: NSObject  {
-    
-}
+
+@interface BicycleDietCommon: NSObject  
+//TODO: Collect SQL statements here
+
 
 @property (nonatomic) int UserID;
 
+
 @end
+
 
 

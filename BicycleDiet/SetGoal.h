@@ -24,6 +24,8 @@
 @property (nonatomic) int gender;
 @property (nonatomic) int points;
 @property (nonatomic) float suggested;
+@property (nonatomic, retain) IBOutlet UIImageView * skinny;
+@property (nonatomic, retain) IBOutlet UIImageView * obese;
 
 
 @property (nonatomic, retain) IBOutlet UITextField *namefield;

@@ -283,7 +283,8 @@ return sum;
     int year= [components year];
    
     // end
-    
+  
+    //TODO: Update to use Formatter 
     mydate = [@"" stringByAppendingFormat: @"'%i%@%i'", day, [self ThreeCharMonth: month], year];
     
     NSLog(@"%@",mydate);

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface weightlimit : NSObject {
-    NSMutableArray *obj_list;
+    
 }
 
 @property (nonatomic, retain) IBOutlet NSMutableArray * obj_list;

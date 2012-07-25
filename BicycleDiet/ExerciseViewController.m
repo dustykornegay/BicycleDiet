@@ -7,7 +7,6 @@
 //
 
 #import "ExerciseViewController.h"
-#import "AppDelegate.h"
 #import "BicycleDietCommon.h"
 
 @interface ExerciseViewController ()

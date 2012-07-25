@@ -8,7 +8,6 @@
 
 #import "SetGoal.h"
 #import "BicycleDietCommon.h"
-#import "AppDelegate.h"
 
 
 @implementation SetGoal
@@ -25,6 +24,7 @@
 @synthesize gender_button;
 @synthesize suggestgoal_button;
 @synthesize acceptgoal_button;
+@synthesize skinny, obese;
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -33,7 +33,7 @@
     if (self) {
         // Initialization code
        
-        
+       
     }
     return self;
 }
@@ -48,19 +48,31 @@
 }
 */
 -(IBAction)doGender_button:(id)sender{
+   
     //This code is intended to change the label on the gender button from "Gender" to "Male"/"Female" 
    
    if  (gender == 1){
         [sender setTitle:  @"Female" forState:UIControlStateNormal];
-     //   namefield.text = @"Jane";
+   
+       [skinny setImage: [UIImage imageNamed: @"ID-10046769.jpg" ]];
+       [obese setImage:[UIImage imageNamed: @"ID-10064756.jpg"]];
+      
+       
+       //set next state gender
        gender = 2;
     }else  if  (gender == 2){
         [sender setTitle:  @"Gender" forState:UIControlStateNormal];
-      //  namefield.text = @"Pat";
+        
+      //set next state male
         gender = 3;
     }else {
         [sender setTitle:  @"Male" forState:UIControlStateNormal];
-      //  namefield.text = @"John";
+         
+        
+        [skinny setImage: [UIImage imageNamed: @"ID-10080546.jpg"]];
+        [obese setImage:[UIImage imageNamed: @"ID-10072763.jpg"]];
+        
+        //set next state to female
         gender = 1;
    } 
     

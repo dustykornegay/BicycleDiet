@@ -8,7 +8,6 @@
 
 #import "ProgressViewController.h"
 #import "ProgressView.h"
-#import "AppDelegate.h"
 #import "BicycleDietCommon.h"
 
 

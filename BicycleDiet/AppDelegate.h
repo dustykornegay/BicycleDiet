@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
-#import "SetGoal.h"
+
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
