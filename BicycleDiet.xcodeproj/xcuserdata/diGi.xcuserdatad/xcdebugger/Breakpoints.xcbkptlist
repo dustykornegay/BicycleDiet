@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/weightlimit.m"
-         timestampString = "364717693.871022"
+         timestampString = "364877035.999247"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "259"
-         endingLineNumber = "259"
+         startingLineNumber = "266"
+         endingLineNumber = "266"
          landmarkName = "+GetTime"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +164,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/weightlimit.m"
-         timestampString = "364717693.871022"
+         timestampString = "364877035.999247"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "265"
-         endingLineNumber = "265"
+         startingLineNumber = "272"
+         endingLineNumber = "272"
          landmarkName = "+GetDate"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +177,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/weightlimit.m"
-         timestampString = "364717693.871022"
+         timestampString = "364877035.999247"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "246"
-         endingLineNumber = "246"
+         startingLineNumber = "253"
+         endingLineNumber = "253"
          landmarkName = "+GetTime"
          landmarkType = "5">
       </FileBreakpoint>
@@ -229,11 +229,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BicycleDiet/weightlimit.m"
-         timestampString = "364717693.871022"
+         timestampString = "364877035.999247"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "219"
-         endingLineNumber = "219"
+         startingLineNumber = "226"
+         endingLineNumber = "226"
          landmarkName = "+PushDailyGoals:Diet:Exercise:ExerciseDuration:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -365,6 +365,19 @@
          startingLineNumber = "149"
          endingLineNumber = "149"
          landmarkName = "-textFieldShouldReturn:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BicycleDiet/weightlimit.m"
+         timestampString = "364877035.999247"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
+         landmarkName = "+GetPointsEarnedToday_Diet:Type:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

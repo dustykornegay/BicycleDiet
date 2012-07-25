@@ -11,8 +11,9 @@
 #import "Users.h"
 #import "Activity.h"
 
-@implementation weightlimit 
+@implementation weightlimit
 @synthesize obj_list = _obj_list;
+
 
 
 +(float) Calculate_Points: (float) current_weight_lbs ideal: (float) ideal_weight_lbs{
@@ -99,20 +100,26 @@
     return total;
 }
 
-+(int) GetPointsEarnedToday: (int)user_num{
++(int) GetPointsEarnedToday: (int)user_num Type: (NSString *) dietOrExercise{
+    
+    NSDate * today = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"ddMMMyyyy"];
+    
+    NSString * str_today =  [formatter stringFromDate:today]; 
+    
+    NSString * sql = [@"Select * from status where " stringByAppendingFormat: @"user_id = %i and date = %@and type = 'Diet'" , user_num, str_today];
+    
+    int total =[self Database_select: sql];
+    
     // Open the status table and total the points earned from all sources
     // where user_id == user_num  &  date == ?Today's Date;
     //sql = "SELECT ?points? WHERE user_id = ?user_num? AND date= ?Today?
     
-    return 1000;
+    return total;
 }
 
     
-+(int) GetPointsEarnedToday_Exercise{
-    //TODO: in Progress View Controller Move here to clean up.
-    
-    return 400;
-}
 
 +(int)Database_select: (NSString *) sql_command{
 DBController *mydb = [[DBController alloc] init];

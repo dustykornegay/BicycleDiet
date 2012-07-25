@@ -19,10 +19,10 @@
 
 
 +(int) GetPointsTotal_goal: (int) user_num;
-
 +(int) GetPointsEarnedTotal: (int) user_num;
-+(int) GetPointsEarnedToday: (int) user_num;
-+(int) GetPointsEarnedToday_Exercise;
+
++(int) GetPointsEarnedToday: (int) user_num Type: (NSString *) dietOrExercise;
+
 + (int)Database_select: (NSString *) sql_command;
 
 +(int) DaysToGoal:  (int) user_id ;
