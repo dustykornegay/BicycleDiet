@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="f6l-R4-FAo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="f6l-R4-FAo">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
         <!--Goal View Controller - Goal-->
@@ -12,7 +11,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="US1-wh-rja" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cyp-wE-nOZ" customClass="GoalViewController" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cOT-bH-Yc8">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2" id="I5w-9W-6qC">
@@ -146,7 +145,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="180" id="PXd-eS-lKn">
-                                <rect key="frame" x="217" y="81" width="94" height="27"/>
+                                <rect key="frame" x="217" y="125" width="94" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <action selector="byDate" destination="cyp-wE-nOZ" eventType="touchUpInside" id="bBt-hk-tHI"/>
@@ -181,12 +180,12 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RxS-u5-tof" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4gQ-Rx-AcU" customClass="ProgressViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rEM-lb-aBd" customClass="ProgressView">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rEM-lb-aBd" customClass="ProgressView">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Inspiration Bar:                           Keep Up The Good Work" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xUZ-ch-Qee">
-                                <rect key="frame" x="97" y="161" width="209" height="64"/>
+                                <rect key="frame" x="97" y="161" width="205" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.4781732983673242" green="0.8118285815257692" blue="0.93465523097826086" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -222,7 +221,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="LO6-ct-X4X" userLabel="Progress Chart">
-                                <rect key="frame" x="17" y="227" width="289" height="128"/>
+                                <rect key="frame" x="13" y="233" width="289" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
@@ -318,7 +317,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" id="FHm-zX-jkh">
-                                <rect key="frame" x="0.0" y="367" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Meal" width="54" id="RRW-Pa-mKF">
@@ -343,8 +342,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Bicycle.png" id="i87-Ys-FIs">
-                                <rect key="frame" x="17" y="162" width="79" height="62"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="Bicycle.png" id="i87-Ys-FIs">
+                                <rect key="frame" x="13" y="161" width="85" height="106"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -384,11 +383,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p31-bV-Q8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="UIB-97-VUD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ffJ-Yf-ATZ" userLabel="QuizView">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="trz-kM-44b">
-                                <rect key="frame" x="0.0" y="314" width="320" height="102"/>
+                                <rect key="frame" x="0.0" y="314" width="320" height="146"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="snF-ri-Q5F">
@@ -546,11 +545,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2CC-b2-cNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Yow-nY-k2T" userLabel="MealView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bzH-DZ-orc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="0Xr-L4-OyW">
-                                <rect key="frame" x="0.0" y="319" width="320" height="97"/>
+                                <rect key="frame" x="0.0" y="319" width="320" height="141"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Peanut Butter Sandwich with Milk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="kYi-LZ-ypK">
@@ -587,6 +586,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="UIB-97-VUD" kind="push" id="ax3-UC-XqF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xqg-jJ-VFP">
                                 <rect key="frame" x="172" y="233" width="128" height="37"/>
@@ -688,7 +690,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Xp-fC-52P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="iBf-BO-vEh" customClass="ViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bct-CM-8nU">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <toolbar key="tableFooterView" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ERf-ko-1Cl">
@@ -845,7 +847,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOe-yq-a2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cei-DH-dw9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yge-x3-ICY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="0OS-ny-SCV">
@@ -993,7 +995,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOc-Ue-Oiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="X3f-W4-xvo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dy0-Hs-zoO">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="for Siriwan Inc          by Dusty Kornegay " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ghC-HA-kHD">
@@ -1058,11 +1060,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgk-Wn-s8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="61b-DY-JHd" userLabel="ExcerciseView" customClass="ExerciseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJE-E4-b8z">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="hn9-1K-IoT">
-                                <rect key="frame" x="0.0" y="319" width="320" height="97"/>
+                                <rect key="frame" x="0.0" y="319" width="320" height="141"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Exercise Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WoR-kb-7cI">
@@ -1159,7 +1161,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrD-C5-D9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="aqo-1O-lOk" customClass="ExercisingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qHy-3o-pXx">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nsL-Eh-wEe">
@@ -1251,7 +1253,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Bicycle Diet" title="Bicycle Diet" id="12" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13" userLabel="BicycleDiet_StartForm" customClass="SetGoal">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" id="Sxk-pm-4Zg" userLabel="Txt_Name">
@@ -1463,11 +1465,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9P3-fk-gOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="myJ-cO-3c7" userLabel="SnackView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RwK-Nj-ApO">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="MBf-kX-j1V">
-                                <rect key="frame" x="0.0" y="319" width="320" height="97"/>
+                                <rect key="frame" x="0.0" y="319" width="320" height="141"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1Ql-U6-bDc">
@@ -1504,6 +1506,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="UIB-97-VUD" kind="push" id="lSv-T3-aht"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ID-10046769.jpg" id="pKc-b2-iom">
                                 <rect key="frame" x="170" y="7" width="134" height="164"/>
@@ -1596,9 +1601,119 @@
         <image name="PadMaMa.png" width="240" height="320"/>
         <image name="siriwan.png" width="320" height="162"/>
     </resources>
+    <classes>
+        <class className="CreateUserCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateUserCell.h"/>
+        </class>
+        <class className="EmptyCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EmptyCell.h"/>
+        </class>
+        <class className="ExerciseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SubmitPoints:"/>
+                <relationship kind="outlet" name="unsubmittedpoints" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ExercisingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercisingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="StartPauseTimer:"/>
+                <relationship kind="action" name="sliderIntensity:"/>
+                <relationship kind="outlet" name="counter" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="points_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stopwatch" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GoalViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SetGoals"/>
+                <relationship kind="action" name="byDate"/>
+                <relationship kind="action" name="sliderDiet:"/>
+                <relationship kind="action" name="sliderHoursExercise:"/>
+                <relationship kind="action" name="sliderIntensityExercise:"/>
+                <relationship kind="outlet" name="DateSelector" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="ETA" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="WeightAtDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="caloriesDiet" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="eventday" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hoursExercise" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="ProgressCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="diet" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exercise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="total" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="username" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ProgressView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="Goal_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="inspiration" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedTotal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Diet" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Exercise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Total" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalgoal_points" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalprogress" candidateClass="UIProgressView"/>
+            </relationships>
+        </class>
+        <class className="ProgressViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dietGoal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dietProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exerciseGoal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="exerciseProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="inspiration" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="totalgoal_points" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalpoints_earned" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalpoints_earnedtoday" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SetGoal" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetGoal.h"/>
+            <relationships>
+                <relationship kind="action" name="doAcceptgoal_button"/>
+                <relationship kind="action" name="doGender_button:"/>
+                <relationship kind="action" name="doSuggestgoal_button"/>
+                <relationship kind="action" name="sliderchanged:"/>
+                <relationship kind="outlet" name="acceptgoal_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="current_weight" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gender_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="goal" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="height_ft_field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="height_in_field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="namefield" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="obese" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="skinny" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="suggestgoal_button" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="HhA-Rc-9Up"/>
+        <segue reference="b0F-0I-AUe"/>
+    </inferredMetricsTieBreakers>
 </document>
