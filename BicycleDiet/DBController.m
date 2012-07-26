@@ -417,6 +417,12 @@
     NSString * sql = [ @"" stringByAppendingFormat: @"DELETE FROM username where user_id = %i", user]; 
     
     [self DBPush: sql];
+    
+    sql = [ @"" stringByAppendingFormat: @"DELETE FROM status where user_id = %i", user];
+    
+    [self DBPush: sql];
+
+    
 }
 
 

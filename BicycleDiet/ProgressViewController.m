@@ -111,7 +111,7 @@
     
     //Error Code accessing DB -2: No object  -1: SQL error
     if (pointsEarned_exercise < 0) {
-        NSLog(@"Database Error Diet Points %i", pointsEarned_exercise);
+        NSLog(@"Database Error Exercise Points %i", pointsEarned_exercise);
         pointsEarned_exercise = 0;
     }
     

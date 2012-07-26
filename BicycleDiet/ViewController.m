@@ -9,7 +9,7 @@
 //Controllers
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "DBController.h"
+#import "BicycleDietCommon.h"
 #import "ProgressViewController.h"
 
 //Cells & Views
@@ -143,22 +143,48 @@
         
         float temp = (float) cellValue.total_progress / (float) cellValue.total_goal;
         
-        
         int e_goal = cellValue.dailyExercise_goal;
+        
         int d_goal = cellValue.dailyDiet_goal;
         
         float e_progress = 0;
+        
         float d_progress = 0;
         
-        if (e_goal >0) {
+        int exercise = [weightlimit GetPointsEarnedToday: cellValue.user_id Type: @"Exercise"];
+        
+        int diet = [weightlimit GetPointsEarnedToday: cellValue.user_id Type: @"Diet"];
+        
+        
+        //Error Code accessing DB -2: No object  -1: SQL error
+        if (exercise < 0) {
             
-            e_progress = (float) cellValue.dailyExercise_progress / (float) e_goal;
+            NSLog(@"Database Error Diet Points %i", exercise);
+            
+            e_progress =0;
+            
+        }else if (e_goal > 0){
+            
+            e_progress = (float) exercise / (float) e_goal;
+            
         }
         
-        if (d_goal >0) {
+        
+        if (diet < 0) {
             
-            d_progress = (float) cellValue.dailyDiet_progress / (float) d_goal;
+            NSLog(@"Database Error Diet Points %i", diet);
+            
+            d_progress =0;
+            
+        }else if (d_goal > 0){
+            
+            d_progress = (float) diet/ (float) e_goal;
+            
         }
+        
+        
+        
+      
         
 
         
@@ -247,8 +273,7 @@
         
         
         [userlist removeObjectAtIndex: indexPath.row -1];
-        
-            [self viewWillAppear:FALSE];
+    
         
         // Delete the row from the data source
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
