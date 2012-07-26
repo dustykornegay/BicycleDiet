@@ -141,19 +141,27 @@
 
     cell.username.text = cellValue.user;
         
-        float temp = (float) cellValue.total_progress / (float) cellValue.total_goal;
+        
         
         int e_goal = cellValue.dailyExercise_goal;
         
         int d_goal = cellValue.dailyDiet_goal;
         
+        int t_goal = cellValue.total_goal;
+        
+        
         float e_progress = 0;
         
         float d_progress = 0;
         
+        float t_progress = 0;
+        
+        
         int exercise = [weightlimit GetPointsEarnedToday: cellValue.user_id Type: @"Exercise"];
         
         int diet = [weightlimit GetPointsEarnedToday: cellValue.user_id Type: @"Diet"];
+        
+        int total = [weightlimit GetPointsEarnedTotal: cellValue.user_id ];
         
         
         //Error Code accessing DB -2: No object  -1: SQL error
@@ -182,13 +190,23 @@
             
         }
         
-        
+        if (total < 0) {
+            
+            NSLog(@"Database Error Diet Points %i", diet);
+            
+            t_progress =0;
+            
+        }else if ( t_goal > 0){
+            
+            t_progress = (float) total/ (float) t_goal;
+            
+        }
         
       
         
 
         
-        cell.totalprogress.progress = temp;
+        cell.totalprogress.progress = t_progress;
         cell.exercise_todaysprogress.progress = e_progress;
         cell.diet_todaysprogress.progress = d_progress;
     
