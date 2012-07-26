@@ -88,10 +88,9 @@
 
 +(int) GetPointsEarnedTotal: (int)user_num {
     // Open the status table and total the points earned from all sources
-    // where user_id == user_num
-    //sql = "Select ?points? from status where user_id = ?user_num?
-     
+         
     NSString * sql = [[NSString alloc] initWithFormat: @"Select * from status where user_id = %i", user_num];
+    
     NSLog(@"User ID = %@",sql);
     
     int total =[self Database_select: sql];
@@ -102,19 +101,11 @@
 
 +(int) GetPointsEarnedToday: (int)user_num Type: (NSString *) DietOrExercise{
     
-    NSDate * today = [NSDate date];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"ddMMMyyyy"];
-    
-    NSString * str_today =  [formatter stringFromDate:today]; 
+    NSString * str_today =  [self GetDate]; 
     
     NSString * sql = [@"Select * from status where " stringByAppendingFormat: @"user_id = %i and date like '%@' and action = '%@'" , user_num, str_today, DietOrExercise ];
     
     int total =[self Database_select: sql];
-    
-    // Open the status table and total the points earned from all sources
-    // where user_id == user_num  &  date == ?Today's Date;
-    //sql = "SELECT ?points? WHERE user_id = ?user_num? AND date= ?Today?
     
     return total;
 }
@@ -122,32 +113,36 @@
     
 
 +(int)Database_select: (NSString *) sql_command{
-DBController *mydb = [[DBController alloc] init];
-int sum = 0;
-
-if([mydb DBdatafieldToActivityArray: sql_command ]){
-// TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
     
-NSLog( @"Get data from DB");
-    NSMutableArray * objects;
+    int sum = 0; //initialize sum to zero before totalling     
     
-    objects = mydb.obj_array;
+    DBController *mydb = [[DBController alloc] init];
+        
+    if([mydb DBdatafieldToActivityArray: sql_command ]){
+        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
     
-    if (objects.count != 0){
-    // walk through array and sum data values
-    for( int y = 0; y < [objects count]; y++){
-        Activity * a =[objects objectAtIndex: y];
-        sum += a.points; }
-    }else {
+        NSLog( @"Get data from DB");
+        NSMutableArray * objects;
+    
+        objects = mydb.obj_array;
+    
+        if (objects.count != 0){
+            // walk through array and sum data values
+            for( int y = 0; y < [objects count]; y++){
+                Activity * a =[objects objectAtIndex: y];
+                sum += a.points; }
+            
+        }else {
             sum = -2;
         }
     
     
-}else {
-    NSLog (@"DBdatafieldToObjectArray FAILED in weightlimit +Database_select");
-    sum = -1;
-}
-return sum;
+    }else {
+        NSLog (@"DBdatafieldToObjectArray FAILED in weightlimit +Database_select");
+        sum = -1;
+    }
+    
+    return sum;
 }
 
 
@@ -274,23 +269,6 @@ return sum;
     [formatter setDateFormat:@"ddMMMyyyy"];
     
     NSString * mydate = [[NSString alloc] init];
-    
-    /*
-    // code found from Richard J. Ross on stackoverflow.com
-    //begin
-    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar];
-    NSDateComponents *components = [cal components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:now];
-
-     
-    int month = [components month] ;
-    int day = [components day]; 
-    int year= [components year];
-   
-    // end
-  
-    //TODO: Update to use Formatter 
-    //mydate = [@"" stringByAppendingFormat: @"'%i%@%i'", day, [self ThreeCharMonth: month], year];
-    */
     
     mydate = [formatter stringFromDate:now];
     

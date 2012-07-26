@@ -33,16 +33,12 @@
         
         BundleDbPath = [BundleDbPath stringByAppendingPathComponent:databaseName ];
         
-        NSLog(@"%@",BundleDbPath);
         
         NSArray *libraryPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
         NSString *documentsDir = [libraryPaths objectAtIndex:0];
         
         databasePath = [documentsDir stringByAppendingPathComponent:appSupport];
         
-          
-        
-        NSLog(@"%@", databasePath);
         NSError * myerror;
         
         //create the ApplicationSupportDirectory if it does not exist
@@ -106,8 +102,11 @@
     
     return success;
     
-    
 }
+
+
+
+
 -(BOOL) DBPush: (NSString *) sql_com{
     BOOL success = [self CheckOrCreateDB];
     
@@ -154,33 +153,37 @@
 	// Query the database for all  records and construct the object array
         
 	// Init the  Array
+    
 	obj_array = [[NSMutableArray alloc] init];
-	
-        NSLog(@"database exists");
     
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+       
         sqlite3_extended_result_codes(database, 1);
         
         NSLog (@"Database opened");
         
 		// Setup the SQL Statement and compile it for faster access
-        
-        
+                
 		sqlite3_stmt *compiledStatement;
          
         
 		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array
+            
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+                
 				// Read the data from the result row
-                NSLog (@"inside while");
+                NSLog (@"inside User while");
 				
                 // TODO:Update this with a select statement so the correct onject type is loaded
                 
                 int userid = sqlite3_column_int(compiledStatement, 0);
+                
 				NSString *user = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                
 				int goal= sqlite3_column_int(compiledStatement, 2);
+                
                 int progress= sqlite3_column_int(compiledStatement, 3);
                 
                 int exercisegoal = sqlite3_column_int(compiledStatement, 4);
@@ -199,17 +202,18 @@
             
 			}
             success = TRUE;
+            
 		}else {
+            
             success = FALSE;
         }
-        
-        
+    
 		// Release the compiled statement from memory
 		sqlite3_finalize(compiledStatement);
     }
 
-
-sqlite3_close(database);
+    sqlite3_close(database);
+    
     return success;
 }
 
@@ -222,17 +226,15 @@ sqlite3_close(database);
     
 	// Init the  Array
 	obj_array = [[NSMutableArray alloc] init];
-	
-    NSLog(@"database exists");
     
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+        
         sqlite3_extended_result_codes(database, 1);
         
         NSLog (@"Database opened");
         
 		// Setup the SQL Statement and compile it for faster access
-        
         
 		sqlite3_stmt *compiledStatement;
         
@@ -242,39 +244,41 @@ sqlite3_close(database);
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
-                NSLog (@"inside while");
+                NSLog (@"inside Activity while");
 				
                 // TODO:Update this with a select statement so the correct onject type is loaded
                 
-                
+                int user_id = sqlite3_column_int(compiledStatement, 0);
 				int type = sqlite3_column_int(compiledStatement, 1);
                // NSString * activity_id = sqlite3_column_int(compiledStatement, 2);
                 
 				int points= sqlite3_column_int(compiledStatement, 4);
                
-                NSLog( @"ID:   Type: %i Points: %i", type, points); 
+                NSLog( @"ID: %i  Type: %i Points: %i", user_id, type, points); 
                 
 				// Create a new animal object with the data from the database
-				Activity *an_activity = [[Activity alloc] initWithTimeStamp:nil andId:0 andType: type andPoints:points];
+				Activity *an_activity = [[Activity alloc] initWithTimeStamp:nil andId:user_id andType: type andPoints:points];
 				
                 
 				// Add the animal object to the animals Array
 				[obj_array addObject:an_activity];
-				
-                
+				                
 			}
             success = TRUE;
+            
 		}else {
+            
             success = FALSE;
         }
         
         
 		// Release the compiled statement from memory
 		sqlite3_finalize(compiledStatement);
+        
     }
-    
-    
+        
     sqlite3_close(database);
+    
     return success;
 }
 
@@ -287,8 +291,6 @@ sqlite3_close(database);
     
 	// Init the  Array
 	obj_array = [[NSMutableArray alloc] init];
-	
-    NSLog(@"database exists");
     
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
@@ -301,22 +303,23 @@ sqlite3_close(database);
         
 		sqlite3_stmt *compiledStatement;
         
-  //TODO: Update this so it loads five random messages from the database      
+        //TODO: Update this so it loads five random messages from the database 
+        
 		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array
+            
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+                
 				// Read the data from the result row
-                NSLog (@"inside while");
+                NSLog (@"inside  Inspiration while");
 				
-                // TODO:Update this with a select statement so the correct onject type is loaded
-                
-                
 				int inspiredID = sqlite3_column_int(compiledStatement, 0);
-                 NSString  * quote = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                
+                NSString  * quote = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 
 				
                 
-                NSLog( @"ID:   Type: %i Points: %@", inspiredID, quote); 
+                NSLog( @"InspireID: %i Quote: %@", inspiredID, quote); 
                 
 				// Create a new animal object with the data from the database
 				Inspiration *someInspiration = [[Inspiration alloc] initWithId: inspiredID andAuthor:0 andDate:0 andQuote: quote ];
@@ -327,20 +330,26 @@ sqlite3_close(database);
 				
                 
 			}
+            
             success = TRUE;
+            
 		}else {
+            
             success = FALSE;
         }
         
-        
 		// Release the compiled statement from memory
+        
 		sqlite3_finalize(compiledStatement);
     }
     
-    
     sqlite3_close(database);
+    
     return success;
 }
+
+
+
 
 
 -(int) DBGetUserID: (NSString *) username {
@@ -348,17 +357,25 @@ sqlite3_close(database);
     NSString * sql = [@"Select user_id where username = " stringByAppendingFormat: @" %@", username];
     
     if ([self DBdatafieldToUserArray: (NSString *) sql]){
+        
         if (obj_array.count > 0){
+            
         Users * temp = [obj_array lastObject];
         
             return temp.user_id;
+            
         }else {
+            
             return -2;
         }
     }else {
+        
         return -1;
     }
 }
+
+
+
 
 -(int) DBGetNewUserID {
     NSString * sql = @"Select max(user_id) from username";
@@ -384,21 +401,26 @@ sqlite3_close(database);
 		sqlite3_finalize(compiledStatement);
     }
     
-        
-    
     sqlite3_close(database);
     }
+    
     user_id ++;
     return user_id ;
     
 }
 
+
+
+
 -(void) DeleteUser: (int)user {
-    NSLog(@"User_id: %i", user);
+    
     NSString * sql = [ @"" stringByAppendingFormat: @"DELETE FROM username where user_id = %i", user]; 
     
     [self DBPush: sql];
 }
+
+
+
 
 -(void) LoadDatabaseFromFile: (NSString *) filename {
     NSFileManager *fileManager = [NSFileManager defaultManager];

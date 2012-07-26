@@ -25,4 +25,5 @@
             andId:(int)anId
             andType:(int)aType
         andPoints:(int)somePoints;
+        
 @end

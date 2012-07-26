@@ -17,6 +17,9 @@
     int pointsEarned_quiz;
     int pointsEarned_total;
     
+    int diet_goal;
+    int exercise_goal;
+    
     int user_id;
     
     NSMutableArray * inspirationArray;

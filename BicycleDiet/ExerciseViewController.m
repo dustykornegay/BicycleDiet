@@ -55,12 +55,8 @@
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    NSString * temp_str = [weightlimit GetTime];
-    
-    NSLog( @"TimeNow: %@", temp_str);
-    
     //Open Database, submit points with activity id exercise , and user_id matching the user
-   NSString * sql_com = [@"insert into status" stringByAppendingFormat: @" Values(%i,'Exercise', %@, %@,%i)", appDelegate.user_id, temp_str, [weightlimit GetDate], points_earned ];
+   NSString * sql_com = [@"insert into status" stringByAppendingFormat: @" Values(%i,'Exercise', '%@', '%@' ,%i)", appDelegate.user_id, [weightlimit GetTime], [weightlimit GetDate], points_earned ];
     
     
     NSLog(@"%@",sql_com);

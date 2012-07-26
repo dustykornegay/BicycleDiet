@@ -91,13 +91,12 @@
     
     //Grab Inches 
     float inches = [height_in_field.text floatValue];
+    
     //Grab height MULTIPLY by 12 (convert to inches) 
     inches = inches + [height_ft_field.text floatValue ]* 12;
+    
    // Use NSNumber to format output of Calc_Suggested Weight [weightlimit Calc_Suggested_weight: 69 ratio:1]
-   
-   
-    
-    
+
     NSLog(@"%f",waist);
     
     suggested = [weightlimit Calc_Suggested_weight: inches ratio: waist];
@@ -106,30 +105,23 @@
     
     //initialize current weight if it wasn't set by the user
     if ([current_weight.text floatValue] == 0) {current_weight.text = [[NSNumber alloc ]initWithFloat: suggested].stringValue;}
-    
-       
+           
      goal.text =  [[NSNumber alloc ]initWithFloat: suggested].stringValue;
- 
-#ifndef DEBUG
-    NSLog(@"DoSuggestGoal in SetGoal.m completed"); 
-    NSLog(@"Waist to hip ratio: %f", waist);
-    NSLog(@"Current weight: %f", [current_weight.text floatValue]);
-    NSLog(@"Suggested Weight: %f", suggested );
-    NSLog(@"Gender Selected: %i", gender);
-#endif    
-    
-  
       
 } 
+
+
+
 -(IBAction)doAcceptgoal_button{
-     NSLog(@"Suggested: %f", suggested);
-    NSLog(@"Current Weight: %f", [current_weight.text floatValue]);
+     NSLog(@"Suggested: %f  Current Weight: %f", suggested, [current_weight.text floatValue]);
     
     if (suggested == 0) {
+        
        return;
     }
+    
     if (suggested >= [current_weight.text floatValue]){
-        NSLog(@"You have already met your weightloss goal");
+      
         NSLog(@"Gaining weight is not currently supported by this application");
         return;
         
@@ -145,6 +137,7 @@
         int user_id =[myDB DBGetNewUserID];
         
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
         appDelegate.user_id = user_id;
         
         //TODO: Push user_id,Name and goal to Database
@@ -157,15 +150,20 @@
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *) aTextField {
+    
     [aTextField resignFirstResponder];
-    NSLog(@"I hit return");
+    
+    NSLog(@"Hide Keyboard On Return");
+    
     return YES;
     
 }
 -(IBAction)sliderchanged: (id) sender {
+    
     UISlider *slider = (UISlider *) sender;
+    
     waist = (slider.value);
-    //NSLog (@"Slider set waist to hip ratio to: %f",waist);
+    
 } 
 
 @end

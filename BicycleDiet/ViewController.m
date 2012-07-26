@@ -229,7 +229,9 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
         NSLog(@"%i",userlist.count);
+        
         if ((indexPath.row -1) < userlist.count   ){
         //Delete  user_id from database username table && activities table
        DBController *myDB = [[DBController alloc ]init];

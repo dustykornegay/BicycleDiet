@@ -76,6 +76,7 @@
     NSLog(@"%i",user_id);
     
     int totalearned = [weightlimit GetPointsEarnedTotal: user_id];
+    
     int totalgoal = [weightlimit GetPointsTotal_goal:user_id];
     
     
@@ -83,8 +84,6 @@
     exerciseGoal.text = @"Goal Not Set";
     
     
-    
-    dietProgress.progress = (float)500/(float)1000;
     
     if ((totalgoal != 0)){
         totalProgress.progress = (float) totalearned / (float) totalgoal;
@@ -96,19 +95,39 @@
     
     totalpoints_earned.text = [[NSNumber alloc ]initWithInt:totalearned ].stringValue; 
     
-    
-    
     [self getGoals:user_id];
     
-    // TODO: load from DB from activity table where date = today AND user = user_i
+    // TODO: load from DB from activity table where date = today AND user = user_id
     
-    totalpoints_earnedtoday.text = [[NSNumber alloc] initWithInt: [weightlimit GetPointsEarnedToday:user_id Type: @"Exercise"]].stringValue  ;
+    pointsEarned_diet =  [weightlimit GetPointsEarnedToday:user_id Type: @"Diet"];
+    
+    //Error Code accessing DB -2: No object  -1: SQL error
+    if (pointsEarned_diet < 0) {
+        NSLog(@"Database Error Diet Points %i", pointsEarned_diet);
+        pointsEarned_diet =0;
+    }
+    
+    pointsEarned_exercise = [weightlimit GetPointsEarnedToday:user_id Type: @"Exercise"];
+    
+    //Error Code accessing DB -2: No object  -1: SQL error
+    if (pointsEarned_exercise < 0) {
+        NSLog(@"Database Error Diet Points %i", pointsEarned_exercise);
+        pointsEarned_exercise = 0;
+    }
+    
+    
+    
+    dietProgress.progress = (float)pointsEarned_diet/(float) diet_goal;
+    
+    exerciseProgress.progress = (float)pointsEarned_exercise /(float) exercise_goal;
+    
+    totalpoints_earnedtoday.text = [[NSNumber alloc] initWithInt: (pointsEarned_diet + pointsEarned_exercise)].stringValue  ;
     
     
     // Use weightlimit Database Select  with sql for date an user_id
  
     //TODO: update progress from data base
-  //  NSString * sql = [@"Select * from status where"  stringByAppendingFormat: @"user_id =  %i AND date = %@ AND activity_id = %i", user_id, date, ];
+  
   
    // [weightlimit Database_select: sql];
     
@@ -139,12 +158,13 @@
     
     if([myDB DBdatafieldToUserArray:sql ]){
         Users * temp = [myDB obj_array].lastObject;
+  //todo
         
-        pointsEarned_diet = temp.dailyDiet_goal;
-        pointsEarned_exercise = temp.dailyExercise_goal;
+        diet_goal = temp.dailyDiet_goal;
+        exercise_goal = temp.dailyExercise_goal;
         
-        exerciseGoal.text = [@"" stringByAppendingFormat: @"%i", pointsEarned_diet];
-        dietGoal.text = [@"" stringByAppendingFormat: @"%i", pointsEarned_exercise ];
+        exerciseGoal.text = [@"" stringByAppendingFormat: @"%i", exercise_goal];
+        dietGoal.text = [@"" stringByAppendingFormat: @"%i", diet_goal ];
     }
 }
 
@@ -163,8 +183,6 @@
     
    
     if([mydb DBgetInspirationArray: sql ]){
-        
-        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
         
         
         self.inspirationArray = mydb.obj_array;
