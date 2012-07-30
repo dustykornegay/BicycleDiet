@@ -13,6 +13,10 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface GraphView : UIView
+@interface GraphView : UIView{
+
+NSMutableArray * XYCoordinates;
+    
+}
 
 @end
