@@ -245,8 +245,6 @@
     //Four character time hhmm
     NSString * mytime;
     
-    // Code modified from Carl Norum @stackoverflow.com
-    //begin
     NSDateFormatter *formatter;
     
     formatter = [[NSDateFormatter alloc] init];
@@ -278,6 +276,20 @@
     
 }
 
++ (void) PopulateGraph: (int) weeks {
+    //Store Exercise points in an array [7, 14, 28, 56, 70 140, 280 days)
+    
+    int today = 7 * weeks;
+    
+    
+    // select * from status where date like '%JUN2012';
+    // query point for each day and store them in an array. [x= today, y= points]
+    
+    NSString * sql = @"Select * from status where date like ";
+    
+    
+    
+}
 
 
 @end

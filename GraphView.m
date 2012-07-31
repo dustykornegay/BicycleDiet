@@ -36,7 +36,7 @@
 
     // select  days
     //  <= 7  7 bins, eight points   (1 week)
-    //  <= 14 14 bins, 15 points ... (2 weeks)  ... as described above
+    //  <= 14 14 bins, 15 points ... (2 weeks)  ... as described abovesq
 
 
 // Compute Y values
