@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+
+
 
 @interface weightlimit : NSObject {
-    
+  
 }
 
-@property (nonatomic, retain) IBOutlet NSMutableArray * obj_list;
+
+@property (nonatomic, retain) IBOutlet NSMutableArray * graph;
 
 +(float) Calculate_Points: (float) current_weight_lbs ideal: (float) ideal_weight_lbs;
 +(float) Calc_Suggested_weight: (float) height_inches ratio: (float) desired_waist_hip_ratio;
@@ -33,7 +37,9 @@
 
 +(NSString *) GetTime;
 
-+(NSString *) GetDate;
++(NSString *) GetDate: (int)daysAgo;
+
+
 
 
 

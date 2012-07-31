@@ -10,9 +10,14 @@
 #import "DBController.h"
 #import "Users.h"
 #import "Activity.h"
+#import "BicycleDietCommon.h"
+
+
 
 @implementation weightlimit
-@synthesize obj_list = _obj_list;
+
+@synthesize graph = _graph;
+
 
 
 
@@ -101,7 +106,7 @@
 
 +(int) GetPointsEarnedToday: (int)user_num Type: (NSString *) DietOrExercise{
     
-    NSString * str_today =  [self GetDate]; 
+    NSString * str_today =  [self GetDate:0];
     
     NSString * sql = [@"Select * from status where " stringByAppendingFormat: @"user_id = %i and date like '%@' and action = '%@'" , user_num, str_today, DietOrExercise ];
     
@@ -259,16 +264,24 @@
     return mytime;
 }
 
-+(NSString *) GetDate{
++(NSString *) GetDate : (int) daysAgo{
+   
+    NSCalendar  *cal = [NSCalendar currentCalendar];
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    
+    [components setDay: - daysAgo];
+    
+    NSDate * event = [cal dateByAddingComponents: components  toDate:[NSDate date] options:0 ];
+    
     //9 character date format ddMMMyyyy ex 12JUN2012
-    NSDate * now = [NSDate date];
 
     NSDateFormatter * formatter= [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"ddMMMyyyy"];
     
     NSString * mydate = [[NSString alloc] init];
     
-    mydate = [formatter stringFromDate:now];
+    mydate = [formatter stringFromDate: event];
     
     NSLog(@"%@",mydate);
     
@@ -276,20 +289,40 @@
     
 }
 
+//TODO: Fix this
 + (void) PopulateGraph: (int) weeks {
+    CGMutablePathRef thePath = CGPathCreateMutable();
+    CGPathMoveToPoint(thePath,NULL,0,0);
+    
+    Point temp;
     //Store Exercise points in an array [7, 14, 28, 56, 70 140, 280 days)
-    
-    int today = 7 * weeks;
-    
+
+    for (int i = 7 * weeks; i >= 0; i-- ){
+  
+    NSString * date  =  [self GetDate: i];
     
     // select * from status where date like '%JUN2012';
     // query point for each day and store them in an array. [x= today, y= points]
     
-    NSString * sql = @"Select * from status where date like ";
+    NSString * sql = [ @"Select * " initWithFormat: @"from status where date like %@", date];
     
     
+    temp.h  = 280 ;
+    temp.v =  (float)[self Database_select: sql];
     
+    if (temp.v < 0) {temp.v = 0;}
+
+CGPathAddLineToPoint (thePath, NULL, temp.h, temp.v);
+    
+    }
+    
+    
+   
 }
 
 
+
+
 @end
+
+
