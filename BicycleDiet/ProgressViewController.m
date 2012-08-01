@@ -208,4 +208,35 @@
 
 }
 
+
+- (void) PopulateGraph: (int) weeks {
+    //  CGMutablePathRef thePath = CGPathCreateMutable();
+    //  CGPathMoveToPoint(thePath,NULL,0,0);
+    
+    graph = [[NSMutableArray alloc]init];
+    MultiDPoint *temp;
+    //Store Exercise points in an array [7, 14, 28, 56, 70 140, 280 days)
+    
+    for (int i = 7 * weeks; i >= 0; i-- ){
+        
+        NSString * date  =  [weightlimit GetDate: i];
+        
+        // select * from status where date like '%JUN2012';
+        // query point for each day and store them in an array. [x= today, y= points]
+        
+        NSString * sql = [ @"Select * " initWithFormat: @"from status where date like %@", date];
+        
+        
+        temp.x  = 280/ (7 * weeks - i) ;
+        temp.y =  (float)[weightlimit Database_select: sql];
+        
+        if (temp.y < 0) {temp.y = 0;}
+        
+        [graph addObject:temp ];
+        //  CGPathAddLineToPoint (thePath, NULL, temp.h, temp.v);
+        
+    }
+    
+}
+
 @end

@@ -23,6 +23,7 @@
     int user_id;
     
     NSMutableArray * inspirationArray;
+    NSMutableArray * graph;
     NSTimer * inspirationTimer;
     int index;
     BOOL visible;
