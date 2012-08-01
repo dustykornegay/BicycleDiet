@@ -15,7 +15,7 @@
 
 @interface GraphView : UIView{
 
-NSMutableArray * XYCoordinates;
+
     
 }
 

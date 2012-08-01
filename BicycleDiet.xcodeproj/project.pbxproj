@@ -17,6 +17,7 @@
 		1E3A219D1597DC800014D2CD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3A219B1597D3F40014D2CD /* Default.png */; };
 		1E3A21A51597F9870014D2CD /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A21A41597F9870014D2CD /* Users.m */; };
 		1E3E65A015A6B90400601EFE /* GoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3E659F15A6B90400601EFE /* GoalViewController.m */; };
+		1E44765815C9C54400526A3A /* MultiDPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E44765715C9C54400526A3A /* MultiDPoint.m */; };
 		1E4B58E3158BE86500A9457B /* CreateUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B58E2158BE86500A9457B /* CreateUserCell.m */; };
 		1E4B58EC158D324F00A9457B /* SetGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B58EB158D324F00A9457B /* SetGoal.m */; };
 		1E5908D915C25A190073AFF1 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5908D815C25A190073AFF1 /* GraphView.m */; };
@@ -71,6 +72,8 @@
 		1E3A21A41597F9870014D2CD /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		1E3E659E15A6B90300601EFE /* GoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalViewController.h; sourceTree = "<group>"; };
 		1E3E659F15A6B90400601EFE /* GoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalViewController.m; sourceTree = "<group>"; };
+		1E44765615C9C54400526A3A /* MultiDPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiDPoint.h; path = ../MultiDPoint.h; sourceTree = "<group>"; };
+		1E44765715C9C54400526A3A /* MultiDPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiDPoint.m; path = ../MultiDPoint.m; sourceTree = "<group>"; };
 		1E4B58E1158BE86500A9457B /* CreateUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateUserCell.h; sourceTree = "<group>"; };
 		1E4B58E2158BE86500A9457B /* CreateUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserCell.m; sourceTree = "<group>"; };
 		1E4B58EA158D324F00A9457B /* SetGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGoal.h; sourceTree = "<group>"; };
@@ -179,10 +182,12 @@
 				1E6F7618159F91AB00A93206 /* Exercise.m */,
 				1E6F7620159FC1C500A93206 /* Food.h */,
 				1E6F7621159FC1C600A93206 /* Food.m */,
-				1E6F7623159FC97000A93206 /* MealSnack.h */,
-				1E6F7624159FC97100A93206 /* MealSnack.m */,
 				1E6F761D159FBE2600A93206 /* Inspiration.h */,
 				1E6F761E159FBE2600A93206 /* Inspiration.m */,
+				1E6F7623159FC97000A93206 /* MealSnack.h */,
+				1E6F7624159FC97100A93206 /* MealSnack.m */,
+				1E44765615C9C54400526A3A /* MultiDPoint.h */,
+				1E44765715C9C54400526A3A /* MultiDPoint.m */,
 				1E6F7626159FCBF300A93206 /* Question.h */,
 				1E6F7627159FCBF300A93206 /* Question.m */,
 				1E3A21A31597F9870014D2CD /* Users.h */,
@@ -377,6 +382,7 @@
 				1E8E7C6B15B0D58600F86BF8 /* ExercisingViewController.m in Sources */,
 				1E2DBC1515B28033001001C1 /* ExerciseViewController.m in Sources */,
 				1E5908D915C25A190073AFF1 /* GraphView.m in Sources */,
+				1E44765815C9C54400526A3A /* MultiDPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

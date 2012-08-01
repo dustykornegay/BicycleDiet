@@ -115,9 +115,41 @@
     return total;
 }
 
-    
-
+  
 +(int)Database_select: (NSString *) sql_command{
+    
+    int sum = 0; //initialize sum to zero before totalling
+    
+    DBController *mydb = [[DBController alloc] init];
+    
+    if([mydb DBdatafieldToActivityArray: sql_command ]){
+        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
+        
+        NSLog( @"Get data from DB");
+        NSMutableArray * objects;
+        
+        objects = mydb.obj_array;
+        
+        if (objects.count != 0){
+            // walk through array and sum data values
+            for( int y = 0; y < [objects count]; y++){
+                Activity * a =[objects objectAtIndex: y];
+                sum += a.points; }
+            
+        }else {
+            sum = -2;
+        }
+        
+        
+    }else {
+        NSLog (@"DBdatafieldToObjectArray FAILED in weightlimit +Database_select");
+        sum = -1;
+    }
+    
+    return sum;
+}
+
+-(int)Database_select: (NSString *) sql_command{
     
     int sum = 0; //initialize sum to zero before totalling     
     
@@ -289,12 +321,38 @@
     
 }
 
-//TODO: Fix this
-+ (void) PopulateGraph: (int) weeks {
-    CGMutablePathRef thePath = CGPathCreateMutable();
-    CGPathMoveToPoint(thePath,NULL,0,0);
+-(NSString *) GetDate : (int) daysAgo{
     
-    Point temp;
+    NSCalendar  *cal = [NSCalendar currentCalendar];
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    
+    [components setDay: - daysAgo];
+    
+    NSDate * event = [cal dateByAddingComponents: components  toDate:[NSDate date] options:0 ];
+    
+    //9 character date format ddMMMyyyy ex 12JUN2012
+    
+    NSDateFormatter * formatter= [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"ddMMMyyyy"];
+    
+    NSString * mydate = [[NSString alloc] init];
+    
+    mydate = [formatter stringFromDate: event];
+    
+    NSLog(@"%@",mydate);
+    
+    return mydate;
+    
+}
+
+//TODO: Fix this
+- (void) PopulateGraph: (int) weeks {
+  //  CGMutablePathRef thePath = CGPathCreateMutable();
+  //  CGPathMoveToPoint(thePath,NULL,0,0);
+    
+    graph = [[NSMutableArray alloc]init];
+    MultiDPoint *temp;
     //Store Exercise points in an array [7, 14, 28, 56, 70 140, 280 days)
 
     for (int i = 7 * weeks; i >= 0; i-- ){
@@ -307,12 +365,13 @@
     NSString * sql = [ @"Select * " initWithFormat: @"from status where date like %@", date];
     
     
-    temp.h  = 280 ;
-    temp.v =  (float)[self Database_select: sql];
+    temp.x  = 280/ (7 * weeks - i) ;
+    temp.y =  (float)[self Database_select: sql];
     
-    if (temp.v < 0) {temp.v = 0;}
+    if (temp.y < 0) {temp.y = 0;}
 
-CGPathAddLineToPoint (thePath, NULL, temp.h, temp.v);
+        [graph addObject:temp ];
+      //  CGPathAddLineToPoint (thePath, NULL, temp.h, temp.v);
     
     }
     

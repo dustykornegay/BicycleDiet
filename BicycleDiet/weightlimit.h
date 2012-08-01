@@ -12,7 +12,7 @@
 
 
 @interface weightlimit : NSObject {
-  
+    NSMutableArray * graph;
 }
 
 
@@ -27,7 +27,7 @@
 
 +(int) GetPointsEarnedToday: (int) user_num Type: (NSString *) DietOrExercise;
 
-+ (int)Database_select: (NSString *) sql_command;
+-(int)Database_select: (NSString *) sql_command;
 
 +(int) DaysToGoal:  (int) user_id ;
 +(int) QuarterPoundsbyDate:(int) CaloriesPerDay date: (NSDate *) goal;

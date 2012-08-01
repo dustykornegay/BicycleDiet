@@ -16,8 +16,9 @@
 #import "Activity.h"
 #import "Exercise.h"
 #import "Food.h"
-#import "MealSnack.h"
 #import "Inspiration.h"
+#import "MealSnack.h"
+#import "MultiDPoint.h"
 #import "Question.h"
 #import "Users.h"
 
