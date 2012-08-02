@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E1DAD271596C40F00EC6DB0 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */; };
 		1E2950DF159299C700FB9E52 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2950DE159299C700FB9E52 /* ProgressView.m */; };
-		1E2950E215929C0B00FB9E52 /* ProgressChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2950E115929C0B00FB9E52 /* ProgressChartView.m */; };
 		1E2DBC1515B28033001001C1 /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2DBC1415B28033001001C1 /* ExerciseViewController.m */; };
 		1E3A218F159784770014D2CD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3A218E159784770014D2CD /* libsqlite3.0.dylib */; };
 		1E3A219615978C540014D2CD /* DBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A219515978C540014D2CD /* DBController.m */; };
@@ -58,8 +57,6 @@
 		1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		1E2950DD159299C700FB9E52 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		1E2950DE159299C700FB9E52 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
-		1E2950E015929C0B00FB9E52 /* ProgressChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressChartView.h; sourceTree = "<group>"; };
-		1E2950E115929C0B00FB9E52 /* ProgressChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressChartView.m; sourceTree = "<group>"; };
 		1E2DBC1315B28033001001C1 /* ExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseViewController.h; sourceTree = "<group>"; };
 		1E2DBC1415B28033001001C1 /* ExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseViewController.m; sourceTree = "<group>"; };
 		1E3A218E159784770014D2CD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -153,8 +150,6 @@
 				1E5908D815C25A190073AFF1 /* GraphView.m */,
 				1E864D7D1589AEFE002F12F0 /* ProgressCell.h */,
 				1E864D7E1589AEFE002F12F0 /* ProgressCell.m */,
-				1E2950E015929C0B00FB9E52 /* ProgressChartView.h */,
-				1E2950E115929C0B00FB9E52 /* ProgressChartView.m */,
 				1E2950DD159299C700FB9E52 /* ProgressView.h */,
 				1E2950DE159299C700FB9E52 /* ProgressView.m */,
 				1E4B58EA158D324F00A9457B /* SetGoal.h */,
@@ -367,7 +362,6 @@
 				1E4B58EC158D324F00A9457B /* SetGoal.m in Sources */,
 				1E871E82158ED04A00386892 /* weightlimit.m in Sources */,
 				1E2950DF159299C700FB9E52 /* ProgressView.m in Sources */,
-				1E2950E215929C0B00FB9E52 /* ProgressChartView.m in Sources */,
 				1E1DAD271596C40F00EC6DB0 /* ProgressViewController.m in Sources */,
 				1E3A219615978C540014D2CD /* DBController.m in Sources */,
 				1E3A21A51597F9870014D2CD /* Users.m in Sources */,

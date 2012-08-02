@@ -9,6 +9,7 @@
 #import "ProgressViewController.h"
 #import "ProgressView.h"
 #import "BicycleDietCommon.h"
+#import "GraphView.h"
 
 
 @interface ProgressViewController ()
@@ -52,6 +53,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -59,6 +61,7 @@
     index = 0;
     //initialize inspiration timer
     inspirationTimer = [NSTimer scheduledTimerWithTimeInterval: 60 target: self selector: @selector(getInspiration:) userInfo:NULL repeats: YES];
+    
     
 	    
      
@@ -123,13 +126,9 @@
     
     totalpoints_earnedtoday.text = [[NSNumber alloc] initWithInt: (pointsEarned_diet + pointsEarned_exercise)].stringValue  ;
     
+    GraphView * mygoal;
     
-    // Use weightlimit Database Select  with sql for date an user_id
- 
-    //TODO: update progress from data base
-  
-  
-   // [weightlimit Database_select: sql];
+    [self.view addSubview: mygoal];
     
 }
 
@@ -210,9 +209,7 @@
 
 
 - (void) PopulateGraph: (int) weeks {
-    //  CGMutablePathRef thePath = CGPathCreateMutable();
-    //  CGPathMoveToPoint(thePath,NULL,0,0);
-    
+     
     graph = [[NSMutableArray alloc]init];
     MultiDPoint *temp;
     //Store Exercise points in an array [7, 14, 28, 56, 70 140, 280 days)
@@ -233,7 +230,8 @@
         if (temp.y < 0) {temp.y = 0;}
         
         [graph addObject:temp ];
-        //  CGPathAddLineToPoint (thePath, NULL, temp.h, temp.v);
+        
+
         
     }
     

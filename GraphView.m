@@ -13,20 +13,46 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
+    if (self == nil) {
         // Initialization code
+       // self = [[viewClass alloc] initWithFrame:CGRectZero];
+        
+        
     }
     return self;
 }
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
-{
+{    
+    CGFloat components [] = {1.0,1.0,1.0};
+    
     // Drawing code
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, 3.0);
+    
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    CGColorRef color = CGColorCreate(colorspace, components);
+    
+    CGContextSetStrokeColor(context, color);
+    CGContextBeginPath (context);
+
+    
+    //insert points here
+    CGContextMoveToPoint(context, 0, 0);
+    CGContextAddLineToPoint(context, 280, 0);
+    
+    //draw the path to the view
+    CGContextStrokePath(context);
+    
+
+    
 }
-*/
+
+
+
 
 //Draw from right to left.  (today, yesterday, 2 days ago ...)
 

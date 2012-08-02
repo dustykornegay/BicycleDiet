@@ -8,6 +8,7 @@
 
 #import "ProgressView.h"
 #import "weightlimit.h"
+#import "GraphView.h"
 
 
 @implementation ProgressView
@@ -32,7 +33,9 @@
     if (self) {
         
         // Initialization code
-       
+       GraphView * graphView = [[GraphView alloc] init];
+        [self addSubview:graphView];
+        [self bringSubviewToFront:graphView];
      
     }
     return self;
@@ -44,6 +47,8 @@
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
+   
+    
 }
 */
 

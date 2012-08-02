@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="f6l-R4-FAo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="f6l-R4-FAo">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
         <!--Goal View Controller - Goal-->
@@ -11,7 +11,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="US1-wh-rja" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cyp-wE-nOZ" customClass="GoalViewController" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cOT-bH-Yc8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2" id="I5w-9W-6qC">
@@ -179,9 +179,9 @@
         <scene sceneID="N1y-xt-BUi">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RxS-u5-tof" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="4gQ-Rx-AcU" customClass="ProgressViewController" sceneMemberID="viewController">
-                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rEM-lb-aBd" customClass="ProgressView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                <viewController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="4gQ-Rx-AcU" customClass="ProgressViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rEM-lb-aBd" customClass="ProgressView">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Inspiration Bar:                           Keep Up The Good Work" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xUZ-ch-Qee">
@@ -220,10 +220,13 @@
                                 <color key="textColor" red="0.078214020479999993" green="0.060990015139999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="center" id="LO6-ct-X4X" userLabel="Progress Chart">
+                            <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LO6-ct-X4X" userLabel="ProgressChart" customClass="GraphView">
                                 <rect key="frame" x="20" y="240" width="280" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" label="ProgressChart">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                             </view>
                             <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="stv-QY-DHt">
                                 <rect key="frame" x="13" y="68" width="239" height="9"/>
@@ -372,6 +375,7 @@
                         <outlet property="totalgoal_points" destination="Nix-lQ-MVc" id="bDC-2q-lsx"/>
                         <outlet property="totalpoints_earned" destination="d8d-6s-bje" id="gyW-Oo-dT1"/>
                         <outlet property="totalpoints_earnedtoday" destination="hIF-yP-akO" id="3Mb-CH-mFi"/>
+                        <outlet property="view" destination="rEM-lb-aBd" id="Q1O-eU-1K0"/>
                     </connections>
                 </viewController>
             </objects>
@@ -383,7 +387,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p31-bV-Q8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="UIB-97-VUD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ffJ-Yf-ATZ" userLabel="QuizView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="trz-kM-44b">
@@ -545,7 +549,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2CC-b2-cNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Yow-nY-k2T" userLabel="MealView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bzH-DZ-orc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="0Xr-L4-OyW">
@@ -690,7 +694,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Xp-fC-52P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="iBf-BO-vEh" customClass="ViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bct-CM-8nU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <toolbar key="tableFooterView" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ERf-ko-1Cl">
@@ -847,7 +851,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOe-yq-a2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cei-DH-dw9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yge-x3-ICY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="0OS-ny-SCV">
@@ -995,7 +999,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOc-Ue-Oiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="X3f-W4-xvo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dy0-Hs-zoO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="for Siriwan Inc          by Dusty Kornegay " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ghC-HA-kHD">
@@ -1060,7 +1064,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgk-Wn-s8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="61b-DY-JHd" userLabel="ExcerciseView" customClass="ExerciseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJE-E4-b8z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="hn9-1K-IoT">
@@ -1161,7 +1165,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrD-C5-D9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="aqo-1O-lOk" customClass="ExercisingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qHy-3o-pXx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nsL-Eh-wEe">
@@ -1465,7 +1469,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9P3-fk-gOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="myJ-cO-3c7" userLabel="SnackView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RwK-Nj-ApO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="MBf-kX-j1V">
@@ -1619,6 +1623,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercisingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="StartPauseTimer:"/>
+                <relationship kind="action" name="sliderIntensity:"/>
                 <relationship kind="outlet" name="counter" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="points_label" candidateClass="UILabel"/>
@@ -1641,6 +1646,9 @@
                 <relationship kind="outlet" name="hoursExercise" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
             </relationships>
+        </class>
+        <class className="GraphView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphView.h"/>
         </class>
         <class className="ProgressCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressCell.h"/>
@@ -1711,4 +1719,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="HhA-Rc-9Up"/>
+        <segue reference="b0F-0I-AUe"/>
+    </inferredMetricsTieBreakers>
 </document>
