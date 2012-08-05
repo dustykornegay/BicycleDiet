@@ -27,22 +27,18 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {    
-    CGFloat components [] = {1.0,1.0,1.0};
     
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 3.0);
     
-    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
-    CGColorRef color = CGColorCreate(colorspace, components);
     
-    CGContextSetStrokeColor(context, color);
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
     CGContextBeginPath (context);
 
-    
     //insert points here
     CGContextMoveToPoint(context, 0, 0);
-    CGContextAddLineToPoint(context, 280, 0);
+    CGContextAddLineToPoint(context, 280, 100);
     
     //draw the path to the view
     CGContextStrokePath(context);
