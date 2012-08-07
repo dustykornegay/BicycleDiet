@@ -24,6 +24,7 @@
 +(float) Calculate_Points: (float) current_weight_lbs ideal: (float) ideal_weight_lbs{
     //Goal is 3500 calories per/pound * pounds to lose + 5 * 3500 as hedge
     //for activities that are important to get best use from app, but don't directly impact outcome
+    
     if ((current_weight_lbs - ideal_weight_lbs) >=  0)  {
         float goal=  (5 + (current_weight_lbs - ideal_weight_lbs))* 3500;
                     
@@ -35,14 +36,7 @@
                     
     }
                     
-  /*                  int Calc_Suggested_weight (float height_inches, bool wears_skirts, bool uses_weights) {
-                        
-                        float suggested_weight = height_inches *  2.2 ; //69in * 2.2 = 151 ;  60in * 2.2 = 132;
-                        if (uses_weights){ suggested_weight = suggested_weight * 1.15;} // 69in -> 175; 60in -> 151;
-                        if (wears_skirts){ suggested_weight = suggested_weight * .875; }// 69 ->
-                        
-                        return suggested_weight;
-                    }*/
+
                       
                     
 + (float) Calc_Suggested_weight: (float) height_inches ratio: (float) desired_waist_hip_ratio{
@@ -96,11 +90,8 @@
          
     NSString * sql = [[NSString alloc] initWithFormat: @"Select * from status where user_id = %i", user_num];
     
-    NSLog(@"User ID = %@",sql);
-    
     int total =[self Database_select: sql];
    
-    
     return total;
 }
 
@@ -123,9 +114,9 @@
     DBController *mydb = [[DBController alloc] init];
     
     if([mydb DBdatafieldToActivityArray: sql_command ]){
-        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
+         // Total points earned from sql: ex. Select Points where Date: "today" and Activity= "Exercise"
         
-        NSLog( @"Get data from DB");
+
         NSMutableArray * objects;
         
         objects = mydb.obj_array;
@@ -157,9 +148,8 @@
     
     NSLog(@"%@",sql_command);
     if([mydb DBdatafieldToActivityArray: sql_command ]){
-        // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
+        // Total points earned from sql: ex. Select Points where Date: "today" and Activity= "Exercise"
     
-        NSLog( @"Get data from DB");
         NSMutableArray * objects;
     
         objects = mydb.obj_array;
@@ -176,7 +166,7 @@
     
     
     }else {
-     //   NSLog (@"DBdatafieldToObjectArray FAILED in weightlimit +Database_select");
+        NSLog (@"DBdatafieldToObjectArray FAILED in weightlimit +Database_select");
         sum = -1;
     }
     
@@ -261,13 +251,8 @@
     bool success = false;
     
     if ( TRUE /* if user exist in database */) { 
-        
-        //TODO: Set goals
-        // pseudoSQL: @"Update Values( caloriesCut, extraCaloriesBurned) INTO users where user_id = user_id  ,) 
     
         NSString * sql_command = [[NSString alloc] initWithFormat: @"Update username set exerciseGoal = %i, exerciseDuration = %i, dietGoal = %i where user_id = %i", extraCaloriesBurned , minutes ,caloriesCut, user_id];
-        
-  //      NSLog(@"%@", sql_command);
         
         if([mydb DBPush: sql_command]){        
          success = TRUE;
@@ -288,12 +273,8 @@
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HHmm"];
     
-   mytime = [formatter stringFromDate:[NSDate date]];
-     //end
-    
- //   NSLog(@"%@", mytime);
-    
-   
+    mytime = [formatter stringFromDate:[NSDate date]];
+ 
     return mytime;
 }
 
@@ -315,8 +296,7 @@
     NSString * mydate = [[NSString alloc] init];
     
     mydate = [formatter stringFromDate: event];
-    
- //   NSLog(@"%@",mydate);
+
     
     return mydate;
     
@@ -341,16 +321,9 @@
     
     mydate = [formatter stringFromDate: event];
     
-  //  NSLog(@"%@",mydate);
-    
     return mydate;
     
 }
-
-
-
-
-
 
 
 @end

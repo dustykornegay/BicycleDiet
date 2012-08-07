@@ -59,8 +59,6 @@
     NSString * sql_com = [@"insert into status" stringByAppendingFormat: @" Values(%i,'Exercise', '%@', '%@' ,%i)", appDelegate.user_id, [weightlimit GetTime], [weightlimit GetDate: 0], points_earned ];
     
     
-    NSLog(@"%@",sql_com);
-    
     DBController * mydB = [[DBController alloc] init]; 
     
     if([mydB DBPush: sql_com]){

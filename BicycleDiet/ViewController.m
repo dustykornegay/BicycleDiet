@@ -202,41 +202,51 @@
             
         }
         
-      
-        
-
-        
         cell.totalprogress.progress = t_progress;
+        
         cell.exercise_todaysprogress.progress = e_progress;
+        
         cell.diet_todaysprogress.progress = d_progress;
     
         
         if (d_goal > 0){
-            cell.diet.text = [[NSNumber alloc] initWithInt: d_goal].stringValue; 
+            
+            cell.diet.text = [[NSNumber alloc] initWithInt: d_goal].stringValue;
+            
         }else {
+            
         cell.diet.text = @"diet Goal";
         }
         
         if (e_goal > 0) {
             cell.exercise.text = [[NSNumber alloc] initWithInt: e_goal].stringValue;
+            
         }else {
+            
         cell.exercise.text = @"exerciseGoal";
+            
         }
+        
         cell.total.text = [[NSNumber alloc] initWithInt: cellValue.total_goal].stringValue ;
         
         cell.user_id = cellValue.user_id;
+        
         return cell;
+        
     }else {
     
     // configure Empty Cell
     static NSString *CellIdentifier = @"EmptyCell";
+        
     EmptyCell *emptycell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (emptycell == nil) {
+        
         emptycell = [[EmptyCell alloc] initWithStyle:UITableViewCellStyleDefault 
                                    reuseIdentifier:CellIdentifier];
         
     }
+        
     return emptycell;      
     }
     
@@ -247,10 +257,15 @@
 
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     if ((indexPath.row -1) >= 0) {
+        
         if ( (indexPath.row -1) < userlist.count ){
+            
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            
     Users * selectedUser =[userlist objectAtIndex: indexPath.row -1];
+            
     appDelegate.user_id =  selectedUser.user_id;
         }
     }
@@ -278,15 +293,10 @@
         
         if ((indexPath.row -1) < userlist.count   ){
         //Delete  user_id from database username table && activities table
-       DBController *myDB = [[DBController alloc ]init];
+        DBController *myDB = [[DBController alloc ]init];
         
-        //AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         Users * temp = [userlist objectAtIndex:(indexPath.row -1)];
         
-        
-        
-        // TODO:fix deleteUser sql so that it functions correctly
-        // also consider removing history from status table
         [myDB DeleteUser: temp.user_id];
         
         
@@ -294,7 +304,7 @@
     
         
         // Delete the row from the data source
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
         
         

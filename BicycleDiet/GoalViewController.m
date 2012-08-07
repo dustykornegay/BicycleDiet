@@ -81,8 +81,6 @@
     // load new exercise/diet goal values in the database by user_id
      exerciseGoal = exerciseGoal_intensity * exerciseGoal_minutes;
     
-    NSLog( @"UserID: %i DietGoal: %i ExerciseGoal: %i ExerciseDuration: % i", user_id, dietGoal, exerciseGoal, exerciseGoal_minutes );
-    
     //TODO:Write the new goals out to the database by user_id.
     [weightlimit PushDailyGoals: (int) user_id Diet: (int) dietGoal Exercise: (int) exerciseGoal ExerciseDuration: (int) exerciseGoal_minutes];
 }
@@ -173,7 +171,7 @@
 
 -(BOOL) textFieldShouldReturn:(UITextField *) aTextField {
     [aTextField resignFirstResponder];
-    NSLog(@"I hit return");
+   
     return YES;
     
 }

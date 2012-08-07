@@ -72,8 +72,6 @@
         if (i == 0){
           CGContextMoveToPoint(context, point.x, point.y);
         }else {
-    
-        NSLog( @"point x: %2f y: %2f", point.x, point.y);
             
     //Normalize Y by dividing it by max_y TODO: Improve Normalization 
     CGContextAddLineToPoint(context, point.x, height - 10 - (100 * point.y / max.y));

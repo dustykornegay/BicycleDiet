@@ -80,11 +80,6 @@
     
     // Do any additional setup after loading the view.
     
-    
-    
-    NSLog(@"ProgressView Loaded");
-    NSLog(@"%i",user_id);
-    
     int totalearned = [weightlimit GetPointsEarnedTotal: user_id];
     
     int totalgoal = [weightlimit GetPointsTotal_goal:user_id];
@@ -231,15 +226,14 @@
         // select * from status where date like '%JUN2012';
         // query point for each day and store them in an array. [x= today, y= points]
         sql = @"";
-        //TODO: Update User_id
+     
         sql =  [sql stringByAppendingFormat: @"Select * from status where date like '%@' and user_id = '%i'", date , user_id];
         
-        NSLog(@"%@", sql);
         MultiDPoint *temp = [[MultiDPoint alloc] init];
         temp.x  = (width - (i * width/(7 * weeks)))  ; //staring at the left of the graph, walk forward for every day i
         temp.y =  (float)[weightlimit Database_select: sql];
         
-        NSLog(@"x:%f y: %f",temp.x,temp.y);
+       
         
         if (temp.y < 0) {temp.y = 0;}
         

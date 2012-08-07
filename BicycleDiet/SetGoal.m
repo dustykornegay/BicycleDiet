@@ -130,7 +130,7 @@
         points =[weightlimit Calculate_Points:[current_weight.text floatValue] ideal: suggested];
        
         
-        NSLog(@"Points to Goal are set to %i", points);
+       // NSLog(@"Points to Goal are set to %i", points);
         
         DBController * myDB = [[DBController alloc] init];
         
@@ -153,7 +153,7 @@
     
     [aTextField resignFirstResponder];
     
-    NSLog(@"Hide Keyboard On Return");
+   // NSLog(@"Hide Keyboard On Return");
     
     return YES;
     
