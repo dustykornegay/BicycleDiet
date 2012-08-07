@@ -44,11 +44,13 @@
 @property (nonatomic, retain) IBOutlet UIProgressView *totalProgress;
 
 @property (nonatomic,retain) NSArray * inspirationArray;
+@property (nonatomic,retain) NSMutableArray * graph;
 
 -(id)initWithUserId: (int) User_id;
 
 -(void)getInspiration: (NSTimer *)inspirationTimer;
 
++ (NSMutableArray *) PopulateGraph: (int) weeks UserID: (int)user_id;
 
 
 @end

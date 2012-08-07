@@ -154,7 +154,8 @@
     int sum = 0; //initialize sum to zero before totalling     
     
     DBController *mydb = [[DBController alloc] init];
-        
+    
+    NSLog(@"%@",sql_command);
     if([mydb DBdatafieldToActivityArray: sql_command ]){
         // TODO: Total points earned from sql: Select Points where Date: "today" and Activity= "Exercise"
     
@@ -175,7 +176,7 @@
     
     
     }else {
-        NSLog (@"DBdatafieldToObjectArray FAILED in weightlimit +Database_select");
+     //   NSLog (@"DBdatafieldToObjectArray FAILED in weightlimit +Database_select");
         sum = -1;
     }
     
@@ -266,7 +267,7 @@
     
         NSString * sql_command = [[NSString alloc] initWithFormat: @"Update username set exerciseGoal = %i, exerciseDuration = %i, dietGoal = %i where user_id = %i", extraCaloriesBurned , minutes ,caloriesCut, user_id];
         
-        NSLog(@"%@", sql_command);
+  //      NSLog(@"%@", sql_command);
         
         if([mydb DBPush: sql_command]){        
          success = TRUE;
@@ -290,7 +291,7 @@
    mytime = [formatter stringFromDate:[NSDate date]];
      //end
     
-    NSLog(@"%@", mytime);
+ //   NSLog(@"%@", mytime);
     
    
     return mytime;
@@ -315,7 +316,7 @@
     
     mydate = [formatter stringFromDate: event];
     
-    NSLog(@"%@",mydate);
+ //   NSLog(@"%@",mydate);
     
     return mydate;
     
@@ -340,7 +341,7 @@
     
     mydate = [formatter stringFromDate: event];
     
-    NSLog(@"%@",mydate);
+  //  NSLog(@"%@",mydate);
     
     return mydate;
     

@@ -30,6 +30,7 @@
 @synthesize inspiration;
 @synthesize inspirationArray;
 @synthesize visible;
+@synthesize graph;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -67,12 +68,18 @@
      
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    user_id = appDelegate.user_id ;
+    
+    NSLog(@"user_id: %i", user_id);
+}
+
 -(void)viewDidAppear:(BOOL)animated {
     visible = TRUE;
     
     // Do any additional setup after loading the view.
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    user_id = appDelegate.user_id ;
+    
     
     
     NSLog(@"ProgressView Loaded");
@@ -208,32 +215,39 @@
 }
 
 
-- (void) PopulateGraph: (int) weeks {
++ (NSMutableArray *) PopulateGraph: (int) weeks UserID: (int) user_id{
      
-    graph = [[NSMutableArray alloc]init];
-    MultiDPoint *temp;
+    NSMutableArray * graph = [[NSMutableArray alloc]init];
+    
+    NSString * sql = [[NSString alloc] init];
     //Store Exercise points in an array [7, 14, 28, 56, 70 140, 280 days)
     
-    for (int i = 7 * weeks; i >= 0; i-- ){
+    for (int i = 1+ (7 * weeks); i >= 0; i-- ){
         
-        NSString * date  =  [weightlimit GetDate: i];
+        float width = (float) WIDTH;
+        
+        NSString * date  =  [weightlimit GetDate: i]; // what day was it i days ago
         
         // select * from status where date like '%JUN2012';
         // query point for each day and store them in an array. [x= today, y= points]
+        sql = @"";
+        //TODO: Update User_id
+        sql =  [sql stringByAppendingFormat: @"Select * from status where date like '%@' and user_id = '%i'", date , user_id];
         
-        NSString * sql = [ @"Select * " initWithFormat: @"from status where date like %@", date];
-        
-        
-        temp.x  = 280/ (7 * weeks - i) ;
+        NSLog(@"%@", sql);
+        MultiDPoint *temp = [[MultiDPoint alloc] init];
+        temp.x  = (width - (i * width/(7 * weeks)))  ; //staring at the left of the graph, walk forward for every day i
         temp.y =  (float)[weightlimit Database_select: sql];
+        
+        NSLog(@"x:%f y: %f",temp.x,temp.y);
         
         if (temp.y < 0) {temp.y = 0;}
         
-        [graph addObject:temp ];
+       [graph addObject:temp ];
         
-
         
     }
+     return  graph;
     
 }
 

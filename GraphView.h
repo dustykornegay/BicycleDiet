@@ -13,8 +13,15 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+#import "BicycleDietCommon.h"
+
+#define  WIDTH  280;
+#define HEIGHT  128;
+
 @interface GraphView : UIView{
 
+    NSMutableArray * graph;
+    int user_id;
 
     
 }

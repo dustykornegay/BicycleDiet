@@ -45,7 +45,7 @@
         if (![fileManager fileExistsAtPath:databasePath]){
             
             [fileManager createDirectoryAtPath:databasePath withIntermediateDirectories:FALSE attributes:nil error: &myerror];
-            NSLog(@"%@",myerror);
+         //  NSLog(@"%@",myerror);
         }
         
         //create the bicycleDietdirectory if it doesn't exist
@@ -54,7 +54,7 @@
         if (![fileManager fileExistsAtPath:databasePath]){
             
             [fileManager createDirectoryAtPath:databasePath withIntermediateDirectories:FALSE attributes:nil error: &myerror];
-            NSLog(@"%@",myerror);
+          // NSLog(@"%@",myerror);
         }
         
         //copy database to databasePath if it doesn't exist
@@ -63,7 +63,7 @@
         if (![fileManager fileExistsAtPath:databasePath]){
             
             if( ![fileManager copyItemAtPath:BundleDbPath toPath:databasePath error: & myerror]){
-                NSLog(@"%@",myerror);
+              //  NSLog(@"%@",myerror);
             }
         
         }
@@ -114,7 +114,7 @@
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
         sqlite3_extended_result_codes(database, 1);
         
-        NSLog (@"Database opened for insert");
+      //  NSLog (@"Database opened for insert");
         
 		// Setup the SQL Statement and compile it for faster access
         
@@ -128,11 +128,11 @@
             
             if(sqlite3_step(compiledStatement)){
             success = TRUE;
-            NSLog(@"database recieved pushed data");
+      //      NSLog(@"database recieved pushed data");
             
 		}else {
             success = FALSE;
-            NSLog(@"data was not pushed to database");
+           NSLog(@"data was not pushed to database");
         }
         }
         
@@ -161,7 +161,7 @@
        
         sqlite3_extended_result_codes(database, 1);
         
-        NSLog (@"Database opened");
+      //  NSLog (@"Database opened");
         
 		// Setup the SQL Statement and compile it for faster access
                 
@@ -174,7 +174,7 @@
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
                 
 				// Read the data from the result row
-                NSLog (@"inside User while");
+          //      NSLog (@"inside User while");
 				
                 // TODO:Update this with a select statement so the correct onject type is loaded
                 
@@ -232,19 +232,19 @@
         
         sqlite3_extended_result_codes(database, 1);
         
-        NSLog (@"Database opened");
+   //     NSLog (@"Database opened");
         
 		// Setup the SQL Statement and compile it for faster access
         
 		sqlite3_stmt *compiledStatement;
         
-        NSLog (@"%@", sql_com);
+    //    NSLog (@"%@", sql_com);
         
 		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
-                NSLog (@"inside Activity while");
+               // NSLog (@"inside Activity while");
 				
                 // TODO:Update this with a select statement so the correct onject type is loaded
                 
@@ -254,7 +254,7 @@
                 
 				int points= sqlite3_column_int(compiledStatement, 4);
                
-                NSLog( @"ID: %i  Type: %i Points: %i", user_id, type, points); 
+               // NSLog( @"ID: %i  Type: %i Points: %i", user_id, type, points);
                 
 				// Create a new animal object with the data from the database
 				Activity *an_activity = [[Activity alloc] initWithTimeStamp:nil andId:user_id andType: type andPoints:points];
@@ -296,7 +296,7 @@
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
         sqlite3_extended_result_codes(database, 1);
         
-        NSLog (@"Database opened");
+     //   NSLog (@"Database opened");
         
 		// Setup the SQL Statement and compile it for faster access
         
@@ -311,7 +311,7 @@
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
                 
 				// Read the data from the result row
-                NSLog (@"inside  Inspiration while");
+       //         NSLog (@"inside  Inspiration while");
 				
 				int inspiredID = sqlite3_column_int(compiledStatement, 0);
                 
@@ -319,7 +319,7 @@
                 
 				
                 
-                NSLog( @"InspireID: %i Quote: %@", inspiredID, quote); 
+      //          NSLog( @"InspireID: %i Quote: %@", inspiredID, quote);
                 
 				// Create a new animal object with the data from the database
 				Inspiration *someInspiration = [[Inspiration alloc] initWithId: inspiredID andAuthor:0 andDate:0 andQuote: quote ];
@@ -439,7 +439,7 @@
     
     //Delete the Dot old file if it exists
     if ([fileManager removeItemAtPath:filenameToOld error: NULL]  == YES){
-        NSLog (@"Remove successful");
+  //      NSLog (@"Remove successful");
     }else{
         NSLog (@"Remove failed");
     }
