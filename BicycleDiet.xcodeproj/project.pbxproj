@@ -31,6 +31,7 @@
 		1E6F7639159FE1FB00A93206 /* PadMaMa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F7638159FE1FB00A93206 /* PadMaMa.png */; };
 		1E6F763F159FFB3C00A93206 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F763E159FFB3C00A93206 /* EmptyCell.m */; };
 		1E6F764115A0008D00A93206 /* siriwan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F764015A0008D00A93206 /* siriwan.png */; };
+		1E81281515D2000500B6F4CE /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E81281415D2000500B6F4CE /* icon2x.png */; };
 		1E81F7C115829BE1004755AE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E81F7C015829BE1004755AE /* icon.png */; };
 		1E864D7B15899922002F12F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7A15899922002F12F0 /* ViewController.m */; };
 		1E864D7F1589AEFE002F12F0 /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7E1589AEFE002F12F0 /* ProgressCell.m */; };
@@ -95,6 +96,7 @@
 		1E6F763D159FFB3C00A93206 /* EmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptyCell.h; path = ../EmptyCell.h; sourceTree = "<group>"; };
 		1E6F763E159FFB3C00A93206 /* EmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptyCell.m; path = ../EmptyCell.m; sourceTree = "<group>"; };
 		1E6F764015A0008D00A93206 /* siriwan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siriwan.png; sourceTree = "<group>"; };
+		1E81281415D2000500B6F4CE /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
 		1E81F7C015829BE1004755AE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		1E864D7915899922002F12F0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1E864D7A15899922002F12F0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		1EFAF469157B0DE900F8DF27 = {
 			isa = PBXGroup;
 			children = (
+				1E81281415D2000500B6F4CE /* icon2x.png */,
 				1EFAF47E157B0DE900F8DF27 /* BicycleDiet */,
 				1EFAF477157B0DE900F8DF27 /* Frameworks */,
 				1EFAF475157B0DE900F8DF27 /* Products */,
@@ -343,6 +346,7 @@
 				1E6F764115A0008D00A93206 /* siriwan.png in Resources */,
 				1EE1C4F115A178FA0011278F /* bicycle_retina.png in Resources */,
 				1EF1441C15BE303F00F5AF38 /* ID-10064756.jpg in Resources */,
+				1E81281515D2000500B6F4CE /* icon2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
