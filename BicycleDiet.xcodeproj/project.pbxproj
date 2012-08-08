@@ -33,6 +33,7 @@
 		1E6F764115A0008D00A93206 /* siriwan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F764015A0008D00A93206 /* siriwan.png */; };
 		1E81281515D2000500B6F4CE /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E81281415D2000500B6F4CE /* icon2x.png */; };
 		1E81281B15D232A200B6F4CE /* bicyclediet.db in Resources */ = {isa = PBXBuildFile; fileRef = 1E81281A15D232A200B6F4CE /* bicyclediet.db */; };
+		1E81281E15D236C800B6F4CE /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E81281D15D236C800B6F4CE /* QuizViewController.m */; };
 		1E81F7C115829BE1004755AE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E81F7C015829BE1004755AE /* icon.png */; };
 		1E864D7B15899922002F12F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7A15899922002F12F0 /* ViewController.m */; };
 		1E864D7F1589AEFE002F12F0 /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7E1589AEFE002F12F0 /* ProgressCell.m */; };
@@ -98,6 +99,8 @@
 		1E6F764015A0008D00A93206 /* siriwan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siriwan.png; sourceTree = "<group>"; };
 		1E81281415D2000500B6F4CE /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
 		1E81281A15D232A200B6F4CE /* bicyclediet.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bicyclediet.db; sourceTree = "<group>"; };
+		1E81281C15D236C800B6F4CE /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizViewController.h; path = ../QuizViewController.h; sourceTree = "<group>"; };
+		1E81281D15D236C800B6F4CE /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewController.m; path = ../QuizViewController.m; sourceTree = "<group>"; };
 		1E81F7C015829BE1004755AE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		1E864D7915899922002F12F0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1E864D7A15899922002F12F0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				1EFAF48B157B0DE900F8DF27 /* RootViewController.m */,
 				1E1DAD251596C40F00EC6DB0 /* ProgressViewController.h */,
 				1E1DAD261596C40F00EC6DB0 /* ProgressViewController.m */,
+				1E81281C15D236C800B6F4CE /* QuizViewController.h */,
+				1E81281D15D236C800B6F4CE /* QuizViewController.m */,
 				1E864D7915899922002F12F0 /* ViewController.h */,
 				1E864D7A15899922002F12F0 /* ViewController.m */,
 			);
@@ -381,6 +386,7 @@
 				1E2DBC1515B28033001001C1 /* ExerciseViewController.m in Sources */,
 				1E5908D915C25A190073AFF1 /* GraphView.m in Sources */,
 				1E44765815C9C54400526A3A /* MultiDPoint.m in Sources */,
+				1E81281E15D236C800B6F4CE /* QuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
