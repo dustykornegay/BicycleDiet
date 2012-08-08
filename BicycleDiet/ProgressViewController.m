@@ -72,7 +72,6 @@
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     user_id = appDelegate.user_id ;
     
-    NSLog(@"user_id: %i", user_id);
 }
 
 -(void)viewDidAppear:(BOOL)animated {

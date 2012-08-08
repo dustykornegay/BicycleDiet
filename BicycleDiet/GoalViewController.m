@@ -47,7 +47,7 @@
     
     NSString * sql_com = [@"Select * from username where user_id = " stringByAppendingFormat:@"%i",user_id];
     
-    DBController * myDb = [[DBController alloc ]init];
+       DBController * myDb = [[DBController alloc ]init];
     
     
     if ([myDb DBdatafieldToUserArray:sql_com]){
@@ -83,6 +83,8 @@
     
     //TODO:Write the new goals out to the database by user_id.
     [weightlimit PushDailyGoals: (int) user_id Diet: (int) dietGoal Exercise: (int) exerciseGoal ExerciseDuration: (int) exerciseGoal_minutes];
+    
+   
 }
 
 - (void)viewDidUnload
