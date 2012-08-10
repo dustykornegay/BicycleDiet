@@ -734,22 +734,23 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="for Siriwan Inc          by Dusty Kornegay " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ghC-HA-kHD">
-                                <rect key="frame" x="75" y="234" width="171" height="70"/>
+                                <rect key="frame" x="75" y="218" width="171" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="BicycleDiet www.bicyclediet.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Svb-S4-l7K">
-                                <rect key="frame" x="30" y="179" width="261" height="57"/>
+                                <rect key="frame" x="30" y="169" width="261" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="0.078214020479999993" green="0.060990015139999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pictures provided by Siriwan Kornegay          And          www.freedigitalphotos.net" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="KzP-CW-Rx9">
-                                <rect key="frame" x="91" y="312" width="139" height="63"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="KzP-CW-Rx9">
+                                <rect key="frame" x="91" y="287" width="139" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Pictures provided by Siriwan Kornegay               -          www.freedigitalphotos.net  -                                   icon by:  Karen Wang www.wangkaren.com</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1335,6 +1336,134 @@
         <image name="ID-10064756.jpg" width="343" height="400"/>
         <image name="siriwan.png" width="320" height="162"/>
     </resources>
+    <classes>
+        <class className="CreateUserCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateUserCell.h"/>
+        </class>
+        <class className="EmptyCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EmptyCell.h"/>
+        </class>
+        <class className="ExerciseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SubmitPoints:"/>
+                <relationship kind="outlet" name="unsubmittedpoints" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ExercisingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercisingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="StartPauseTimer:"/>
+                <relationship kind="outlet" name="counter" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="points_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stopwatch" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GoalViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SetGoals"/>
+                <relationship kind="action" name="byDate"/>
+                <relationship kind="action" name="sliderDiet:"/>
+                <relationship kind="action" name="sliderHoursExercise:"/>
+                <relationship kind="action" name="sliderIntensityExercise:"/>
+                <relationship kind="outlet" name="DateSelector" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="ETA" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="WeightAtDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="caloriesDiet" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="eventday" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hoursExercise" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="GraphView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphView.h"/>
+        </class>
+        <class className="ProgressCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="diet" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exercise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="total" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="username" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ProgressView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="Goal_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="inspiration" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedTotal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Diet" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Exercise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pointsEarnedtoday_Total" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalgoal_points" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalprogress" candidateClass="UIProgressView"/>
+            </relationships>
+        </class>
+        <class className="ProgressViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dietGoal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dietProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="exerciseGoal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="exerciseProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="inspiration" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="totalgoal_points" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalpoints_earned" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalpoints_earnedtoday" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="QuizViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuizViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="ChooseA"/>
+                <relationship kind="action" name="ChooseB"/>
+                <relationship kind="action" name="ChooseC"/>
+                <relationship kind="action" name="ChooseD"/>
+                <relationship kind="action" name="ChooseE"/>
+                <relationship kind="action" name="ChooseOther"/>
+                <relationship kind="action" name="Next"/>
+                <relationship kind="outlet" name="answer" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answerA" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answerB" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answerC" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answerD" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answerE" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answerOther" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="question" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SetGoal" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetGoal.h"/>
+            <relationships>
+                <relationship kind="action" name="doAcceptgoal_button"/>
+                <relationship kind="action" name="doGender_button:"/>
+                <relationship kind="action" name="doSuggestgoal_button"/>
+                <relationship kind="action" name="sliderchanged:"/>
+                <relationship kind="outlet" name="acceptgoal_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="current_weight" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gender_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="goal" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="height_ft_field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="height_in_field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="namefield" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="obese" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="skinny" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="suggestgoal_button" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
