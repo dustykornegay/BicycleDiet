@@ -7,6 +7,7 @@
 //
 
 #import "QuizViewController.h"
+#import "AppDelegate.h"
 
 @interface QuizViewController ()
 
@@ -30,13 +31,18 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void) viewDidAppear:(BOOL)animated{
+- (void) viewWillAppear:(BOOL)animated{
     //get the type of quiz and user_id from the appDelegate
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    quiz_id = appDelegate.quiz_id;
+    user_id = appDelegate.user_id;
     
     //Load the question numbers into an array
     //TODO: Select * from quiz where quiz_id = ? ; 1= Eat 0= Diet Facts
     //for Eat quiz display the points before they are selected
     //set the local count variable to be used by Next Question
+    
+    quizQuestion = [[Question alloc] init];
     
 }
 

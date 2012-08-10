@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Question.h"
 
 @interface QuizViewController : UIViewController{
     UILabel * question;
@@ -17,9 +18,17 @@
     UILabel * answerE;
     UITextField * answerOther;
     
+    UILabel * answer;
+    
     int score;
     
     int pointspossible;
+    
+    //Used to retrieve a quiz and store points in database
+    int user_id;
+    int quiz_id;
+    
+    Question * quizQuestion;
     
         
 }
@@ -31,6 +40,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *answerD;
 @property (nonatomic, retain) IBOutlet UILabel *answerE;
 @property (nonatomic, retain) IBOutlet UITextField *answerOther;
+
+@property (nonatomic, retain) IBOutlet UILabel *answer;
 
 
 - (IBAction) ChooseA;

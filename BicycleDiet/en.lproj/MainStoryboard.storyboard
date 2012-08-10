@@ -402,6 +402,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="Next" destination="UIB-97-VUD" eventType="touchUpInside" id="Lsu-ew-Iu9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8835310971" green="1" blue="0.93787280220000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -452,6 +455,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChooseA" destination="UIB-97-VUD" eventType="touchUpInside" id="78l-8Y-Ujf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BUC-sU-haa">
                                 <rect key="frame" x="6" y="103" width="37" height="37"/>
@@ -464,6 +470,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChooseB" destination="UIB-97-VUD" eventType="touchUpInside" id="bCO-kv-pO1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KCf-gQ-KTv">
                                 <rect key="frame" x="7" y="148" width="37" height="37"/>
@@ -476,6 +485,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChooseC" destination="UIB-97-VUD" eventType="touchUpInside" id="Gle-Do-0zh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3to-sA-EHB">
                                 <rect key="frame" x="6" y="192" width="37" height="37"/>
@@ -488,15 +500,18 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChooseD" destination="UIB-97-VUD" eventType="touchUpInside" id="FMT-vA-X4r"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eliminating 3500 Calories is required to lose one pound. " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="6" id="1Hn-Rb-lev">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eliminating 3500 Calories is required to lose one pound. " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="6" id="1Hn-Rb-lev" userLabel="answer">
                                 <rect key="frame" x="123" y="313" width="192" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CqA-fy-yCF" userLabel="Choice4">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CqA-fy-yCF" userLabel="Choice5">
                                 <rect key="frame" x="53" y="244" width="248" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -514,6 +529,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChooseE" destination="UIB-97-VUD" eventType="touchUpInside" id="oue-Tj-lhV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b6G-eh-qKw">
                                 <rect key="frame" x="6" y="282" width="52" height="37"/>
@@ -526,8 +544,11 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChooseOther" destination="UIB-97-VUD" eventType="touchUpInside" id="u7V-Wt-6Kz"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="zSP-YA-F0W">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="zSP-YA-F0W" userLabel="ChoiceOther">
                                 <rect key="frame" x="87" y="282" width="178" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -537,6 +558,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quiz" id="Kew-9U-EPn"/>
+                    <connections>
+                        <outlet property="answer" destination="1Hn-Rb-lev" id="IiD-b0-KyD"/>
+                        <outlet property="answerA" destination="Cd0-7I-M8y" id="YC4-ns-NSh"/>
+                        <outlet property="answerB" destination="Ajh-Vu-yAQ" id="Hwi-wZ-yc3"/>
+                        <outlet property="answerC" destination="ibp-hK-xyd" id="0Jj-cm-agR"/>
+                        <outlet property="answerD" destination="Tg6-J4-dmJ" id="rot-gx-LoA"/>
+                        <outlet property="answerE" destination="CqA-fy-yCF" id="hwZ-O9-u2d"/>
+                        <outlet property="answerOther" destination="zSP-YA-F0W" id="pag-Xx-yTE"/>
+                        <outlet property="question" destination="MeU-TS-PEk" id="BnY-YF-r0P"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1340" y="879"/>
@@ -1304,127 +1335,6 @@
         <image name="ID-10064756.jpg" width="343" height="400"/>
         <image name="siriwan.png" width="320" height="162"/>
     </resources>
-    <classes>
-        <class className="CreateUserCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateUserCell.h"/>
-        </class>
-        <class className="EmptyCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EmptyCell.h"/>
-        </class>
-        <class className="ExerciseViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExerciseViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="SubmitPoints:"/>
-                <relationship kind="outlet" name="unsubmittedpoints" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ExercisingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercisingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="StartPauseTimer:"/>
-                <relationship kind="action" name="sliderIntensity:"/>
-                <relationship kind="outlet" name="counter" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="points_label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="stopwatch" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GoalViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="SetGoals"/>
-                <relationship kind="action" name="byDate"/>
-                <relationship kind="action" name="sliderDiet:"/>
-                <relationship kind="action" name="sliderHoursExercise:"/>
-                <relationship kind="action" name="sliderIntensityExercise:"/>
-                <relationship kind="outlet" name="DateSelector" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="ETA" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="WeightAtDate" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="caloriesDiet" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="eventday" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="hoursExercise" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
-            </relationships>
-        </class>
-        <class className="GraphView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphView.h"/>
-        </class>
-        <class className="ProgressCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="diet" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="exercise" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="total" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalprogress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="username" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ProgressView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="Goal_button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="diet_todaysprogress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="exercise_todaysprogress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="inspiration" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pointsEarnedTotal" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pointsEarnedtoday_Diet" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pointsEarnedtoday_Exercise" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pointsEarnedtoday_Total" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalgoal_points" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalprogress" candidateClass="UIProgressView"/>
-            </relationships>
-        </class>
-        <class className="ProgressViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgressViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dietGoal" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dietProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="exerciseGoal" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="exerciseProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="inspiration" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="totalgoal_points" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalpoints_earned" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalpoints_earnedtoday" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="QuizViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuizViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="ChooseA"/>
-                <relationship kind="action" name="ChooseB"/>
-                <relationship kind="action" name="ChooseC"/>
-                <relationship kind="action" name="ChooseD"/>
-                <relationship kind="action" name="ChooseE"/>
-                <relationship kind="action" name="ChooseOther"/>
-                <relationship kind="action" name="Next"/>
-            </relationships>
-        </class>
-        <class className="SetGoal" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetGoal.h"/>
-            <relationships>
-                <relationship kind="action" name="doAcceptgoal_button"/>
-                <relationship kind="action" name="doGender_button:"/>
-                <relationship kind="action" name="doSuggestgoal_button"/>
-                <relationship kind="action" name="sliderchanged:"/>
-                <relationship kind="outlet" name="acceptgoal_button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="current_weight" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gender_button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="goal" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="height_ft_field" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="height_in_field" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="namefield" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="obese" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="skinny" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="suggestgoal_button" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

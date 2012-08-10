@@ -334,6 +334,84 @@
 }
 
 
+-(BOOL)  DBdatafieldToQuestionArray: (NSString *) sql_com{
+	
+	BOOL success = [self CheckOrCreateDB];
+    
+	// Query the database for all  records and construct the object array
+    
+	// Init the  Array
+	obj_array = [[NSMutableArray alloc] init];
+    
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+        
+        sqlite3_extended_result_codes(database, 1);
+        
+		// Setup the SQL Statement and compile it for faster access
+        
+		sqlite3_stmt *compiledStatement;
+        
+        
+		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+                // NSLog (@"inside Activity while");
+				
+                // TODO:Update this with a select statement so the correct onject type is loaded
+                
+                int question_id = sqlite3_column_int(compiledStatement, 0);
+				
+                NSString * quest = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                
+                int number_answer= sqlite3_column_int(compiledStatement, 2);
+                
+                NSString * choiceA = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                int aA = sqlite3_column_int(compiledStatement, 3);
+                
+                NSString * choiceB = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
+                int b = sqlite3_column_int(compiledStatement, 5);
+                
+                NSString * choiceC = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
+                int c = sqlite3_column_int(compiledStatement, 7);
+                
+                NSString * choiceD = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
+                int d = sqlite3_column_int(compiledStatement, 9);
+                
+                NSString * choiceE = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
+                int e = sqlite3_column_int(compiledStatement, 11);
+                
+                
+				
+                
+                
+                
+				// Create a new animal object with the data from the database
+				Question * a_question = [[Question alloc] initWithQuestionId:question_id andQuestion: quest andChoice1:choiceA andChoice2:choiceB andChoice3:choiceC andChoice4: choiceD andChoice5:choiceE andAnswer:number_answer andPoints1: aA andPoints2:b andPoints3:c andPoints4:d andPoints5:e];
+				
+                
+				// Add the animal object to the questionArray
+				[obj_array addObject:a_question];
+                
+			}
+            success = TRUE;
+            
+		}else {
+            
+            success = FALSE;
+        }
+        
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+        
+    }
+    
+    sqlite3_close(database);
+    
+    return success;
+}
+
 
 
 
