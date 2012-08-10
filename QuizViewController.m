@@ -14,6 +14,7 @@
 
 @implementation QuizViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,14 +40,45 @@
     
 }
 
-- (void) Tally{
-    //Add points earned from previous question to runnig Tally
-    
+- (IBAction) ChooseA{
+    [self Tally: 1];
     
 }
 
-- (void) NextQuestion{
+- (IBAction) ChooseB{
+    [self Tally: 1];
+}
+
+- (IBAction) ChooseC{
+    [self Tally: 1];
+}
+- (IBAction) ChooseD{
+    [self Tally: 1];
+}
+- (IBAction) ChooseE{
+    [self Tally: 1];
+}
+
+- (IBAction) ChooseOther{
+    [self Tally: 1];
+}
+
+
+- (void) Tally: (int) pointsForAnswer{
+    //Add points earned from previous question to running Tally
+    score += pointsForAnswer;
+    
+    [self ShowAnswer];
+    
+}
+
+- (void) Next{
     //Display the next question
+    
+}
+
+- (void) ShowAnswer{
+    
 }
 
 - (void) SubmitQuiz{

@@ -14,6 +14,7 @@
 @synthesize points =_points;
 @synthesize user_array = _user_array;
 @synthesize user_id= _user_id;
+@synthesize quiz_id= _quiz_id;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
