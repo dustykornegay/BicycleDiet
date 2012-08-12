@@ -30,7 +30,7 @@
     int i;
     
     Question * quizQuestion;
-    
+    NSMutableArray * questionNumber;
         
 }
 
@@ -43,7 +43,7 @@
 @property (nonatomic, retain) IBOutlet UITextField *answerOther;
 
 @property (nonatomic, retain) IBOutlet UILabel *answer;
-
+@property (nonatomic, retain) NSMutableArray * questionNumber;
 
 - (IBAction) ChooseA;
 - (IBAction) ChooseB;

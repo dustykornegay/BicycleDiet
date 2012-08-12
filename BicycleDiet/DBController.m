@@ -374,37 +374,37 @@
                 
                 int number_answer= sqlite3_column_int(compiledStatement, 2);
                 
-                if((char *)sqlite3_column_text(compiledStatement, 3) != NULL){
-                    choiceA = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
+                if((char *)sqlite3_column_text(compiledStatement, 4) != NULL){
+                    choiceA = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
                 }
                 
-                int aA = sqlite3_column_int(compiledStatement, 4);
+                int aA = sqlite3_column_int(compiledStatement, 3);
                 
                 
-                if((char *)sqlite3_column_text(compiledStatement, 5) != NULL){
-                choiceB = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
+                if((char *)sqlite3_column_text(compiledStatement, 6) != NULL){
+                choiceB = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
                 }
-                int b = sqlite3_column_int(compiledStatement, 6);
+                int b = sqlite3_column_int(compiledStatement, 5);
                 
-                if((char *)sqlite3_column_text(compiledStatement, 7) != NULL){
+                if((char *)sqlite3_column_text(compiledStatement, 8) != NULL){
                     
-                choiceC = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 7)];
+                choiceC = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
                 }
                 
                 
-                int c = sqlite3_column_int(compiledStatement, 8);
+                int c = sqlite3_column_int(compiledStatement, 7);
                 
-                if((char *)sqlite3_column_text(compiledStatement, 9) != NULL){
-                 choiceD = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
+                if((char *)sqlite3_column_text(compiledStatement, 10) != NULL){
+                 choiceD = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
                 }
                 
-                int d = sqlite3_column_int(compiledStatement, 10);
+                int d = sqlite3_column_int(compiledStatement, 9);
                 
-                if((char *)sqlite3_column_text(compiledStatement, 11) != NULL){
-                choiceE = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 11)];
+                if((char *)sqlite3_column_text(compiledStatement, 12) != NULL){
+                choiceE = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
                 }
                 
-                int e = sqlite3_column_int(compiledStatement, 12);
+                int e = sqlite3_column_int(compiledStatement, 11);
                 
                 
             
@@ -435,7 +435,55 @@
 }
 
 
-
+-(BOOL)  DBdatafieldToIntegerArray: (NSString *) sql_com{
+	
+	BOOL success = [self CheckOrCreateDB];
+    
+	// Query the database for all  records and construct the object array
+    
+	// Init the  Array
+	obj_array = [[NSMutableArray alloc] init];
+    
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+        
+        sqlite3_extended_result_codes(database, 1);
+        
+		// Setup the SQL Statement and compile it for faster access
+        
+		sqlite3_stmt *compiledStatement;
+        
+        
+		if(sqlite3_prepare_v2(database, [sql_com UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+                // NSLog (@"inside Activity while");
+				
+                // TODO:Update this with a select statement so the correct onject type is loaded
+                             
+                int question_id = sqlite3_column_int(compiledStatement, 1);
+				
+				// Add the animal object to the questionArray
+				[obj_array addObject: [NSNumber numberWithInteger:question_id]];
+                
+			}
+            success = TRUE;
+            
+		}else {
+            
+            success = FALSE;
+        }
+        
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+        
+    }
+    
+    sqlite3_close(database);
+    
+    return success;
+}
 
 -(int) DBGetUserID: (NSString *) username {
 

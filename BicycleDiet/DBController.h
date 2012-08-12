@@ -23,7 +23,7 @@
 @property (nonatomic) NSMutableArray * obj_array;
 @property (nonatomic, retain) Users *a;
 
-
+-(BOOL)  DBdatafieldToIntegerArray: (NSString *) sql_com;
 -(BOOL)  DBdatafieldToQuestionArray: (NSString *) sql_com;
 -(BOOL) DBdatafieldToUserArray:  (NSString *) sql_com ;
 -(BOOL) DBdatafieldToActivityArray:  (NSString *) sql_com ;

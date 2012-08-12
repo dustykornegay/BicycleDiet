@@ -15,7 +15,7 @@
 @end
 
 @implementation QuizViewController
-@synthesize question,answerA,answerB,answerC,answerD,answerE,answerOther,answer;
+@synthesize question,answerA,answerB,answerC,answerD,answerE,answerOther,answer, questionNumber;
 
 
 
@@ -46,7 +46,14 @@
     //TODO: Select * from quiz where quiz_id = ? ; 1= Eat 0= Diet Facts
     //for Eat quiz display the points before they are selected
     //set the local count variable to be used by Next Question
+    NSString * sql = [ @"Select * from quiz where quiz_id = " stringByAppendingFormat: @" %i", quiz_id];
     
+    DBController * myDB = [[DBController alloc] init];
+    
+    if ([myDB DBdatafieldToIntegerArray:sql]){
+    questionNumber = [myDB obj_array];
+    }
+        
     quizQuestion = [[Question alloc] init];
     
 }
@@ -88,14 +95,20 @@
     //clear previous answer
     
     answer.text = @"";
+    NSString * sql = [[NSString alloc] init];
     //Display the next question
-    NSString * sql = [ @"Select * from question where question_id = " stringByAppendingFormat: @" %i", 1];
-    
+    if (i < questionNumber.count){
+        
+      NSNumber * index = [[self questionNumber] objectAtIndex: i ];
+        
+        sql = [ @"Select * from question where question_id = " stringByAppendingFormat: @" %i", index.intValue ];
+   
+        NSLog(@"%@", sql);
     DBController * myDB = [[DBController alloc] init];
     
     if([myDB DBdatafieldToQuestionArray:sql ]){
-        if (i < [myDB obj_array ].count){
-        quizQuestion = [[myDB obj_array] objectAtIndex: i];
+      
+        quizQuestion = [[myDB obj_array] lastObject];
             
         question.text = quizQuestion.question;
         
@@ -109,17 +122,19 @@
         answerD.text = quizQuestion.choice4;
         answerE.text = quizQuestion.choice5;
         
-            i ++;}
+    }
+        i++;
         
-        else {
+    }else {
                 i =0;
+        NSLog(@"Last Question");
             }
 
-    }
-        
+    
+}
         
        
-}
+
 
 - (void) ShowAnswer{
     switch (quizQuestion.bestAnswer){
