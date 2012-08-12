@@ -24,7 +24,7 @@
 @property (nonatomic, retain) Users *a;
 
 
-
+-(BOOL)  DBdatafieldToQuestionArray: (NSString *) sql_com;
 -(BOOL) DBdatafieldToUserArray:  (NSString *) sql_com ;
 -(BOOL) DBdatafieldToActivityArray:  (NSString *) sql_com ;
 -(BOOL)  DBgetInspirationArray: (NSString *) sql_com;

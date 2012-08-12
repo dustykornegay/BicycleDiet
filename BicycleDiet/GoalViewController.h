@@ -25,6 +25,7 @@
     UISlider *intensityExercise;
     
     int exerciseGoal_intensity;
+    
 }
 
 @property (nonatomic) int user_id;

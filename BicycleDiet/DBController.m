@@ -362,32 +362,53 @@
                 // TODO:Update this with a select statement so the correct onject type is loaded
                 
                 int question_id = sqlite3_column_int(compiledStatement, 0);
-				
+                
+                NSString * choiceA = [[NSString alloc] init];
+                NSString * choiceB = [[NSString alloc] init];
+				NSString * choiceC = [[NSString alloc] init];
+                NSString * choiceD = [[NSString alloc] init];
+                NSString * choiceE = [[NSString alloc] init];
+                
+                
                 NSString * quest = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 
                 int number_answer= sqlite3_column_int(compiledStatement, 2);
                 
-                NSString * choiceA = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
-                int aA = sqlite3_column_int(compiledStatement, 3);
+                if((char *)sqlite3_column_text(compiledStatement, 3) != NULL){
+                    choiceA = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
+                }
                 
-                NSString * choiceB = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
-                int b = sqlite3_column_int(compiledStatement, 5);
+                int aA = sqlite3_column_int(compiledStatement, 4);
                 
-                NSString * choiceC = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
-                int c = sqlite3_column_int(compiledStatement, 7);
+                if((char *)sqlite3_column_text(compiledStatement, 5) != NULL){
+                choiceB = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
+                }
+                int b = sqlite3_column_int(compiledStatement, 6);
                 
-                NSString * choiceD = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
-                int d = sqlite3_column_int(compiledStatement, 9);
-                
-                NSString * choiceE = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
-                int e = sqlite3_column_int(compiledStatement, 11);
-                
-                
-				
+                if((char *)sqlite3_column_text(compiledStatement, 7) != NULL){
+                    
+                choiceC = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 7)];
+                }
                 
                 
+                int c = sqlite3_column_int(compiledStatement, 8);
                 
-				// Create a new animal object with the data from the database
+                if((char *)sqlite3_column_text(compiledStatement, 9) != NULL){
+                 choiceD = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
+                }
+                
+                int d = sqlite3_column_int(compiledStatement, 10);
+                
+                if((char *)sqlite3_column_text(compiledStatement, 11) != NULL){
+                choiceE = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 11)];
+                }
+                
+                int e = sqlite3_column_int(compiledStatement, 12);
+                
+                
+            
+                
+				// Create a new question object with the data from the database
 				Question * a_question = [[Question alloc] initWithQuestionId:question_id andQuestion: quest andChoice1:choiceA andChoice2:choiceB andChoice3:choiceC andChoice4: choiceD andChoice5:choiceE andAnswer:number_answer andPoints1: aA andPoints2:b andPoints3:c andPoints4:d andPoints5:e];
 				
                 

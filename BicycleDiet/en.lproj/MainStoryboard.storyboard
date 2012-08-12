@@ -337,7 +337,7 @@
                                     <barButtonItem width="48" style="plain" systemItem="fixedSpace" id="IOq-S5-2ww"/>
                                     <barButtonItem title="Eat" width="65" id="hvg-2D-nNz">
                                         <connections>
-                                            <segue destination="myJ-cO-3c7" kind="push" id="GVk-Qd-gOY"/>
+                                            <segue destination="myJ-cO-3c7" kind="push" identifier="PrepareToEat" id="GVk-Qd-gOY"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -410,7 +410,7 @@
                                 <color key="backgroundColor" red="0.8835310971" green="1" blue="0.93787280220000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many extra Calories do you have to burn and/or cut from your diet to lose one pound?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="MeU-TS-PEk" userLabel="Question">
-                                <rect key="frame" x="5" y="4" width="309" height="62"/>
+                                <rect key="frame" x="5" y="0.0" width="309" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1354,6 +1354,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercisingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="StartPauseTimer:"/>
+                <relationship kind="action" name="sliderIntensity:"/>
                 <relationship kind="outlet" name="counter" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="points_label" candidateClass="UILabel"/>
@@ -1471,6 +1472,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="HhA-Rc-9Up"/>
-        <segue reference="lSv-T3-aht"/>
+        <segue reference="b0F-0I-AUe"/>
     </inferredMetricsTieBreakers>
 </document>

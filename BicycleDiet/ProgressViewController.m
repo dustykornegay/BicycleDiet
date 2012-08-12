@@ -173,7 +173,7 @@
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     //set quiz_id to 0-Fact Quiz, 1-DietQuiz  
-    if ([[segue identifier] isEqualToString: @"EatQuiz"]){
+    if ([[segue identifier] isEqualToString: @"PrepareToEat"]){
         
         appDelegate.quiz_id = 1 ;
         
@@ -181,7 +181,7 @@
     
     if ([[segue identifier] isEqualToString: @"FactQuiz"]){
         
-        appDelegate.quiz_id = 1 ;
+        appDelegate.quiz_id = 0 ;
         
     }
     

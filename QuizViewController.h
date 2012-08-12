@@ -27,6 +27,7 @@
     //Used to retrieve a quiz and store points in database
     int user_id;
     int quiz_id;
+    int i;
     
     Question * quizQuestion;
     
