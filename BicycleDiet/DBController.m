@@ -380,6 +380,7 @@
                 
                 int aA = sqlite3_column_int(compiledStatement, 4);
                 
+                
                 if((char *)sqlite3_column_text(compiledStatement, 5) != NULL){
                 choiceB = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
                 }

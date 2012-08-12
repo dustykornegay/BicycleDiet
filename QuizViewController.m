@@ -94,6 +94,7 @@
     DBController * myDB = [[DBController alloc] init];
     
     if([myDB DBdatafieldToQuestionArray:sql ]){
+        if (i < [myDB obj_array ].count){
         quizQuestion = [[myDB obj_array] objectAtIndex: i];
             
         question.text = quizQuestion.question;
@@ -108,7 +109,11 @@
         answerD.text = quizQuestion.choice4;
         answerE.text = quizQuestion.choice5;
         
-        i ++;
+            i ++;}
+        
+        else {
+                i =0;
+            }
 
     }
         
