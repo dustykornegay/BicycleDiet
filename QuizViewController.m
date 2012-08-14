@@ -122,12 +122,27 @@
         answerD.text = quizQuestion.choice4;
         answerE.text = quizQuestion.choice5;
         
+        //TODO: connect points and display them if eat quiz
+        if (quiz_id == 1) {
+            //display points
+          /*
+            points1.text = quizQuestion.points1;
+            points2.text = quizQuestion.points2;
+            points3.text = quizQuestion.points3;
+            points4.text = quizQuestion.points4;
+            points5.text = quizQuestion.points5;
+           */
+        }
+        
+        
     }
         i++;
         
     }else {
                 i =0;
         NSLog(@"Last Question");
+        //TODO change 
+        
             }
 
     
@@ -137,7 +152,19 @@
 
 
 - (void) ShowAnswer{
-    switch (quizQuestion.bestAnswer){
+    int max = quizQuestion.points1;
+    int item = 1;
+    
+    if (max < quizQuestion.points2){item = 2; max = quizQuestion.points2; }
+        
+    if (max < quizQuestion.points3){item = 3; max = quizQuestion.points3; }
+    
+    if (max < quizQuestion.points4){item = 4; max = quizQuestion.points4; }
+    
+    if (max < quizQuestion.points5){item = 5; max = quizQuestion.points5; }
+
+    max = 0;
+    switch (item){
     case 1:
         answer.text = @"A";
         break;
@@ -166,7 +193,9 @@
 }
 
 - (void) SubmitQuiz{
+    // submit score to database under activity = "Diet", user_id = self.user_id;
     
+    // call segue to return to prior View
 }
 
 - (void)viewDidUnload
