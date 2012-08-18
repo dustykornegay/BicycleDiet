@@ -56,6 +56,7 @@
         
     quizQuestion = [[Question alloc] init];
     
+    [self Next];
 }
 
 - (IBAction) ChooseA{
