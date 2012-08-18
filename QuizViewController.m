@@ -201,6 +201,26 @@
     NSLog(@"TotalPoints for this quiz= %i", score);
     // submit score to database under activity = "Diet", user_id = self.user_id;
     
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    //Open Database, submit points with activity id exercise , and user_id matching the user
+    NSString * sql_com = [@"insert into status" stringByAppendingFormat: @" Values(%i,'Diet', '%@', '%@' ,%i)", appDelegate.user_id, [weightlimit GetTime], [weightlimit GetDate: 0], score ];
+    
+    
+    DBController * mydB = [[DBController alloc] init];
+    
+    if([mydB DBPush: sql_com]){
+        
+        //Reset points to 0
+        
+        score = 0;
+              
+        
+        appDelegate.points = 0;
+    }else {
+        NSLog(@"failed to push exercise points into the status table");
+    }
+    
     // call segue to return to prior View
     [self.navigationController popViewControllerAnimated:YES];
 }
