@@ -16,7 +16,7 @@
 
 @implementation QuizViewController
 @synthesize question,answerA,answerB,answerC,answerD,answerE,answerOther,answer, questionNumber;
-
+@synthesize points1, points2,points3, points4, points5;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -126,13 +126,13 @@
         //TODO: connect points and display them if eat quiz
         if (quiz_id == 1) {
             //display points
-          /*
-            points1.text = quizQuestion.points1;
-            points2.text = quizQuestion.points2;
-            points3.text = quizQuestion.points3;
-            points4.text = quizQuestion.points4;
-            points5.text = quizQuestion.points5;
-           */
+          
+            points1.text = [[NSNumber alloc] initWithInt: quizQuestion.points1].stringValue;
+            points2.text = [[NSNumber alloc] initWithInt: quizQuestion.points2].stringValue;
+            points3.text = [[NSNumber alloc] initWithInt: quizQuestion.points3].stringValue;
+            points4.text = [[NSNumber alloc] initWithInt: quizQuestion.points4].stringValue;
+            points5.text = [[NSNumber alloc] initWithInt: quizQuestion.points5].stringValue;
+           
         }
         
         
@@ -142,9 +142,12 @@
     }else {
                 i =0;
         NSLog(@"Last Question");
-        //TODO change 
+        //show points
+
+        //change title to submit
+        [self SubmitQuiz];
         
-            }
+        }
 
     
 }
@@ -194,9 +197,12 @@
 }
 
 - (void) SubmitQuiz{
+    
+    NSLog(@"TotalPoints for this quiz= %i", score);
     // submit score to database under activity = "Diet", user_id = self.user_id;
     
     // call segue to return to prior View
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidUnload

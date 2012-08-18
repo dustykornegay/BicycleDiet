@@ -11,7 +11,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="US1-wh-rja" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cyp-wE-nOZ" customClass="GoalViewController" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cOT-bH-Yc8">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2" id="I5w-9W-6qC">
@@ -181,7 +181,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RxS-u5-tof" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="4gQ-Rx-AcU" customClass="ProgressViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rEM-lb-aBd" customClass="ProgressView">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Inspiration Bar:                           Keep Up The Good Work" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xUZ-ch-Qee">
@@ -320,7 +320,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" id="FHm-zX-jkh">
-                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Quiz" width="61" id="8ex-ji-zJF">
@@ -343,7 +343,7 @@
                                 </items>
                             </toolbar>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="Bicycle.png" id="i87-Ys-FIs">
-                                <rect key="frame" x="10" y="161" width="85" height="106"/>
+                                <rect key="frame" x="10" y="161" width="85" height="62"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -384,11 +384,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p31-bV-Q8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="UIB-97-VUD" customClass="QuizViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ffJ-Yf-ATZ" userLabel="QuizView">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="trz-kM-44b">
-                                <rect key="frame" x="0.0" y="369" width="320" height="91"/>
+                                <rect key="frame" x="0.0" y="369" width="320" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="snF-ri-Q5F">
@@ -601,6 +601,11 @@
                         <outlet property="answerD" destination="Tg6-J4-dmJ" id="rot-gx-LoA"/>
                         <outlet property="answerE" destination="CqA-fy-yCF" id="hwZ-O9-u2d"/>
                         <outlet property="answerOther" destination="zSP-YA-F0W" id="pag-Xx-yTE"/>
+                        <outlet property="points1" destination="nnL-KL-Ngz" id="Ghj-4P-EOb"/>
+                        <outlet property="points2" destination="8r8-Hr-QuH" id="FcR-34-aoc"/>
+                        <outlet property="points3" destination="Lo3-nk-mAL" id="2Pz-wt-Cjz"/>
+                        <outlet property="points4" destination="hRz-rb-QSw" id="lYB-Ak-UNW"/>
+                        <outlet property="points5" destination="67b-RV-BPV" id="yyJ-xI-oWw"/>
                         <outlet property="question" destination="MeU-TS-PEk" id="BnY-YF-r0P"/>
                     </connections>
                 </viewController>
@@ -613,7 +618,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Xp-fC-52P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="iBf-BO-vEh" customClass="ViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bct-CM-8nU">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <toolbar key="tableFooterView" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ERf-ko-1Cl">
@@ -765,7 +770,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOc-Ue-Oiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="X3f-W4-xvo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dy0-Hs-zoO">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="for Siriwan Inc          by Dusty Kornegay " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ghC-HA-kHD">
@@ -831,11 +836,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgk-Wn-s8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="61b-DY-JHd" userLabel="ExcerciseView" customClass="ExerciseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJE-E4-b8z">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="hn9-1K-IoT">
-                                <rect key="frame" x="0.0" y="319" width="320" height="141"/>
+                                <rect key="frame" x="0.0" y="319" width="320" height="97"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Exercise Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WoR-kb-7cI">
@@ -932,7 +937,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrD-C5-D9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="aqo-1O-lOk" customClass="ExercisingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qHy-3o-pXx">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nsL-Eh-wEe">
@@ -1024,7 +1029,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Bicycle Diet" title="Bicycle Diet" id="12" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13" userLabel="BicycleDiet_StartForm" customClass="SetGoal">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" id="Sxk-pm-4Zg" userLabel="Txt_Name">
@@ -1236,11 +1241,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9P3-fk-gOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="myJ-cO-3c7" userLabel="SnackView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RwK-Nj-ApO">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="MBf-kX-j1V">
-                                <rect key="frame" x="0.0" y="319" width="320" height="141"/>
+                                <rect key="frame" x="0.0" y="319" width="320" height="97"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1Ql-U6-bDc">
@@ -1389,6 +1394,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ExercisingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="StartPauseTimer:"/>
+                <relationship kind="action" name="sliderIntensity:"/>
                 <relationship kind="outlet" name="counter" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="intensityExercise" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="points_label" candidateClass="UILabel"/>
@@ -1473,6 +1479,11 @@
                 <relationship kind="outlet" name="answerD" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answerE" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answerOther" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="points1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="points2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="points3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="points4" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="points5" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="question" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -1505,7 +1516,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="HhA-Rc-9Up"/>
+        <segue reference="3kZ-wd-nVm"/>
         <segue reference="b0F-0I-AUe"/>
     </inferredMetricsTieBreakers>
 </document>

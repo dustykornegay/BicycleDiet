@@ -378,13 +378,13 @@
                     choiceA = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
                 }
                 
-                int aA = sqlite3_column_int(compiledStatement, 3);
+                int aA = sqlite3_column_int(compiledStatement, 5);
                 
                 
                 if((char *)sqlite3_column_text(compiledStatement, 6) != NULL){
                 choiceB = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
                 }
-                int b = sqlite3_column_int(compiledStatement, 5);
+                int b = sqlite3_column_int(compiledStatement, 7);
                 
                 if((char *)sqlite3_column_text(compiledStatement, 8) != NULL){
                     
@@ -392,19 +392,19 @@
                 }
                 
                 
-                int c = sqlite3_column_int(compiledStatement, 7);
+                int c = sqlite3_column_int(compiledStatement, 9);
                 
                 if((char *)sqlite3_column_text(compiledStatement, 10) != NULL){
                  choiceD = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
                 }
                 
-                int d = sqlite3_column_int(compiledStatement, 9);
+                int d = sqlite3_column_int(compiledStatement, 11);
                 
                 if((char *)sqlite3_column_text(compiledStatement, 12) != NULL){
                 choiceE = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
                 }
                 
-                int e = sqlite3_column_int(compiledStatement, 11);
+                int e = sqlite3_column_int(compiledStatement, 13);
                 
                 
             

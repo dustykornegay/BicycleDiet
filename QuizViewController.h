@@ -42,6 +42,12 @@
 @property (nonatomic, retain) IBOutlet UILabel *answerE;
 @property (nonatomic, retain) IBOutlet UITextField *answerOther;
 
+@property (nonatomic, retain) IBOutlet UILabel *points1;
+@property (nonatomic, retain) IBOutlet UILabel *points2;
+@property (nonatomic, retain) IBOutlet UILabel *points3;
+@property (nonatomic, retain) IBOutlet UILabel *points4;
+@property (nonatomic, retain) IBOutlet UILabel *points5;
+
 @property (nonatomic, retain) IBOutlet UILabel *answer;
 @property (nonatomic, retain) NSMutableArray * questionNumber;
 
