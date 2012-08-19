@@ -68,9 +68,11 @@
      
 }
 
+
 - (void) viewWillAppear:(BOOL)animated{
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     user_id = appDelegate.user_id ;
+    appDelegate.graph = [ProgressViewController PopulateGraph: 1 UserID: user_id];
     
 }
 
@@ -87,7 +89,7 @@
     dietGoal.text = @"Goal Not Set";
     exerciseGoal.text = @"Goal Not Set";
     
-    
+    graph = [ProgressViewController PopulateGraph: 1 UserID: user_id];
     
     if ((totalgoal != 0)){
         totalProgress.progress = (float) totalearned / (float) totalgoal;
@@ -130,6 +132,10 @@
     GraphView * mygoal;
     
     [self.view addSubview: mygoal];
+    
+    [mygoal setNeedsDisplay];
+    [self.view setNeedsDisplay];
+  
     
 }
 

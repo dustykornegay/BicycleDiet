@@ -20,6 +20,13 @@
     
     UILabel * answer;
     
+    UIButton * A;
+    UIButton * B;
+    UIButton * C;
+    UIButton * D;
+    UIButton * E;
+
+    
     int score;
     
     int pointspossible;
@@ -47,6 +54,15 @@
 @property (nonatomic, retain) IBOutlet UILabel *points3;
 @property (nonatomic, retain) IBOutlet UILabel *points4;
 @property (nonatomic, retain) IBOutlet UILabel *points5;
+
+@property (nonatomic, retain) IBOutlet UIButton  * A;
+@property (nonatomic, retain) IBOutlet UIButton  * B;
+@property (nonatomic, retain) IBOutlet UIButton  * C;
+@property (nonatomic, retain) IBOutlet UIButton  * D;
+@property (nonatomic, retain) IBOutlet UIButton  * E;
+
+
+
 
 @property (nonatomic, retain) IBOutlet UILabel *answer;
 @property (nonatomic, retain) NSMutableArray * questionNumber;

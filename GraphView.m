@@ -32,7 +32,7 @@
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     user_id = appDelegate.user_id ;
     
-    graph= [ProgressViewController PopulateGraph: 2 UserID: user_id];
+    graph= appDelegate.graph;
     
     MultiDPoint * point = [[MultiDPoint alloc] init];
     float height = (float) HEIGHT;

@@ -17,6 +17,7 @@
 @implementation QuizViewController
 @synthesize question,answerA,answerB,answerC,answerD,answerE,answerOther,answer, questionNumber;
 @synthesize points1, points2,points3, points4, points5;
+@synthesize A,B,C,D,E;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -122,6 +123,37 @@
         answerC.text = quizQuestion.choice3;
         answerD.text = quizQuestion.choice4;
         answerE.text = quizQuestion.choice5;
+        
+        //Hide Buttons if they aren't needed for the question
+        if ([quizQuestion.choice1 length] == 0){
+            A.hidden = TRUE;
+        } else {
+            A.hidden = FALSE;
+        }
+        
+        if ([quizQuestion.choice2 length] == 0){
+            B.hidden = TRUE;
+        } else {
+            B.hidden = FALSE;
+        }
+        
+        if ([quizQuestion.choice3 length] == 0){
+            C.hidden = TRUE;
+        } else {
+            C.hidden = FALSE;
+        }
+        
+        if ([quizQuestion.choice4 length] == 0){
+            D.hidden = TRUE;
+        } else {
+            D.hidden = FALSE;
+        }
+        
+        if ([quizQuestion.choice5 length] == 0){
+            E.hidden = TRUE;
+        } else {
+            E.hidden = FALSE;
+        }
         
         //TODO: connect points and display them if eat quiz
         if (quiz_id == 1) {

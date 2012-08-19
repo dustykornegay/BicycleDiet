@@ -444,7 +444,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aQO-qS-QxA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aQO-qS-QxA" userLabel="selectA">
                                 <rect key="frame" x="5" y="58" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -459,7 +459,7 @@
                                     <action selector="ChooseA" destination="UIB-97-VUD" eventType="touchUpInside" id="78l-8Y-Ujf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BUC-sU-haa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BUC-sU-haa" userLabel="selectB">
                                 <rect key="frame" x="6" y="103" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -474,7 +474,7 @@
                                     <action selector="ChooseB" destination="UIB-97-VUD" eventType="touchUpInside" id="bCO-kv-pO1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KCf-gQ-KTv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KCf-gQ-KTv" userLabel="selectC">
                                 <rect key="frame" x="7" y="148" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -489,7 +489,7 @@
                                     <action selector="ChooseC" destination="UIB-97-VUD" eventType="touchUpInside" id="Gle-Do-0zh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3to-sA-EHB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3to-sA-EHB" userLabel="selectD">
                                 <rect key="frame" x="6" y="192" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -525,7 +525,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ijg-l0-YsW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ijg-l0-YsW" userLabel="selectE">
                                 <rect key="frame" x="6" y="237" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -540,7 +540,7 @@
                                     <action selector="ChooseE" destination="UIB-97-VUD" eventType="touchUpInside" id="oue-Tj-lhV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b6G-eh-qKw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b6G-eh-qKw" userLabel="selectOther">
                                 <rect key="frame" x="6" y="282" width="52" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -594,6 +594,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Quiz" id="Kew-9U-EPn"/>
                     <connections>
+                        <outlet property="A" destination="aQO-qS-QxA" id="SyE-bo-NDn"/>
+                        <outlet property="B" destination="BUC-sU-haa" id="Lg7-TK-FL6"/>
+                        <outlet property="C" destination="KCf-gQ-KTv" id="nkF-am-6m3"/>
+                        <outlet property="D" destination="3to-sA-EHB" id="lCh-L7-Sc4"/>
+                        <outlet property="E" destination="ijg-l0-YsW" id="Pxd-Tu-56b"/>
                         <outlet property="answer" destination="1Hn-Rb-lev" id="IiD-b0-KyD"/>
                         <outlet property="answerA" destination="Cd0-7I-M8y" id="YC4-ns-NSh"/>
                         <outlet property="answerB" destination="Ajh-Vu-yAQ" id="Hwi-wZ-yc3"/>
@@ -1472,6 +1477,11 @@
                 <relationship kind="action" name="ChooseE"/>
                 <relationship kind="action" name="ChooseOther"/>
                 <relationship kind="action" name="Next"/>
+                <relationship kind="outlet" name="A" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="B" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="C" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="D" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="E" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answer" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answerA" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answerB" candidateClass="UILabel"/>

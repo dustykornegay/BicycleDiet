@@ -13,6 +13,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
     NSMutableArray * user_array;
+    NSMutableArray * graph;
     NSMutableArray * exercise_array;
     NSMutableArray * snack_array;
     NSMutableArray * meal_array;
@@ -27,5 +28,6 @@
 @property int user_id;
 @property int quiz_id;
 @property NSMutableArray * user_array;
+@property NSMutableArray * graph;
 
 @end
