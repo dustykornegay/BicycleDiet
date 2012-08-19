@@ -865,14 +865,14 @@
                                 <rect key="frame" x="0.0" y="319" width="320" height="97"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Exercise Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WoR-kb-7cI">
-                                        <rect key="frame" x="5" y="-1" width="87" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Toe Touch, Knee Bend" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WoR-kb-7cI">
+                                        <rect key="frame" x="5" y="-1" width="161" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="A short description of the exercise is loaded frome the database and goes here." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fZx-xe-gi4">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Touch Your Toes, Bend Your Knees and squat. Then Return to standing position. " lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fZx-xe-gi4">
                                         <rect key="frame" x="12" y="23" width="297" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -897,11 +897,6 @@
                                     <segue destination="aqo-1O-lOk" kind="push" id="uoT-AN-TQ6"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" placeholder="Search Exercises" id="Dvr-Gb-u5X">
-                                <rect key="frame" x="0.0" y="275" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Bicycle.png" id="XPQ-of-gHh">
                                 <rect key="frame" x="153" y="10" width="156" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1288,11 +1283,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.8835310971" green="1" blue="0.93787280220000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <searchBar contentMode="redraw" placeholder="Search Snacks" id="3Kf-Qz-gPk">
-                                <rect key="frame" x="0.0" y="275" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gt9-Ax-4bq">
                                 <rect key="frame" x="5" y="232" width="88" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1545,6 +1535,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="3kZ-wd-nVm"/>
-        <segue reference="b0F-0I-AUe"/>
+        <segue reference="lSv-T3-aht"/>
     </inferredMetricsTieBreakers>
 </document>
