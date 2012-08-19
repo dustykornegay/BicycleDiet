@@ -33,6 +33,7 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *dietGoal;
 @property (nonatomic, retain) IBOutlet UILabel *exerciseGoal;
+@property (nonatomic, retain) IBOutlet UILabel *ETA;
 
 @property (nonatomic, retain) IBOutlet UILabel *totalgoal_points;
 @property (nonatomic,retain) IBOutlet UILabel *totalpoints_earned;

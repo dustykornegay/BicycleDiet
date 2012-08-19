@@ -31,6 +31,7 @@
 @synthesize inspirationArray;
 @synthesize visible;
 @synthesize graph;
+@synthesize ETA;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -91,6 +92,7 @@
     
     graph = [ProgressViewController PopulateGraph: 1 UserID: user_id];
     
+        
     if ((totalgoal != 0)){
         totalProgress.progress = (float) totalearned / (float) totalgoal;
     } else {
@@ -102,6 +104,14 @@
     totalpoints_earned.text = [[NSNumber alloc ]initWithInt:totalearned ].stringValue; 
     
     [self getGoals:user_id];
+    
+    //Set ETA
+    NSDate * temp = [weightlimit DayGoalAchieved: (diet_goal + exercise_goal) userId: user_id];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"ddMMMyyyy"];
+    
+    ETA.text = [formatter stringFromDate: temp] ;
     
     // TODO: load from DB from activity table where date = today AND user = user_id
     
