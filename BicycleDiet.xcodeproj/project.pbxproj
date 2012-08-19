@@ -19,6 +19,7 @@
 		1E3A219D1597DC800014D2CD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3A219B1597D3F40014D2CD /* Default.png */; };
 		1E3A21A51597F9870014D2CD /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A21A41597F9870014D2CD /* Users.m */; };
 		1E3E65A015A6B90400601EFE /* GoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3E659F15A6B90400601EFE /* GoalViewController.m */; };
+		1E3FB6AC15E073B50021758A /* bicyclediet.db in Resources */ = {isa = PBXBuildFile; fileRef = 1E3FB6AB15E073B50021758A /* bicyclediet.db */; };
 		1E44765815C9C54400526A3A /* MultiDPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E44765715C9C54400526A3A /* MultiDPoint.m */; };
 		1E4B58E3158BE86500A9457B /* CreateUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B58E2158BE86500A9457B /* CreateUserCell.m */; };
 		1E4B58EC158D324F00A9457B /* SetGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B58EB158D324F00A9457B /* SetGoal.m */; };
@@ -35,7 +36,6 @@
 		1E6F763F159FFB3C00A93206 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F763E159FFB3C00A93206 /* EmptyCell.m */; };
 		1E6F764115A0008D00A93206 /* siriwan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F764015A0008D00A93206 /* siriwan.png */; };
 		1E81281515D2000500B6F4CE /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E81281415D2000500B6F4CE /* icon2x.png */; };
-		1E81281B15D232A200B6F4CE /* bicyclediet.db in Resources */ = {isa = PBXBuildFile; fileRef = 1E81281A15D232A200B6F4CE /* bicyclediet.db */; };
 		1E81281E15D236C800B6F4CE /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E81281D15D236C800B6F4CE /* QuizViewController.m */; };
 		1E81F7C115829BE1004755AE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E81F7C015829BE1004755AE /* icon.png */; };
 		1E864D7B15899922002F12F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E864D7A15899922002F12F0 /* ViewController.m */; };
@@ -77,6 +77,7 @@
 		1E3A21A41597F9870014D2CD /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		1E3E659E15A6B90300601EFE /* GoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalViewController.h; sourceTree = "<group>"; };
 		1E3E659F15A6B90400601EFE /* GoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalViewController.m; sourceTree = "<group>"; };
+		1E3FB6AB15E073B50021758A /* bicyclediet.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bicyclediet.db; sourceTree = "<group>"; };
 		1E44765615C9C54400526A3A /* MultiDPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiDPoint.h; path = ../MultiDPoint.h; sourceTree = "<group>"; };
 		1E44765715C9C54400526A3A /* MultiDPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiDPoint.m; path = ../MultiDPoint.m; sourceTree = "<group>"; };
 		1E4B58E1158BE86500A9457B /* CreateUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateUserCell.h; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		1E6F763E159FFB3C00A93206 /* EmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptyCell.m; path = ../EmptyCell.m; sourceTree = "<group>"; };
 		1E6F764015A0008D00A93206 /* siriwan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siriwan.png; sourceTree = "<group>"; };
 		1E81281415D2000500B6F4CE /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
-		1E81281A15D232A200B6F4CE /* bicyclediet.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bicyclediet.db; sourceTree = "<group>"; };
 		1E81281C15D236C800B6F4CE /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizViewController.h; path = ../QuizViewController.h; sourceTree = "<group>"; };
 		1E81281D15D236C800B6F4CE /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewController.m; path = ../QuizViewController.m; sourceTree = "<group>"; };
 		1E81F7C015829BE1004755AE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
@@ -275,8 +275,8 @@
 		1EFAF47F157B0DE900F8DF27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1E3FB6AB15E073B50021758A /* bicyclediet.db */,
 				1EE1C4F015A178FA0011278F /* bicycle_retina.png */,
-				1E81281A15D232A200B6F4CE /* bicyclediet.db */,
 				1EFAF484157B0DE900F8DF27 /* main.m */,
 				1E3A219E1597DC880014D2CD /* Default@2x.png */,
 				1E3A219B1597D3F40014D2CD /* Default.png */,
@@ -360,10 +360,10 @@
 				1EE1C4F115A178FA0011278F /* bicycle_retina.png in Resources */,
 				1EF1441C15BE303F00F5AF38 /* ID-10064756.jpg in Resources */,
 				1E81281515D2000500B6F4CE /* icon2x.png in Resources */,
-				1E81281B15D232A200B6F4CE /* bicyclediet.db in Resources */,
 				1E2CF78B15D5AC3A003DD170 /* image.png in Resources */,
 				1E2CF78E15D5ADAF003DD170 /* Image.png in Resources */,
 				1E2CF79015D5AE6D003DD170 /* Image2x.png in Resources */,
+				1E3FB6AC15E073B50021758A /* bicyclediet.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
